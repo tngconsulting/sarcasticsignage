@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sarcastic Signage — Design Showcase</title>
+  <meta name="description" content="Explore different design directions for Sarcastic Signage — handmade signs with attitude.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-dark: #1C1917;
+      --color-dark-soft: #292524;
+      --color-surface: #FAFAF5;
+      --color-surface-alt: #F0EDE5;
+      --color-coral: #EA580C;
+      --color-coral-light: #F97316;
+      --color-accent: #1B4332;
+      --color-accent-light: #2D6A4F;
+      --color-text: #1C1917;
+      --color-text-muted: #78716C;
+      --color-border: #D6D3D1;
+
+      --font-display: 'Inter', sans-serif;
+      --font-body: 'DM Sans', sans-serif;
+      --font-hand: 'Caveat', cursive;
+
+      --space-xs: 0.5rem;
+      --space-sm: 1rem;
+      --space-md: 1.5rem;
+      --space-lg: 2rem;
+      --space-xl: 3rem;
+      --space-2xl: 4rem;
+
+      --max-width: 1200px;
+      --border-radius: 8px;
+      --transition-normal: 300ms ease-in-out;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: var(--font-body);
+      background-color: var(--color-surface);
+      color: var(--color-text);
+      line-height: 1.6;
+      font-size: 16px;
+    }
+
+    /* Skip to content link */
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: var(--color-coral);
+      color: white;
+      padding: var(--space-sm);
+      text-decoration: none;
+      z-index: 100;
+    }
+    .skip-link:focus {
+      top: 0;
+    }
+
+    header {
+      padding: var(--space-xl) var(--space-lg);
+      text-align: center;
+      border-bottom: 2px solid var(--color-border);
+      margin-bottom: var(--space-2xl);
+    }
+
+    h1 {
+      font-family: var(--font-display);
+      font-size: 3.5rem;
+      font-weight: 800;
+      line-height: 1;
+      margin-bottom: var(--space-md);
+      color: var(--color-dark);
+    }
+
+    .subtitle {
+      font-size: 1.25rem;
+      color: var(--color-text-muted);
+      font-weight: 400;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    main {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 var(--space-lg);
+      padding-bottom: var(--space-2xl);
+    }
+
+    .section-heading {
+      font-family: var(--font-display);
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin: var(--space-2xl) 0 var(--space-lg) 0;
+      color: var(--color-dark);
+      display: flex;
+      align-items: center;
+      gap: var(--space-md);
+    }
+
+    .section-heading::after {
+      content: '';
+      flex: 1;
+      height: 2px;
+      background-color: var(--color-border);
+    }
+
+    .designs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: var(--space-lg);
+      margin: var(--space-xl) 0;
+    }
+
+    .design-tile {
+      background: white;
+      border: 1px solid var(--color-border);
+      border-radius: var(--border-radius);
+      overflow: hidden;
+      transition: all var(--transition-normal);
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    .design-tile:hover {
+      border-color: var(--color-coral);
+      box-shadow: 0 12px 24px rgba(234, 88, 12, 0.15);
+      transform: translateY(-4px);
+    }
+
+    .design-tile:focus-visible {
+      outline: 3px solid var(--color-coral);
+      outline-offset: 2px;
+    }
+
+    .tile-preview {
+      height: 200px;
+      overflow: hidden;
+      background: linear-gradient(135deg, var(--color-surface) 0%, var(--color-surface-alt) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      font-weight: 800;
+      color: var(--color-text-muted);
+      font-family: var(--font-display);
+    }
+
+    /* Color variations for each tile */
+    .tile-v1 { background: linear-gradient(135deg, #1e1e2e 0%, #272738 100%); color: #faf7f2; }
+    .tile-v2 { background: linear-gradient(135deg, #141420 0%, #1e1e2e 100%); color: #ede9e3; }
+    .tile-v3 { background: linear-gradient(135deg, #ecdec8 0%, #f5edd8 100%); color: #2c1a0e; }
+    .tile-v4 { background: linear-gradient(135deg, #7a1f2e 0%, #5B1A2A 100%); color: #fdf8f0; }
+    .tile-v5 { background: linear-gradient(135deg, #6B2350 0%, #4A1942 100%); color: #FAF3E8; }
+    .tile-v6 { background: linear-gradient(135deg, #EA580C 0%, #C2410C 100%); color: #FAFAF5; }
+
+    .tile-content {
+      padding: var(--space-lg);
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .tile-title {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: var(--space-sm);
+      color: var(--color-dark);
+    }
+
+    .tile-subtitle {
+      font-size: 0.875rem;
+      color: var(--color-coral);
+      font-weight: 600;
+      margin-bottom: var(--space-md);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .tile-description {
+      font-size: 0.95rem;
+      color: var(--color-text-muted);
+      flex: 1;
+      line-height: 1.6;
+      margin-bottom: var(--space-md);
+    }
+
+    .tile-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-xs);
+      color: var(--color-coral);
+      font-weight: 600;
+      margin-top: auto;
+      transition: gap var(--transition-normal);
+    }
+
+    .design-tile:hover .tile-cta {
+      gap: var(--space-sm);
+    }
+
+    .tile-arrow {
+      display: inline-block;
+      transition: transform var(--transition-normal);
+    }
+
+    .design-tile:hover .tile-arrow {
+      transform: translateX(4px);
+    }
+
+    footer {
+      text-align: center;
+      padding: var(--space-xl) var(--space-lg);
+      border-top: 2px solid var(--color-border);
+      color: var(--color-text-muted);
+      font-size: 0.9rem;
+      margin-top: var(--space-2xl);
+    }
+
+    footer a {
+      color: var(--color-coral);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      .section-heading {
+        font-size: 1.5rem;
+      }
+
+      .designs-grid {
+        grid-template-columns: 1fr;
+      }
+
+      header {
+        padding: var(--space-lg) var(--space-md);
+        margin-bottom: var(--space-xl);
+      }
+
+      main {
+        padding: 0 var(--space-md);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        transition: none !important;
+        animation: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header>
+    <h1>Sarcastic Signage</h1>
+    <p class="subtitle">Explore our design directions. Handmade signs with attitude — bold, blunt, unapologetically honest.</p>
+  </header>
+
+  <main id="main-content">
+    <h2 class="section-heading">Design Directions</h2>
+
+    <div class="designs-grid">
+      <!-- Version 1 -->
+      <a href="index-v1.html" class="design-tile">
+        <div class="tile-preview tile-v1">V1</div>
+        <div class="tile-content">
+          <span class="tile-subtitle">Dark Bold</span>
+          <h3 class="tile-title">Modern Dark</h3>
+          <p class="tile-description">A sleek, contemporary dark theme with coral and teal accents. Perfect for a modern, edgy brand presence.</p>
+          <span class="tile-cta" aria-hidden="true">
+            Explore
+            <span class="tile-arrow">→</span>
+          </span>
+        </div>
+      </a>
+
+      <!-- Version 2 -->
+      <a href="index-v2.html" class="design-tile">
+        <div class="tile-preview tile-v2">V2</div>
+        <div class="tile-content">
+          <span class="tile-subtitle">Refined Dark</span>
+          <h3 class="tile-title">Dark Refined</h3>
+          <p class="tile-description">A refined take on dark design with deeper tones and polished typography. Token-driven for consistency.</p>
+          <span class="tile-cta" aria-hidden="true">
+            Explore
+            <span class="tile-arrow">→</span>
+          </span>
+        </div>
+      </a>
+
+      <!-- Version 3 -->
+      <a href="index-v3.html" class="design-tile">
+        <div class="tile-preview tile-v3">V3</div>
+        <div class="tile-content">
+          <span class="tile-subtitle">Warm Editorial</span>
+          <h3 class="tile-title">Artisan Warm</h3>
+          <p class="tile-description">A warm, editorial direction with parchment backgrounds and rich oxblood tones. Handcrafted and organic.</p>
+          <span class="tile-cta" aria-hidden="true">
+            Explore
+            <span class="tile-arrow">→</span>
+          </span>
+        </div>
+      </a>
+
+      <!-- Version 4 -->
+      <a href="index-v4.html" class="design-tile">
+        <div class="tile-preview tile-v4">V4</div>
+        <div class="tile-content">
+          <span class="tile-subtitle">Heritage Craft</span>
+          <h3 class="tile-title">Classic Heritage</h3>
+          <p class="tile-description">A timeless heritage craft aesthetic with deep crimson and aged gold. Classic, premium, and storied.</p>
+          <span class="tile-cta" aria-hidden="true">
+            Explore
+            <span class="tile-arrow">→</span>
+          </span>
+        </div>
+      </a>
+
+      <!-- Version 5 -->
+      <a href="index-v5.html" class="design-tile">
+        <div class="tile-preview tile-v5">V5</div>
+        <div class="tile-content">
+          <span class="tile-subtitle">Art Deco</span>
+          <h3 class="tile-title">Watercolor Deco</h3>
+          <p class="tile-description">Brand-matched watercolor and art deco vibes with plum, crimson, and amber from Patricia's palette.</p>
+          <span class="tile-cta" aria-hidden="true">
+            Explore
+            <span class="tile-arrow">→</span>
+          </span>
+        </div>
+      </a>
+
+      <!-- Version 6 -->
+      <a href="index-v6.html" class="design-tile">
+        <div class="tile-preview tile-v6">V6</div>
+        <div class="tile-content">
+          <span class="tile-subtitle">Playful Product</span>
+          <h3 class="tile-title">Playful & Bold</h3>
+          <p class="tile-description">Hot coral energy with forest green accents. Playful, energetic, and craft-forward. Made to stand out.</p>
+          <span class="tile-cta" aria-hidden="true">
+            Explore
+            <span class="tile-arrow">→</span>
+          </span>
+        </div>
+      </a>
+    </div>
+  </main>
+
+  <footer>
+    <p>Sarcastic Signage — Handmade by Patricia in Ontario, Canada. Bold. Blunt. Honest.<br>
+    <a href="#main-content">Back to designs</a></p>
+  </footer>
+</body>
+</html>
