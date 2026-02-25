@@ -1,0 +1,1428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarcastic Signage — Signs That Say What You're Thinking</title>
+    <meta name="description" content="Handmade sarcastic signs, totes, and gifts by Patricia in Ontario, Canada. Bold. Blunt. Handmade with attitude.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@400;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <style>
+        /* ========================================
+           CSS CUSTOM PROPERTIES
+           ======================================== */
+        :root {
+            --dark: #1e1e2e;
+            --dark-surface: #272738;
+            --cream: #faf7f2;
+            --coral: #ff6b35;
+            --coral-hover: #ff8555;
+            --teal: #00c9a7;
+            --teal-hover: #00e0bb;
+            --off-white: #f0ede8;
+            --near-black: #2a2a3a;
+            --muted: #8a8a9a;
+            --muted-light: #b5b5c3;
+
+            --font-display: 'Bebas Neue', sans-serif;
+            --font-body: 'DM Sans', sans-serif;
+            --font-hand: 'Caveat', cursive;
+            --font-marker: 'Permanent Marker', cursive;
+
+            --nav-height: 70px;
+            --section-pad: clamp(60px, 10vw, 120px);
+            --content-max: 1200px;
+
+            --grain: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+        }
+
+        /* ========================================
+           RESET & BASE
+           ======================================== */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: var(--nav-height);
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--near-black);
+            background: var(--cream);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        img { max-width: 100%; display: block; }
+        a { text-decoration: none; color: inherit; }
+        button { border: none; cursor: pointer; font-family: inherit; }
+
+        .container {
+            width: 100%;
+            max-width: var(--content-max);
+            margin: 0 auto;
+            padding: 0 clamp(20px, 4vw, 40px);
+        }
+
+        /* ========================================
+           SCROLL REVEAL ANIMATION
+           ======================================== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                        transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .reveal-delay-1 { transition-delay: 0.1s; }
+        .reveal-delay-2 { transition-delay: 0.2s; }
+        .reveal-delay-3 { transition-delay: 0.3s; }
+        .reveal-delay-4 { transition-delay: 0.4s; }
+        .reveal-delay-5 { transition-delay: 0.5s; }
+        .reveal-delay-6 { transition-delay: 0.6s; }
+
+        /* ========================================
+           NAVIGATION
+           ======================================== */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: var(--nav-height);
+            background: rgba(30, 30, 46, 0.95);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            z-index: 1000;
+            border-bottom: 2px solid var(--coral);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .nav.scrolled {
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .nav-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
+            max-width: var(--content-max);
+            margin: 0 auto;
+            padding: 0 clamp(20px, 4vw, 40px);
+        }
+
+        .nav-brand {
+            font-family: var(--font-marker);
+            font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+            color: var(--coral);
+            letter-spacing: 0.5px;
+            white-space: nowrap;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            color: var(--off-white);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            position: relative;
+            padding: 4px 0;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--coral);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after { width: 100%; }
+
+        .nav-cta {
+            display: none;
+            background: var(--coral);
+            color: white;
+            font-family: var(--font-display);
+            font-size: 1rem;
+            letter-spacing: 2px;
+            padding: 8px 20px;
+            border-radius: 4px;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        .nav-cta:hover {
+            background: var(--coral-hover);
+            transform: translateY(-1px);
+        }
+
+        /* Hamburger */
+        .hamburger {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            padding: 8px;
+            z-index: 1001;
+        }
+
+        .hamburger span {
+            width: 26px;
+            height: 2px;
+            background: var(--off-white);
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            transform-origin: center;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: translateY(7px) rotate(45deg);
+        }
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+        .hamburger.active span:nth-child(3) {
+            transform: translateY(-7px) rotate(-45deg);
+        }
+
+        /* Mobile menu */
+        .mobile-menu {
+            position: fixed;
+            top: var(--nav-height);
+            left: 0;
+            right: 0;
+            background: var(--dark);
+            border-bottom: 2px solid var(--coral);
+            padding: 2rem;
+            transform: translateY(-120%);
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            z-index: 999;
+        }
+
+        .mobile-menu.open { transform: translateY(0); }
+
+        .mobile-menu a {
+            display: block;
+            font-family: var(--font-display);
+            font-size: 1.4rem;
+            color: var(--off-white);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--dark-surface);
+        }
+
+        .mobile-menu a:last-child { border-bottom: none; }
+
+        .mobile-menu .mobile-phone {
+            display: block;
+            margin-top: 1rem;
+            background: var(--coral);
+            color: white;
+            text-align: center;
+            padding: 12px;
+            border-radius: 4px;
+            font-family: var(--font-display);
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+        }
+
+        @media (min-width: 768px) {
+            .hamburger { display: none; }
+            .mobile-menu { display: none; }
+            .nav-cta { display: inline-block; }
+        }
+
+        @media (max-width: 767px) {
+            .nav-links { display: none; }
+        }
+
+        /* ========================================
+           HERO SECTION
+           ======================================== */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--dark);
+            position: relative;
+            overflow: hidden;
+            padding-top: var(--nav-height);
+        }
+
+        /* Diagonal slash motif */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -20%;
+            right: -10%;
+            width: 60%;
+            height: 140%;
+            background: linear-gradient(135deg, transparent 40%, rgba(255, 107, 53, 0.06) 40%, rgba(255, 107, 53, 0.06) 42%, transparent 42%,
+                                                  transparent 46%, rgba(0, 201, 167, 0.04) 46%, rgba(0, 201, 167, 0.04) 47.5%, transparent 47.5%);
+            pointer-events: none;
+        }
+
+        /* Grain texture overlay */
+        .hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: var(--grain);
+            background-size: 200px 200px;
+            pointer-events: none;
+            opacity: 0.6;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 2rem clamp(20px, 4vw, 40px);
+            max-width: 900px;
+        }
+
+        .hero-eyebrow {
+            font-family: var(--font-hand);
+            font-size: clamp(1.2rem, 3vw, 1.6rem);
+            color: var(--teal);
+            margin-bottom: 1rem;
+            transform: rotate(-2deg);
+            display: inline-block;
+        }
+
+        .hero h1 {
+            font-family: var(--font-display);
+            font-size: clamp(3.2rem, 10vw, 7.5rem);
+            line-height: 0.95;
+            color: var(--off-white);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero h1 .highlight {
+            color: var(--coral);
+            position: relative;
+        }
+
+        .hero-sub {
+            font-family: var(--font-body);
+            font-size: clamp(1rem, 2.5vw, 1.25rem);
+            color: var(--muted-light);
+            max-width: 500px;
+            margin: 0 auto 2.5rem;
+            font-weight: 300;
+        }
+
+        .hero-cta {
+            display: inline-block;
+            background: var(--coral);
+            color: white;
+            font-family: var(--font-display);
+            font-size: 1.3rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            padding: 16px 40px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-cta:hover {
+            background: var(--coral-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 107, 53, 0.35);
+        }
+
+        /* Floating scrawl annotations */
+        .hero-scrawl {
+            position: absolute;
+            font-family: var(--font-hand);
+            color: var(--teal);
+            opacity: 0.2;
+            pointer-events: none;
+            font-size: clamp(1rem, 2vw, 1.4rem);
+        }
+
+        .hero-scrawl-1 { top: 20%; left: 5%; transform: rotate(-12deg); }
+        .hero-scrawl-2 { bottom: 15%; right: 5%; transform: rotate(8deg); }
+        .hero-scrawl-3 { top: 35%; right: 8%; transform: rotate(-5deg); }
+
+        /* Scroll indicator */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+        }
+
+        .scroll-indicator span {
+            display: block;
+            width: 2px;
+            height: 40px;
+            background: linear-gradient(to bottom, var(--coral), transparent);
+            margin: 0 auto;
+            animation: scrollPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes scrollPulse {
+            0%, 100% { opacity: 1; transform: scaleY(1); }
+            50% { opacity: 0.3; transform: scaleY(0.6); }
+        }
+
+        /* ========================================
+           ABOUT SECTION
+           ======================================== */
+        .about {
+            background: var(--cream);
+            padding: var(--section-pad) 0;
+            position: relative;
+        }
+
+        .about::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--coral), var(--teal), var(--coral));
+        }
+
+        .about-inner {
+            max-width: 750px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about-label {
+            font-family: var(--font-display);
+            font-size: 1rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--coral);
+            margin-bottom: 1.5rem;
+        }
+
+        .about-text {
+            font-size: clamp(1.05rem, 2vw, 1.2rem);
+            color: var(--near-black);
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+
+        .about-quip {
+            font-family: var(--font-hand);
+            font-size: clamp(1.4rem, 3vw, 2rem);
+            color: var(--coral);
+            transform: rotate(-1.5deg);
+            display: inline-block;
+            line-height: 1.3;
+        }
+
+        /* ========================================
+           PRODUCTS SECTION
+           ======================================== */
+        .products {
+            padding: var(--section-pad) 0;
+            background: var(--dark);
+            position: relative;
+        }
+
+        .products::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: var(--grain);
+            background-size: 200px 200px;
+            pointer-events: none;
+            opacity: 0.5;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: clamp(40px, 6vw, 70px);
+            position: relative;
+            z-index: 1;
+        }
+
+        .section-header h2 {
+            font-family: var(--font-display);
+            font-size: clamp(2.8rem, 7vw, 5rem);
+            color: var(--off-white);
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-header .accent-line {
+            width: 60px;
+            height: 3px;
+            background: var(--coral);
+            margin: 1rem auto;
+        }
+
+        .section-header p {
+            font-family: var(--font-hand);
+            font-size: 1.3rem;
+            color: var(--teal);
+        }
+
+        /* Product Group */
+        .product-group {
+            margin-bottom: clamp(50px, 8vw, 80px);
+            position: relative;
+            z-index: 1;
+        }
+
+        .product-group:last-child { margin-bottom: 0; }
+
+        .group-header {
+            display: flex;
+            align-items: baseline;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .group-header h3 {
+            font-family: var(--font-display);
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            color: var(--coral);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .group-header .group-tag {
+            font-family: var(--font-hand);
+            font-size: 1.1rem;
+            color: var(--teal);
+            transform: rotate(-2deg);
+            display: inline-block;
+        }
+
+        .group-description {
+            color: var(--muted-light);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            max-width: 600px;
+        }
+
+        /* Product Cards Grid */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .product-card {
+            background: var(--dark-surface);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+                        box-shadow 0.4s ease;
+            position: relative;
+        }
+
+        .product-card:hover {
+            transform: translateY(-6px) rotate(-0.5deg);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Product image placeholder */
+        .product-image {
+            aspect-ratio: 4 / 3;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Different pattern styles per group */
+        .pattern-signs {
+            background:
+                repeating-linear-gradient(45deg,
+                    transparent,
+                    transparent 10px,
+                    rgba(255, 107, 53, 0.08) 10px,
+                    rgba(255, 107, 53, 0.08) 11px),
+                linear-gradient(135deg, #2a2a3f 0%, #3a2a2a 100%);
+        }
+
+        .pattern-totes {
+            background:
+                radial-gradient(circle at 30% 50%, rgba(0, 201, 167, 0.12) 0%, transparent 50%),
+                radial-gradient(circle at 70% 30%, rgba(255, 107, 53, 0.08) 0%, transparent 40%),
+                linear-gradient(160deg, #2a3a3a 0%, #2a2a3f 100%);
+        }
+
+        .pattern-accessories {
+            background:
+                conic-gradient(from 45deg at 50% 50%, rgba(255, 107, 53, 0.06) 0deg, transparent 90deg, rgba(0, 201, 167, 0.06) 180deg, transparent 270deg),
+                linear-gradient(135deg, #2f2a3a 0%, #2a3a30 100%);
+        }
+
+        .pattern-apparel {
+            background:
+                repeating-linear-gradient(0deg,
+                    transparent,
+                    transparent 20px,
+                    rgba(255, 107, 53, 0.05) 20px,
+                    rgba(255, 107, 53, 0.05) 21px),
+                repeating-linear-gradient(90deg,
+                    transparent,
+                    transparent 20px,
+                    rgba(0, 201, 167, 0.05) 20px,
+                    rgba(0, 201, 167, 0.05) 21px),
+                linear-gradient(135deg, #2a2a3f 0%, #3a2a3a 100%);
+        }
+
+        .pattern-home {
+            background:
+                radial-gradient(ellipse at 20% 80%, rgba(255, 107, 53, 0.1) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 20%, rgba(0, 201, 167, 0.08) 0%, transparent 50%),
+                linear-gradient(135deg, #2a2f3a 0%, #3a2a2f 100%);
+        }
+
+        .product-image .placeholder-text {
+            font-family: var(--font-hand);
+            font-size: 1.1rem;
+            color: var(--muted);
+            text-align: center;
+            padding: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Decorative corner marks on placeholder */
+        .product-image::before,
+        .product-image::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-color: rgba(255, 255, 255, 0.1);
+            border-style: solid;
+            z-index: 1;
+        }
+        .product-image::before {
+            top: 12px;
+            left: 12px;
+            border-width: 2px 0 0 2px;
+        }
+        .product-image::after {
+            bottom: 12px;
+            right: 12px;
+            border-width: 0 2px 2px 0;
+        }
+
+        .product-info {
+            padding: 1.2rem;
+        }
+
+        .product-name {
+            font-family: var(--font-display);
+            font-size: 1.2rem;
+            color: var(--off-white);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 0.3rem;
+        }
+
+        .product-price {
+            font-family: var(--font-hand);
+            font-size: 1.2rem;
+            color: var(--teal);
+            margin-bottom: 1rem;
+        }
+
+        .product-btn {
+            display: inline-block;
+            font-family: var(--font-display);
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 8px 16px;
+            border-radius: 3px;
+            transition: all 0.3s ease;
+        }
+
+        .product-btn.active {
+            background: transparent;
+            color: var(--coral);
+            border: 1.5px solid var(--coral);
+        }
+
+        .product-btn.active:hover {
+            background: var(--coral);
+            color: white;
+        }
+
+        .product-btn.coming-soon {
+            background: transparent;
+            color: var(--muted);
+            border: 1.5px solid var(--muted);
+            cursor: default;
+            font-size: 0.8rem;
+        }
+
+        /* Sub-links for tote colors etc */
+        .sub-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .sub-link {
+            font-family: var(--font-display);
+            font-size: 0.8rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--muted-light);
+            padding: 6px 14px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 3px;
+            transition: all 0.3s ease;
+        }
+
+        .sub-link:hover {
+            border-color: var(--teal);
+            color: var(--teal);
+        }
+
+        /* ========================================
+           CONTACT SECTION
+           ======================================== */
+        .contact {
+            background: var(--cream);
+            padding: var(--section-pad) 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact::after {
+            content: '';
+            position: absolute;
+            bottom: -50%;
+            right: -20%;
+            width: 60%;
+            height: 150%;
+            background: radial-gradient(ellipse, rgba(255, 107, 53, 0.04) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .contact-inner {
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact h2 {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 7vw, 4.5rem);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--near-black);
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+
+        .contact-subtitle {
+            font-size: 1.05rem;
+            color: var(--muted);
+            margin-bottom: 2.5rem;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.2rem;
+            margin-bottom: 2.5rem;
+        }
+
+        @media (min-width: 600px) {
+            .contact-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+
+        .contact-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+        }
+
+        .contact-card:hover {
+            border-color: var(--coral);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        .contact-card-icon {
+            font-size: 1.8rem;
+            margin-bottom: 0.6rem;
+        }
+
+        .contact-card-label {
+            font-family: var(--font-display);
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-bottom: 0.3rem;
+        }
+
+        .contact-card-value {
+            font-family: var(--font-body);
+            font-weight: 500;
+            color: var(--near-black);
+            font-size: 0.95rem;
+            word-break: break-word;
+        }
+
+        .contact-card-value a {
+            color: var(--coral);
+            transition: color 0.2s ease;
+        }
+
+        .contact-card-value a:hover { color: var(--coral-hover); }
+
+        .contact-note {
+            font-family: var(--font-hand);
+            font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+            color: var(--coral);
+            transform: rotate(-1deg);
+            display: inline-block;
+        }
+
+        /* ========================================
+           ADULT SECTION (subtle)
+           ======================================== */
+        .adult-section {
+            background: var(--dark);
+            padding: 3rem 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .adult-inner {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .adult-label {
+            font-family: var(--font-body);
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-bottom: 0.4rem;
+        }
+
+        .adult-title {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+            color: var(--muted-light);
+            text-transform: uppercase;
+            margin-bottom: 0.3rem;
+        }
+
+        .adult-price {
+            font-family: var(--font-hand);
+            font-size: 1rem;
+            color: var(--muted);
+            margin-bottom: 1rem;
+        }
+
+        .adult-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .adult-link {
+            font-family: var(--font-body);
+            font-size: 0.78rem;
+            color: var(--muted);
+            padding: 5px 12px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 3px;
+            transition: all 0.3s ease;
+        }
+
+        .adult-link:hover {
+            color: var(--muted-light);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        /* ========================================
+           FOOTER
+           ======================================== */
+        .footer {
+            background: var(--dark);
+            padding: 2rem 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .footer-inner {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            text-align: center;
+        }
+
+        .footer-brand {
+            font-family: var(--font-marker);
+            font-size: 1.1rem;
+            color: var(--coral);
+        }
+
+        .footer-tagline {
+            font-family: var(--font-hand);
+            font-size: 1.1rem;
+            color: var(--muted);
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .footer-links a {
+            font-family: var(--font-body);
+            font-size: 0.85rem;
+            color: var(--muted);
+            transition: color 0.2s ease;
+        }
+
+        .footer-links a:hover { color: var(--coral); }
+
+        .footer-copy {
+            font-size: 0.78rem;
+            color: rgba(255, 255, 255, 0.2);
+        }
+
+        /* ========================================
+           RESPONSIVE TWEAKS
+           ======================================== */
+        @media (max-width: 767px) {
+            .product-grid {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+
+            .hero-scrawl { display: none; }
+        }
+
+        @media (min-width: 1024px) {
+            .product-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ========================================
+         NAVIGATION
+         ======================================== -->
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="#" class="nav-brand">Sarcastic Signage</a>
+            <ul class="nav-links">
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="tel:6137006677" class="nav-cta">613-700-6677</a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#products" class="mobile-nav-link">Products</a>
+        <a href="#about" class="mobile-nav-link">About</a>
+        <a href="#contact" class="mobile-nav-link">Contact</a>
+        <a href="tel:6137006677" class="mobile-phone mobile-nav-link">Call 613-700-6677</a>
+    </div>
+
+    <!-- ========================================
+         HERO
+         ======================================== -->
+    <section class="hero" id="hero">
+        <span class="hero-scrawl hero-scrawl-1">( no boring signs allowed )</span>
+        <span class="hero-scrawl hero-scrawl-2">* handmade with sass *</span>
+        <span class="hero-scrawl hero-scrawl-3">~ zero filter ~</span>
+
+        <div class="hero-content">
+            <span class="hero-eyebrow">Welcome to the no-filter zone</span>
+            <h1>Signs That Say<br>What <span class="highlight">You're</span><br>Thinking</h1>
+            <p class="hero-sub">Handmade signs, totes, and gifts with zero filter.</p>
+            <a href="#products" class="hero-cta">Browse Products</a>
+        </div>
+
+        <div class="scroll-indicator">
+            <span></span>
+        </div>
+    </section>
+
+    <!-- ========================================
+         ABOUT
+         ======================================== -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-inner reveal">
+                <div class="about-label">The Story</div>
+                <p class="about-text">
+                    Run by Patricia in Ontario, Canada, Sarcastic Signage is where attitude meets craftsmanship. Every product is handmade with love &mdash; and a heavy dose of sarcasm. Whether you need the perfect gift for someone who appreciates blunt honesty, or just want your home decor to finally reflect your real personality, you're in the right place.
+                </p>
+                <span class="about-quip">"Yes, they're all handmade. No, I won't make a 'Live Laugh Love' sign."</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         PRODUCTS
+         ======================================== -->
+    <section class="products" id="products">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>The Goods</h2>
+                <div class="accent-line"></div>
+                <p>Stuff you actually want to own</p>
+            </div>
+
+            <!-- ===== WOODEN SIGNS ===== -->
+            <div class="product-group reveal">
+                <div class="group-header">
+                    <h3>Wooden Signs</h3>
+                    <span class="group-tag">&#8592; the flagship</span>
+                </div>
+                <p class="group-description">Handmade wooden signs that say what everyone's thinking but nobody's saying. Available in 5&times;7 and 8&times;10, framed or unframed.</p>
+                <div class="product-grid">
+
+                    <!-- 5×7 Unframed -->
+                    <div class="product-card reveal reveal-delay-1">
+                        <div class="product-image pattern-signs">
+                            <!-- Replace with: <img src="assets/images/signs/5x7-unframed.jpg" alt="5×7 Unframed Sign"> -->
+                            <span class="placeholder-text">Photo coming soon</span>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">5&times;7 Unframed</div>
+                            <div class="product-price">$15</div>
+                            <a href="https://photos.app.goo.gl/TgeMebcWwSzzK1Cg9" target="_blank" rel="noopener" class="product-btn active">View Collection &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- 5×7 Pre-framed -->
+                    <div class="product-card reveal reveal-delay-2">
+                        <div class="product-image pattern-signs">
+                            <!-- Replace with: <img src="assets/images/signs/5x7-framed.jpg" alt="5×7 Pre-framed Sign"> -->
+                            <span class="placeholder-text">Photo coming soon</span>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">5&times;7 Pre-Framed</div>
+                            <div class="product-price">$15</div>
+                            <a href="https://photos.app.goo.gl/CZ9viWsWYtvU8B886" target="_blank" rel="noopener" class="product-btn active">View Collection &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- 8×10 Unframed -->
+                    <div class="product-card reveal reveal-delay-3">
+                        <div class="product-image pattern-signs">
+                            <!-- Replace with: <img src="assets/images/signs/8x10-unframed.jpg" alt="8×10 Unframed Sign"> -->
+                            <span class="placeholder-text">Photo coming soon</span>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">8&times;10 Unframed</div>
+                            <div class="product-price">$20</div>
+                            <a href="https://photos.app.goo.gl/yVk8xjSjenVhzvfa7" target="_blank" rel="noopener" class="product-btn active">View Collection &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- 8×10 Pre-framed -->
+                    <div class="product-card reveal reveal-delay-4">
+                        <div class="product-image pattern-signs">
+                            <!-- Replace with: <img src="assets/images/signs/8x10-framed.jpg" alt="8×10 Pre-framed Sign"> -->
+                            <span class="placeholder-text">Photo coming soon</span>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">8&times;10 Pre-Framed</div>
+                            <div class="product-price">$20</div>
+                            <a href="https://photos.app.goo.gl/vkrEcV8fTVEnizqy8" target="_blank" rel="noopener" class="product-btn active">View Collection &rarr;</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- ===== TOTE BAGS & POUCHES ===== -->
+            <div class="product-group reveal">
+                <div class="group-header">
+                    <h3>Tote Bags &amp; Pouches</h3>
+                    <span class="group-tag">over 200 designs. seriously.</span>
+                </div>
+                <p class="group-description">Sarcastic tote bags in every color and almost 100 zippered pouch designs. Because your grocery bag should have opinions too.</p>
+
+                <div class="sub-links">
+                    <a href="https://photos.app.goo.gl/Caa1ELRAju7qfP3h9" target="_blank" rel="noopener" class="sub-link">Black Totes</a>
+                    <a href="https://photos.app.goo.gl/gosaf5Vu4JGgtzLX9" target="_blank" rel="noopener" class="sub-link">Natural Totes</a>
+                    <a href="https://photos.app.goo.gl/3Vdkraczxc1Lixje6" target="_blank" rel="noopener" class="sub-link">Yellow Totes</a>
+                    <a href="https://photos.app.goo.gl/SdvNZEvyy5w4XCkh6" target="_blank" rel="noopener" class="sub-link">Pink Totes</a>
+                    <a href="https://photos.app.goo.gl/7rCnBxgExFucbhhY6" target="_blank" rel="noopener" class="sub-link">Shopper's Totes</a>
+                </div>
+
+                <div class="product-grid">
+
+                    <!-- All Tote Bags -->
+                    <div class="product-card reveal reveal-delay-1">
+                        <div class="product-image pattern-totes">
+                            <!-- Replace with: <img src="assets/images/totes/all-totes.jpg" alt="Tote Bags Collection"> -->
+                            <span class="placeholder-text">Photo coming soon</span>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">All Tote Bags</div>
+                            <div class="product-price">200+ designs</div>
+                            <a href="https://photos.app.goo.gl/9z4P55iuCs4CJNqM7" target="_blank" rel="noopener" class="product-btn active">View Collection &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- Zippered Pouches -->
+                    <div class="product-card reveal reveal-delay-2">
+                        <div class="product-image pattern-totes">
+                            <!-- Replace with: <img src="assets/images/pouches/pouches.jpg" alt="Zippered Pouches"> -->
+                            <span class="placeholder-text">Photo coming soon</span>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">Zippered Pouches</div>
+                            <div class="product-price">$6 each &mdash; ~100 designs</div>
+                            <a href="https://photos.app.goo.gl/qEg9GaAJa5RSPjsq9" target="_blank" rel="noopener" class="product-btn active">View Collection &rarr;</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- ===== ACCESSORIES ===== -->
+            <div class="product-group reveal">
+                <div class="group-header">
+                    <h3>Accessories</h3>
+                    <span class="group-tag">small but mighty</span>
+                </div>
+                <div class="product-grid">
+
+                    <!-- Croc Charms -->
+                    <div class="product-card reveal reveal-delay-1">
+                        <div class="product-image pattern-accessories">
+                            <!-- Replace with: <img src="assets/images/accessories/croc-charms.jpg" alt="Silicone Croc Charms"> -->
+                            <span class="placeholder-text">Photo coming soon</span>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">Silicone Croc Charms</div>
+                            <div class="product-price">$2 each &bull; 3 for $5</div>
+                            <a href="https://photos.app.goo.gl/jqK1BJn38Sqz7NGcA" target="_blank" rel="noopener" class="product-btn active">View Collection &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- Key Chains -->
+                    <div class="product-card reveal reveal-delay-2">
+                        <div class="product-image pattern-accessories">
+                            <!-- Replace with: <img src="assets/images/accessories/keychains.jpg" alt="Key Chains & Zipper Pulls"> -->
+                            <span class="placeholder-text">Photo coming soon</span>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">Key Chains / Zipper Pulls</div>
+                            <div class="product-price">$7 each &bull; 3 for $20</div>
+                            <!-- Replace href with Google Photos album link when available -->
+                            <span class="product-btn coming-soon">Album Coming Soon</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- ===== APPAREL ===== -->
+            <div class="product-group reveal">
+                <div class="group-header">
+                    <h3>Apparel</h3>
+                    <span class="group-tag">wear your sarcasm</span>
+                </div>
+                <p class="group-description">T-shirts, caps, toques, and aprons for people who want their outfit to do the talking.</p>
+                <div class="product-grid">
+
+                    <!-- T-Shirts -->
+                    <div class="product-card reveal reveal-delay-1">
+                        <div class="product-image pattern-apparel">
+                            <!-- Replace with: <img src="assets/images/apparel/tshirts.jpg" alt="T-Shirts"> -->
+                            <span class="placeholder-text">Photo coming soon</span>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">T-Shirts</div>
+                            <div class="product-price">$20</div>
+                            <!-- Replace href with Google Photos album link when available -->
+                            <span class="product-btn coming-soon">Album Coming Soon</span>
+                        </div>
+                    </div>
+
+                    <!-- Baseball Caps -->
+                    <div class="product-card reveal reveal-delay-2">
+                        <div class="product-image pattern-apparel">
+                            <!-- Replace with: <img src="assets/images/apparel/caps.jpg" alt="Baseball Caps"> -->
+                            <span class="placeholder-text">Photo coming soon</span>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">Baseball Caps</div>
+                            <div class="product-price">$15</div>
+                            <span class="product-btn coming-soon">Album Coming Soon</span>
+                        </div>
+                    </div>
+
+                    <!-- Swiftie Toques -->
+                    <div class="product-card reveal reveal-delay-3">
+                        <div class="product-image pattern-apparel">
+                            <!-- Replace with: <img src="assets/images/apparel/toques.jpg" alt="Swiftie Toques"> -->
+                            <span class="placeholder-text">Photo coming soon</span>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">Swiftie Toques</div>
+                            <div class="product-price">$15</div>
+                            <span class="product-btn coming-soon">Album Coming Soon</span>
+                        </div>
+                    </div>
+
+                    <!-- BBQ Aprons -->
+                    <div class="product-card reveal reveal-delay-4">
+                        <div class="product-image pattern-apparel">
+                            <!-- Replace with: <img src="assets/images/apparel/aprons.jpg" alt="BBQ Aprons"> -->
+                            <span class="placeholder-text">Photo coming soon</span>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">BBQ Aprons</div>
+                            <div class="product-price">$8&ndash;$15</div>
+                            <span class="product-btn coming-soon">Album Coming Soon</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- ===== HOME & KITCHEN ===== -->
+            <div class="product-group reveal">
+                <div class="group-header">
+                    <h3>Home &amp; Kitchen</h3>
+                    <span class="group-tag">sarcasm belongs everywhere</span>
+                </div>
+                <div class="product-grid">
+
+                    <!-- Pot Holders -->
+                    <div class="product-card reveal reveal-delay-1">
+                        <div class="product-image pattern-home">
+                            <!-- Replace with: <img src="assets/images/home/pot-holders.jpg" alt="Pot Holders"> -->
+                            <span class="placeholder-text">Photo coming soon</span>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">Pot Holders</div>
+                            <div class="product-price">&nbsp;</div>
+                            <span class="product-btn coming-soon">Album Coming Soon</span>
+                        </div>
+                    </div>
+
+                    <!-- Tea Towels -->
+                    <div class="product-card reveal reveal-delay-2">
+                        <div class="product-image pattern-home">
+                            <!-- Replace with: <img src="assets/images/home/tea-towels.jpg" alt="Tea Towels"> -->
+                            <span class="placeholder-text">Photo coming soon</span>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">Tea Towels</div>
+                            <div class="product-price">&nbsp;</div>
+                            <span class="product-btn coming-soon">Album Coming Soon</span>
+                        </div>
+                    </div>
+
+                    <!-- Wine Bags -->
+                    <div class="product-card reveal reveal-delay-3">
+                        <div class="product-image pattern-home">
+                            <!-- Replace with: <img src="assets/images/home/wine-bags.jpg" alt="Reusable Wine Bottle Bags"> -->
+                            <span class="placeholder-text">Photo coming soon</span>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">Wine Bottle Bags</div>
+                            <div class="product-price">$6</div>
+                            <span class="product-btn coming-soon">Album Coming Soon</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ========================================
+         CONTACT
+         ======================================== -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-inner">
+                <h2 class="reveal">Want Something?<br>Just Ask.</h2>
+                <p class="contact-subtitle reveal reveal-delay-1">See something you love? Just call or text Patricia. Custom requests welcome &mdash; if it's sarcastic, she'll make it.</p>
+
+                <div class="contact-grid reveal reveal-delay-2">
+                    <a href="tel:6137006677" class="contact-card">
+                        <div class="contact-card-icon">&#128222;</div>
+                        <div class="contact-card-label">Call / Text</div>
+                        <div class="contact-card-value">613-700-6677</div>
+                    </a>
+                    <a href="mailto:patriciapkcjs@hotmail.com" class="contact-card">
+                        <div class="contact-card-icon">&#9993;</div>
+                        <div class="contact-card-label">Email</div>
+                        <div class="contact-card-value">patriciapkcjs@hotmail.com</div>
+                    </a>
+                    <a href="https://www.facebook.com/sarcastic.signage" target="_blank" rel="noopener" class="contact-card">
+                        <div class="contact-card-icon">&#128077;</div>
+                        <div class="contact-card-label">Facebook</div>
+                        <div class="contact-card-value">Sarcastic Signage</div>
+                    </a>
+                </div>
+
+                <span class="contact-note reveal reveal-delay-3">"Custom requests welcome. Motivational quotes... not so much."</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         ADULT 18+ (subtle)
+         ======================================== -->
+    <section class="adult-section">
+        <div class="container">
+            <div class="adult-inner">
+                <div class="adult-label">Adults Only (18+)</div>
+                <div class="adult-title">Magnetic Canvas Signs</div>
+                <div class="adult-price">$5 each</div>
+                <div class="adult-links">
+                    <a href="https://photos.app.goo.gl/cK1VNCKT5wr71AaS8" target="_blank" rel="noopener" class="adult-link">Nature &amp; Animals</a>
+                    <a href="https://photos.app.goo.gl/AdfViuDBsiR4sekLA" target="_blank" rel="noopener" class="adult-link">Weed</a>
+                    <a href="https://photos.app.goo.gl/ZkybrJPwJZ7b4T9" target="_blank" rel="noopener" class="adult-link">Health &amp; Self-care</a>
+                    <a href="https://photos.app.goo.gl/ZAsW8U7gueo1rFzL9" target="_blank" rel="noopener" class="adult-link">People / Funny</a>
+                    <a href="https://photos.app.goo.gl/MntfzXsSxCYFpWCm8" target="_blank" rel="noopener" class="adult-link">Inspiration / Pride / Misc</a>
+                    <a href="https://photos.app.goo.gl/fCGqERX1SLiTjEqM9" target="_blank" rel="noopener" class="adult-link">View All</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         FOOTER
+         ======================================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-brand">Sarcastic Signage</div>
+                <div class="footer-tagline">Handmade with attitude in Ontario, Canada</div>
+                <div class="footer-links">
+                    <a href="tel:6137006677">613-700-6677</a>
+                    <a href="mailto:patriciapkcjs@hotmail.com">Email</a>
+                    <a href="https://www.facebook.com/sarcastic.signage" target="_blank" rel="noopener">Facebook</a>
+                </div>
+                <div class="footer-copy">&copy; 2025 Sarcastic Signage. All rights reserved. Obviously.</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========================================
+         JAVASCRIPT
+         ======================================== -->
+    <script>
+        // --- Mobile Menu Toggle ---
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileLinks = mobileMenu.querySelectorAll('.mobile-nav-link');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('open');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('open');
+            });
+        });
+
+        // --- Nav Shadow on Scroll ---
+        const nav = document.getElementById('nav');
+        let lastScroll = 0;
+
+        window.addEventListener('scroll', () => {
+            const scrollY = window.scrollY;
+            if (scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+            lastScroll = scrollY;
+        }, { passive: true });
+
+        // --- Scroll Reveal (Intersection Observer) ---
+        const revealElements = document.querySelectorAll('.reveal');
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -40px 0px'
+        });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+    </script>
+</body>
+</html>

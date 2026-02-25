@@ -1,0 +1,1318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sarcastic Signage — Handmade with Attitude</title>
+  <meta name="description" content="Handmade sarcastic signs, totes, and gifts by Patricia in Ontario, Canada. Crafted with care and zero filter.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* =============================================
+       CLF TOKENS — Brand-matched: Watercolor + Art Deco
+       Josefin Sans (Art Deco geometric) + DM Sans (body)
+       Palette pulled from Patricia's business card
+       ============================================= */
+    :root {
+      --color-plum:          #4A1942;
+      --color-plum-mid:      #6B2350;
+      --color-plum-light:    #8A3068;
+      --color-crimson:       #8B3A2A;
+      --color-crimson-light: #A84835;
+      --color-amber:         #C87B20;
+      --color-amber-light:   #D99A3A;
+      --color-olive:         #4A6A2A;
+      --color-olive-light:   #5E8535;
+      --color-cream:         #F5E6D0;
+      --color-cream-light:   #FAF3E8;
+      --color-surface:       #FAF3E8;
+      --color-surface-alt:   #F0E4D0;
+      --color-dark:          #1C1117;
+      --color-dark-soft:     #2D1B24;
+      --color-text:          #1C1117;
+      --color-text-muted:    #6B5545;
+      --color-border:        #D8C9B5;
+      --color-error:         #9B2020;
+
+      --font-display: 'Josefin Sans', sans-serif;
+      --font-body:    'DM Sans', system-ui, sans-serif;
+      --font-hand:    'Caveat', cursive;
+
+      --font-size-base:      17px;
+      --line-height-body:    1.65;
+      --line-height-heading: 1.08;
+
+      --nav-h:  64px;
+      --pad-section: clamp(64px, 10vw, 112px);
+      --pad-x:  clamp(20px, 5vw, 48px);
+      --max-w:  1100px;
+      --radius: 6px;
+      --radius-lg: 12px;
+      --radius-pill: 100px;
+
+      --space-xs:  4px;
+      --space-sm:  8px;
+      --space-md:  16px;
+      --space-lg:  24px;
+      --space-xl:  40px;
+      --space-2xl: 64px;
+      --space-3xl: 96px;
+
+      --shadow-sm:  0 1px 4px rgba(28,17,23,0.08);
+      --shadow-md:  0 4px 16px rgba(28,17,23,0.12);
+      --shadow-lg:  0 12px 36px rgba(28,17,23,0.18);
+
+      --transition-fast:   150ms ease;
+      --transition-normal: 280ms ease;
+    }
+
+    /* =============================================
+       RESET
+       ============================================= */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: var(--nav-h); font-size: var(--font-size-base); }
+    body {
+      font-family: var(--font-body);
+      background: var(--color-surface);
+      color: var(--color-text);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { max-width: 100%; display: block; }
+    a   { text-decoration: none; color: inherit; }
+    button { border: none; cursor: pointer; font-family: inherit; background: none; }
+    ul  { list-style: none; }
+    .wrap { width: 100%; max-width: var(--max-w); margin: 0 auto; padding: 0 var(--pad-x); }
+
+    /* =============================================
+       SKIP LINK
+       ============================================= */
+    .skip-link {
+      position: absolute; top: -100%; left: 16px;
+      background: var(--color-plum); color: var(--color-cream);
+      padding: 12px 20px; border-radius: 0 0 var(--radius) var(--radius);
+      font-size: 1rem; font-weight: 500; z-index: 9999;
+      transition: top var(--transition-fast);
+    }
+    .skip-link:focus { top: 0; outline: 3px solid var(--color-amber); outline-offset: 2px; }
+
+    /* =============================================
+       NAV
+       ============================================= */
+    .site-nav {
+      position: fixed; top: 0; left: 0; right: 0;
+      height: var(--nav-h);
+      background: rgba(250,243,232,0.9);
+      backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid transparent;
+      z-index: 100;
+      transition: border-color var(--transition-normal), box-shadow var(--transition-normal);
+    }
+    .site-nav.scrolled { border-bottom-color: var(--color-border); box-shadow: 0 1px 8px rgba(28,17,23,0.05); }
+    .nav-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 100%; max-width: var(--max-w); margin: 0 auto; padding: 0 var(--pad-x);
+    }
+
+    .nav-brand { line-height: 1; }
+    .nav-brand-main {
+      font-family: var(--font-display);
+      font-size: clamp(1rem, 2.2vw, 1.2rem);
+      font-weight: 300;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--color-plum);
+    }
+    .nav-brand-main strong {
+      display: block;
+      font-weight: 700;
+      font-size: 1.15em;
+      letter-spacing: 0.08em;
+    }
+
+    .nav-links { display: flex; align-items: center; gap: clamp(18px, 3vw, 30px); }
+    .nav-links a {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-text-muted);
+      transition: color var(--transition-fast);
+      padding: 4px 0;
+    }
+    .nav-links a:hover,
+    .nav-links a:focus-visible { color: var(--color-plum); }
+    .nav-links a:focus-visible { outline: 2px solid var(--color-plum); outline-offset: 4px; border-radius: 2px; }
+
+    .nav-cta {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: var(--color-plum); color: var(--color-cream);
+      padding: 9px 20px; border-radius: var(--radius-pill);
+      font-family: var(--font-display);
+      font-size: 1rem; font-weight: 600;
+      letter-spacing: 0.06em; text-transform: uppercase;
+      min-height: 44px; white-space: nowrap;
+      transition: background var(--transition-fast), box-shadow var(--transition-fast);
+    }
+    .nav-cta:hover,
+    .nav-cta:focus-visible { background: var(--color-plum-mid); box-shadow: var(--shadow-md); }
+    .nav-cta:focus-visible { outline: 3px solid var(--color-amber); outline-offset: 3px; }
+    .nav-cta svg { width: 14px; height: 14px; }
+
+    .hamburger {
+      display: none; flex-direction: column; gap: 5px; padding: 10px;
+      min-width: 44px; min-height: 44px;
+      align-items: center; justify-content: center; border-radius: var(--radius);
+    }
+    .hamburger:focus-visible { outline: 2px solid var(--color-plum); outline-offset: 2px; }
+    .hamburger span {
+      display: block; width: 20px; height: 2px;
+      background: var(--color-text); border-radius: 1px;
+      transition: transform var(--transition-fast), opacity var(--transition-fast);
+    }
+    .hamburger[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+    .hamburger[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    .mobile-menu {
+      display: none; position: fixed;
+      top: var(--nav-h); left: 0; right: 0; bottom: 0;
+      background: var(--color-surface);
+      padding: var(--space-lg) var(--pad-x); z-index: 99; overflow-y: auto;
+    }
+    .mobile-menu.open { display: block; }
+    .mobile-menu a {
+      display: block; padding: 16px 0; font-size: 1.1rem;
+      font-family: var(--font-display); font-weight: 400;
+      letter-spacing: 0.06em; text-transform: uppercase;
+      color: var(--color-text); border-bottom: 1px solid var(--color-border);
+    }
+    .mobile-menu a:last-child { border-bottom: none; }
+    .mob-cta {
+      margin-top: var(--space-lg) !important;
+      background: var(--color-plum); color: var(--color-cream) !important;
+      padding: 16px !important; text-align: center;
+      border-radius: var(--radius-pill); border-bottom: none !important;
+      font-weight: 600 !important;
+    }
+
+    /* =============================================
+       HERO — watercolor gradient background
+       ============================================= */
+    .hero {
+      min-height: 100vh; min-height: 100svh;
+      display: flex; flex-direction: column; align-items: center; justify-content: center; gap: var(--space-2xl);
+      padding: calc(var(--nav-h) + var(--space-2xl)) var(--pad-x) var(--space-2xl);
+      position: relative; overflow: hidden;
+      /* Watercolor gradient matching business card */
+      background:
+        linear-gradient(135deg,
+          #4A1942 0%,
+          #6B2350 18%,
+          #8B3A2A 35%,
+          #A84835 48%,
+          #C87B20 62%,
+          #8B6E20 75%,
+          #4A6A2A 90%
+        );
+    }
+    /* Organic watercolor texture overlays */
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse at 15% 80%, rgba(74,25,66,0.6) 0%, transparent 50%),
+        radial-gradient(ellipse at 85% 20%, rgba(74,106,42,0.4) 0%, transparent 45%),
+        radial-gradient(ellipse at 50% 50%, rgba(200,123,32,0.2) 0%, transparent 60%),
+        radial-gradient(ellipse at 30% 20%, rgba(139,58,42,0.3) 0%, transparent 40%);
+      pointer-events: none;
+    }
+    /* Subtle grain/paper texture */
+    .hero::after {
+      content: '';
+      position: absolute; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+      background-size: 200px 200px;
+      opacity: 0.5;
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      position: relative; z-index: 1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(32px, 5vw, 64px);
+      align-items: center;
+      max-width: var(--max-w);
+      width: 100%;
+    }
+
+    .hero-content { max-width: 520px; }
+
+    .hero-pill {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(245,230,208,0.2);
+      padding: 7px 16px; border-radius: var(--radius-pill);
+      font-family: var(--font-display);
+      font-size: 1rem; font-weight: 400;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--color-cream);
+      width: fit-content;
+      margin-bottom: var(--space-xl);
+      animation: fadeIn 0.6s ease both;
+    }
+
+    .hero-h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.4rem, 5vw, 4rem);
+      font-weight: 300;
+      line-height: 1.06;
+      color: var(--color-cream);
+      letter-spacing: 0.02em;
+      animation: fadeUp 0.7s ease 0.1s both;
+    }
+    .hero-h1 strong {
+      font-weight: 700;
+      display: block;
+      letter-spacing: 0.04em;
+    }
+    .hero-h1 em {
+      font-weight: 300;
+      font-style: italic;
+      color: var(--color-amber-light);
+    }
+
+    .hero-sub {
+      font-size: clamp(1rem, 1.4vw, 1.1rem);
+      color: rgba(245,230,208,0.92);
+      margin-top: var(--space-lg);
+      line-height: 1.7;
+      max-width: 400px;
+      animation: fadeUp 0.7s ease 0.2s both;
+    }
+
+    .hero-btns {
+      display: flex; align-items: center; gap: var(--space-md); flex-wrap: wrap;
+      margin-top: var(--space-xl);
+      animation: fadeUp 0.7s ease 0.3s both;
+    }
+
+    .btn-cream {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--color-cream); color: var(--color-plum);
+      padding: 14px 28px; border-radius: var(--radius-pill);
+      font-family: var(--font-display);
+      font-size: 1rem; font-weight: 600;
+      letter-spacing: 0.06em; text-transform: uppercase;
+      min-height: 50px;
+      transition: background var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+    }
+    .btn-cream:hover,
+    .btn-cream:focus-visible {
+      background: #fff; transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    }
+    .btn-cream:focus-visible { outline: 3px solid var(--color-amber); outline-offset: 3px; }
+
+    .btn-ghost {
+      display: inline-flex; align-items: center; gap: 8px;
+      border: 1px solid rgba(245,230,208,0.3);
+      color: var(--color-cream);
+      padding: 14px 28px; border-radius: var(--radius-pill);
+      font-family: var(--font-display);
+      font-size: 1rem; font-weight: 400;
+      letter-spacing: 0.06em; text-transform: uppercase;
+      min-height: 50px;
+      transition: border-color var(--transition-fast), background var(--transition-fast);
+    }
+    .btn-ghost:hover,
+    .btn-ghost:focus-visible { border-color: var(--color-cream); background: rgba(245,230,208,0.08); }
+    .btn-ghost:focus-visible { outline: 2px solid var(--color-amber); outline-offset: 3px; }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--space-md);
+      width: 100%; max-width: var(--max-w);
+      position: relative; z-index: 1;
+      border-top: 1px solid rgba(245,230,208,0.18);
+      padding-top: var(--space-xl);
+      animation: fadeUp 0.7s ease 0.45s both;
+    }
+    .hero-stat-num {
+      font-family: var(--font-display);
+      font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+      font-weight: 700;
+      color: var(--color-cream);
+      line-height: 1;
+      letter-spacing: 0.02em;
+    }
+    .hero-stat-label {
+      font-size: 1rem; font-weight: 500;
+      color: rgba(245,230,208,0.82);
+      letter-spacing: 0.04em; text-transform: uppercase;
+      margin-top: 4px;
+    }
+
+    /* Wooden sign on right */
+    .hero-sign-wrap {
+      display: flex; align-items: center; justify-content: center;
+      position: relative;
+      animation: fadeIn 0.8s ease 0.3s both;
+    }
+    .wooden-sign {
+      position: relative;
+      background: #c4883a;
+      background-image:
+        repeating-linear-gradient(90deg, transparent 0, transparent 13px, rgba(0,0,0,0.06) 13px, rgba(0,0,0,0.06) 14px),
+        repeating-linear-gradient(180deg, rgba(255,255,255,0.02) 0, rgba(255,255,255,0.02) 2px, transparent 2px, transparent 7px);
+      padding: clamp(24px, 3.5vw, 44px) clamp(28px, 4vw, 52px);
+      border-radius: 3px; max-width: 310px; width: 88%;
+      border-top: 5px solid #9a6028; border-bottom: 5px solid #9a6028;
+      box-shadow: inset 0 2px 3px rgba(0,0,0,0.2), 0 8px 32px rgba(0,0,0,0.35);
+      animation: signSwing 5.5s ease-in-out infinite;
+    }
+    .wooden-sign::before {
+      content: ''; position: absolute; inset: 7px;
+      border: 1.5px solid rgba(0,0,0,0.12); pointer-events: none;
+    }
+    .sign-text {
+      font-family: var(--font-display);
+      font-size: clamp(1rem, 2vw, 1.4rem);
+      font-weight: 700; line-height: 1.25;
+      color: #1a0c04; text-align: center;
+      letter-spacing: 0.02em;
+    }
+    .sign-text em {
+      display: block; font-family: var(--font-hand);
+      font-weight: 700; font-style: normal;
+      font-size: 1em; color: #4a2010; margin-top: 4px;
+    }
+    .sign-note {
+      position: absolute; font-family: var(--font-hand);
+      font-size: 1rem; color: rgba(245,230,208,0.82); line-height: 1.2;
+    }
+    .sign-note.top { top: -26px; right: -4px; transform: rotate(5deg); }
+    .sign-note.btm { bottom: -22px; left: -2px; transform: rotate(-3deg); }
+
+    @keyframes signSwing { 0%,100% { transform: rotate(-1.2deg); } 50% { transform: rotate(1.2deg); } }
+    @keyframes fadeIn  { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes fadeUp  { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+
+    /* =============================================
+       ABOUT
+       ============================================= */
+    .about {
+      background: var(--color-surface);
+      padding: var(--pad-section) 0;
+    }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 5fr 3fr;
+      gap: clamp(40px, 6vw, 72px);
+      align-items: start;
+    }
+
+    .eyebrow {
+      font-family: var(--font-display);
+      font-size: 1rem; font-weight: 600;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--color-crimson);
+      margin-bottom: var(--space-sm);
+    }
+    .section-heading {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-weight: 300;
+      color: var(--color-plum);
+      line-height: var(--line-height-heading);
+      letter-spacing: 0.01em;
+      margin-bottom: var(--space-xl);
+    }
+    .section-heading strong { font-weight: 700; }
+    .section-sub {
+      font-size: 1rem; color: var(--color-text-muted);
+      line-height: 1.65; max-width: 520px;
+    }
+
+    .about-text {
+      font-size: 1rem; line-height: var(--line-height-body);
+      color: var(--color-text);
+    }
+    .about-text + .about-text { margin-top: var(--space-md); }
+
+    .about-sidebar { padding-top: var(--space-xs); }
+    .about-quote {
+      border-left: 3px solid var(--color-amber);
+      padding-left: var(--space-lg);
+      margin-bottom: var(--space-xl);
+    }
+    .about-quote blockquote {
+      font-family: var(--font-hand);
+      font-size: clamp(1.3rem, 2.5vw, 1.6rem);
+      line-height: 1.35; color: var(--color-plum);
+    }
+    .about-quote cite {
+      display: block; margin-top: var(--space-sm);
+      font-family: var(--font-display);
+      font-size: 1rem; font-weight: 600;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--color-text-muted); font-style: normal;
+    }
+
+    .about-card {
+      background: var(--color-plum); color: var(--color-cream);
+      padding: var(--space-xl); border-radius: var(--radius-lg);
+    }
+    .about-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.1rem; font-weight: 600;
+      letter-spacing: 0.04em; margin-bottom: var(--space-md);
+    }
+    .about-card p {
+      font-size: 1rem; color: rgba(245,230,208,0.88);
+      line-height: 1.6; margin-bottom: var(--space-md);
+    }
+    .about-card a {
+      display: inline-flex; align-items: center; gap: 6px;
+      color: var(--color-amber-light); font-size: 1rem; font-weight: 500;
+      min-height: 44px; text-decoration: underline;
+      text-decoration-color: transparent; text-underline-offset: 3px;
+      transition: text-decoration-color var(--transition-fast);
+    }
+    .about-card a:hover { text-decoration-color: currentColor; }
+    .about-card a:focus-visible { outline: 2px solid var(--color-amber); outline-offset: 3px; border-radius: 2px; }
+    .about-card a + a { margin-top: var(--space-xs); display: flex; }
+
+    /* =============================================
+       PRODUCTS — watercolor-tinted section
+       ============================================= */
+    .products {
+      background: var(--color-surface-alt);
+      padding: var(--pad-section) 0;
+      border-top: 1px solid var(--color-border);
+    }
+    .products-header { margin-bottom: var(--space-2xl); }
+
+    .cat-block + .cat-block { margin-top: clamp(48px, 8vw, 72px); }
+
+    .cat-header {
+      display: flex; align-items: baseline; gap: var(--space-md);
+      padding-bottom: var(--space-md);
+      border-bottom: 2px solid var(--color-plum);
+      margin-bottom: var(--space-md);
+    }
+    .cat-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.15rem, 2.2vw, 1.5rem);
+      font-weight: 700; color: var(--color-plum);
+      letter-spacing: 0.04em; text-transform: uppercase;
+    }
+    .cat-count {
+      background: var(--color-plum); color: var(--color-cream);
+      font-family: var(--font-display);
+      font-size: 1rem; font-weight: 600;
+      letter-spacing: 0.06em;
+      padding: 3px 10px; border-radius: var(--radius-pill);
+    }
+    .cat-desc {
+      font-size: 1rem; font-style: italic;
+      color: var(--color-text-muted); line-height: 1.6;
+      margin-bottom: var(--space-lg); max-width: 520px;
+    }
+
+    /* Grid layouts */
+    .grid { display: grid; gap: var(--space-md); }
+    .g-2-1 { grid-template-columns: 1.35fr 1fr; }
+    .g-1-1 { grid-template-columns: 1fr 1fr; }
+    .g-3   { grid-template-columns: repeat(3, 1fr); }
+    .g-fill { grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); }
+    .g-row  { grid-template-columns: 1fr; }
+
+    /* Product card */
+    .pc {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      overflow: hidden; display: flex; flex-direction: column;
+      transition: box-shadow var(--transition-normal), transform var(--transition-normal);
+    }
+    .pc:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); }
+    .pc.dim { opacity: 0.55; }
+    .pc.dim:hover { opacity: 0.65; transform: none; box-shadow: none; }
+    .pc.tall { grid-row: span 2; }
+    .pc.wide {
+      display: grid; grid-template-columns: 100px 1fr auto;
+      align-items: center;
+    }
+
+    .pc-img {
+      display: flex; align-items: center; justify-content: center;
+      flex-direction: column; gap: 6px;
+      padding: var(--space-lg); min-height: 120px;
+    }
+    .tall .pc-img { flex: 1; min-height: 170px; }
+    .wide .pc-img { min-height: auto; padding: var(--space-md); min-width: 100px; }
+    .pc-img-icon { font-size: 1.8rem; opacity: 0.25; line-height: 1; }
+    .pc-img-text {
+      font-family: var(--font-hand); font-size: 1rem;
+      color: var(--color-text-muted); text-align: center; opacity: 0.6;
+    }
+
+    .bg-wood { background: linear-gradient(135deg, #F2E4CC, #DFC9A0); }
+    .bg-tote { background: linear-gradient(135deg, #D8E8F2, #B5CDE0); }
+    .bg-acc  { background: linear-gradient(135deg, #F2D5D0, #E0B8B0); }
+    .bg-wear { background: linear-gradient(135deg, #D0ECD0, #B5DEB5); }
+    .bg-home { background: linear-gradient(135deg, #EDE4CC, #D8CFA4); }
+
+    .pc-body {
+      padding: var(--space-lg); display: flex; flex-direction: column;
+      gap: 5px; flex: 1;
+    }
+    .pc-name {
+      font-family: var(--font-display);
+      font-size: 1rem; font-weight: 600;
+      color: var(--color-text); line-height: 1.2;
+      letter-spacing: 0.02em;
+    }
+    .tall .pc-name { font-size: 1.15rem; }
+    .pc-detail { font-size: 1rem; color: var(--color-text-muted); line-height: 1.55; }
+    .pc-price {
+      font-family: var(--font-display);
+      font-size: 1.05rem; font-weight: 700;
+      color: var(--color-crimson);
+      margin-top: auto; padding-top: var(--space-sm);
+    }
+    .soon-tag {
+      display: inline-flex; align-items: center;
+      font-family: var(--font-display);
+      font-size: 1rem; font-weight: 600;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--color-text-muted); background: var(--color-surface-alt);
+      border: 1px dashed var(--color-border);
+      padding: 3px 10px; border-radius: var(--radius-pill); width: fit-content;
+    }
+
+    .pc-act { padding: 0 var(--space-lg) var(--space-lg); }
+    .wide .pc-act { padding: var(--space-md) var(--space-lg); }
+    .btn-album {
+      display: flex; align-items: center; justify-content: center; gap: 6px;
+      width: 100%;
+      background: var(--color-plum); color: var(--color-cream);
+      padding: 11px 16px; border-radius: var(--radius);
+      font-family: var(--font-display);
+      font-size: 1rem; font-weight: 600;
+      letter-spacing: 0.06em; text-transform: uppercase;
+      min-height: 44px;
+      transition: background var(--transition-fast), box-shadow var(--transition-fast);
+    }
+    .btn-album:hover,
+    .btn-album:focus-visible { background: var(--color-plum-mid); box-shadow: var(--shadow-md); }
+    .btn-album:focus-visible { outline: 3px solid var(--color-amber); outline-offset: 3px; }
+
+    .btn-soon {
+      display: flex; align-items: center; justify-content: center;
+      width: 100%; color: var(--color-text-muted);
+      border: 1px dashed var(--color-border);
+      padding: 11px 16px; border-radius: var(--radius);
+      font-size: 1rem; font-style: italic; min-height: 44px;
+    }
+
+    /* Chips */
+    .chips { display: flex; flex-wrap: wrap; gap: var(--space-xs); margin-top: var(--space-sm); }
+    .chip {
+      display: inline-flex; align-items: center; gap: 5px;
+      background: var(--color-surface-alt); border: 1px solid var(--color-border);
+      border-radius: var(--radius-pill); padding: 5px 12px;
+      font-size: 1rem; font-weight: 500; color: var(--color-text-muted);
+      min-height: 30px;
+      transition: border-color var(--transition-fast), color var(--transition-fast);
+    }
+    .chip:hover, .chip:focus-visible { border-color: var(--color-plum); color: var(--color-plum); }
+    .chip:focus-visible { outline: 2px solid var(--color-plum); outline-offset: 2px; }
+    .chip-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+
+    /* =============================================
+       CONTACT — watercolor dark
+       ============================================= */
+    .contact {
+      padding: var(--pad-section) 0;
+      position: relative; overflow: hidden;
+      background:
+        linear-gradient(160deg,
+          #4A1942 0%, #5A2148 25%,
+          #6B2350 45%, #5A2A30 65%,
+          #3A3A28 85%, #2A4A2A 100%
+        );
+    }
+    .contact::before {
+      content: ''; position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse at 20% 30%, rgba(200,123,32,0.12), transparent 50%),
+        radial-gradient(ellipse at 80% 70%, rgba(74,106,42,0.1), transparent 50%);
+      pointer-events: none;
+    }
+    .contact::after {
+      content: ''; position: absolute; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+      background-size: 200px 200px; opacity: 0.4; pointer-events: none;
+    }
+    .contact-grid {
+      position: relative; z-index: 1;
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: clamp(40px, 6vw, 72px); align-items: start;
+    }
+
+    .contact-heading {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 300; line-height: 1.08;
+      color: var(--color-cream); letter-spacing: 0.01em;
+      margin-bottom: var(--space-lg);
+    }
+    .contact-heading strong { font-weight: 700; }
+    .contact-body {
+      font-size: 1rem; color: rgba(245,230,208,0.88);
+      line-height: 1.7; margin-bottom: var(--space-xl);
+    }
+
+    .c-item {
+      display: flex; align-items: center; gap: var(--space-md);
+      padding: var(--space-lg);
+      border: 1px solid rgba(245,230,208,0.1);
+      border-radius: var(--radius-lg); margin-bottom: var(--space-sm);
+      color: var(--color-cream); min-height: 68px;
+      transition: border-color var(--transition-fast), background var(--transition-fast);
+    }
+    .c-item:hover, .c-item:focus-visible {
+      border-color: var(--color-amber); background: rgba(200,123,32,0.08);
+    }
+    .c-item:focus-visible { outline: 2px solid var(--color-amber); outline-offset: 3px; }
+    .c-icon {
+      width: 42px; height: 42px;
+      background: rgba(245,230,208,0.08); border-radius: var(--radius);
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .c-icon svg { width: 18px; height: 18px; color: var(--color-amber-light); }
+    .c-label {
+      font-family: var(--font-display);
+      font-size: 1rem; font-weight: 600;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: rgba(245,230,208,0.78); margin-bottom: 2px;
+    }
+    .c-value { font-size: 1rem; color: var(--color-cream); }
+
+    .how-box {
+      background: rgba(245,230,208,0.05);
+      border: 1px solid rgba(245,230,208,0.08);
+      border-radius: var(--radius-lg); padding: var(--space-xl);
+    }
+    .how-box h3 {
+      font-family: var(--font-display);
+      font-size: 1.2rem; font-weight: 600;
+      color: var(--color-cream); letter-spacing: 0.04em;
+      margin-bottom: var(--space-lg);
+    }
+    .how-box ol {
+      list-style: none; counter-reset: steps;
+      display: flex; flex-direction: column; gap: var(--space-md);
+    }
+    .how-box ol li {
+      counter-increment: steps;
+      display: flex; gap: var(--space-md);
+      font-size: 1rem; color: rgba(245,230,208,0.88); line-height: 1.6;
+    }
+    .how-box ol li::before {
+      content: counter(steps);
+      font-family: var(--font-display);
+      font-size: 1.1rem; font-weight: 700;
+      color: var(--color-amber); min-width: 20px; flex-shrink: 0;
+    }
+    .how-quip {
+      margin-top: var(--space-xl);
+      font-family: var(--font-hand); font-size: 1.05rem;
+      color: rgba(245,230,208,0.78); line-height: 1.4;
+      border-top: 1px solid rgba(245,230,208,0.06);
+      padding-top: var(--space-lg);
+    }
+
+    /* =============================================
+       ADULT 18+
+       ============================================= */
+    .adults {
+      background: var(--color-surface);
+      border-top: 1px solid var(--color-border);
+      padding: clamp(36px, 5vw, 56px) 0;
+    }
+    .adults-flex {
+      display: flex; align-items: flex-start;
+      gap: var(--space-2xl); flex-wrap: wrap;
+    }
+    .adults-label { flex-shrink: 0; }
+    .adults-badge-row { display: flex; align-items: center; gap: var(--space-sm); }
+    .adults-badge {
+      background: rgba(155,32,32,0.08); color: #9B2020;
+      border: 1px solid rgba(155,32,32,0.2);
+      padding: 4px 12px; border-radius: var(--radius-pill);
+      font-family: var(--font-display);
+      font-size: 1rem; font-weight: 700;
+      letter-spacing: 0.06em; text-transform: uppercase;
+    }
+    .adults-title {
+      font-family: var(--font-display);
+      font-size: 1rem; font-weight: 600;
+      color: var(--color-text-muted);
+      letter-spacing: 0.04em; text-transform: uppercase;
+    }
+    .adults-content { flex: 1; min-width: 260px; }
+    .adults-desc {
+      font-size: 1rem; color: var(--color-text-muted);
+      line-height: 1.6; margin-bottom: var(--space-md);
+    }
+    .a-links { display: flex; flex-wrap: wrap; gap: var(--space-xs); }
+    .a-link {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 8px 14px; border: 1px solid var(--color-border);
+      border-radius: var(--radius); font-size: 1rem;
+      color: var(--color-text-muted); min-height: 44px;
+      transition: border-color var(--transition-fast), color var(--transition-fast);
+    }
+    .a-link:hover, .a-link:focus-visible { border-color: #9B2020; color: #9B2020; }
+    .a-link:focus-visible { outline: 2px solid #9B2020; outline-offset: 3px; }
+    .a-link.all {
+      border-style: dashed; border-color: rgba(155,32,32,0.3);
+      color: #9B2020; font-weight: 600;
+    }
+
+    /* =============================================
+       FOOTER
+       ============================================= */
+    .footer {
+      background: var(--color-dark);
+      border-top: 3px solid var(--color-amber);
+      padding: var(--space-xl) 0;
+    }
+    .footer-inner {
+      display: flex; flex-wrap: wrap; align-items: center;
+      justify-content: space-between; gap: var(--space-lg);
+    }
+    .footer-brand {
+      font-family: var(--font-display);
+      font-size: 1rem; font-weight: 300;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--color-cream);
+    }
+    .footer-brand strong { font-weight: 700; }
+    .footer-tag {
+      font-family: var(--font-hand); font-size: 1rem;
+      color: rgba(245,230,208,0.78); margin-top: 1px;
+    }
+    .footer-links { display: flex; flex-wrap: wrap; gap: var(--space-lg); }
+    .footer-links a {
+      font-size: 1rem; color: rgba(245,230,208,0.82);
+      min-height: 44px; display: inline-flex; align-items: center;
+      transition: color var(--transition-fast);
+    }
+    .footer-links a:hover { color: var(--color-amber-light); }
+    .footer-links a:focus-visible { outline: 2px solid var(--color-amber); outline-offset: 3px; border-radius: 2px; }
+    .footer-copy {
+      font-size: 1rem; color: rgba(245,230,208,0.65);
+      text-align: center;
+      padding-top: var(--space-lg); border-top: 1px solid rgba(245,230,208,0.05);
+      margin-top: var(--space-lg);
+    }
+
+    /* =============================================
+       SCROLL REVEAL
+       ============================================= */
+    .reveal {
+      opacity: 0; transform: translateY(16px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .reveal.visible { opacity: 1; transform: none; }
+
+    /* =============================================
+       RESPONSIVE
+       ============================================= */
+    @media (max-width: 1024px) {
+      .hero-inner { grid-template-columns: 1fr; text-align: center; }
+      .hero-content { max-width: none; }
+      .hero-pill { margin-left: auto; margin-right: auto; }
+      .hero-sub { max-width: none; margin-left: auto; margin-right: auto; }
+      .hero-btns { justify-content: center; }
+      .hero-stats { justify-items: center; }
+      .hero-sign-wrap { margin-top: var(--space-xl); }
+      .about-grid { grid-template-columns: 1fr; }
+      .about-sidebar { padding-top: 0; }
+      .contact-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links, .nav-cta { display: none; }
+      .hamburger { display: flex; }
+      .hero { min-height: auto; padding-bottom: var(--space-xl); }
+      .hero-sign-wrap { display: none; }
+      .hero-stats { grid-template-columns: repeat(2, 1fr); gap: var(--space-lg); }
+      .g-2-1, .g-1-1, .g-3 { grid-template-columns: 1fr; }
+      .pc.tall { grid-row: auto; }
+      .pc.wide { grid-template-columns: 1fr; }
+      .wide .pc-img { min-height: 100px; }
+      .adults-flex { flex-direction: column; gap: var(--space-lg); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+      .reveal { opacity: 1; transform: none; }
+      .wooden-sign { animation: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-nav" id="site-nav" role="banner">
+    <div class="nav-inner">
+      <a href="#" class="nav-brand" aria-label="Sarcastic Signage home">
+        <span class="nav-brand-main">Sarcastic<strong>Signage</strong></span>
+      </a>
+      <nav aria-label="Main navigation">
+        <ul class="nav-links" role="list">
+          <li><a href="#products">Products</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#adults">18+</a></li>
+        </ul>
+      </nav>
+      <a href="tel:6137006677" class="nav-cta" aria-label="Call or text Patricia at 613-700-6677">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+        613-700-6677
+      </a>
+      <button class="hamburger" id="hamburger" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobile-menu" role="navigation" aria-label="Mobile navigation">
+      <a href="#products">Products</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="#adults">18+ Signs</a>
+      <a href="tel:6137006677" class="mob-cta">Call / Text: 613-700-6677</a>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-h1">
+      <div class="hero-inner">
+        <div class="hero-content">
+          <span class="hero-pill" aria-hidden="true">Handmade in Ontario, Canada</span>
+          <h1 class="hero-h1" id="hero-h1">
+            Signs That Say<br>
+            <strong>What You're</strong>
+            <em>Thinking</em>
+          </h1>
+          <p class="hero-sub">Handmade signs, totes &amp; gifts with zero filter. Crafted by hand. Delivered with attitude.</p>
+          <div class="hero-btns">
+            <a href="#products" class="btn-cream">Browse Products</a>
+            <a href="#contact" class="btn-ghost">Get in Touch</a>
+          </div>
+        </div>
+        <div class="hero-sign-wrap" aria-hidden="true">
+          <span class="sign-note top">yes, it's real wood &darr;</span>
+          <div class="wooden-sign">
+            <p class="sign-text">I'm Not Arguing.<br>I'm Just Explaining<br>Why I'm Right.<em>-- a sign, probably</em></p>
+          </div>
+          <span class="sign-note btm">handmade by Patricia</span>
+        </div>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <p class="hero-stat-num">200+</p>
+          <p class="hero-stat-label">Tote Designs</p>
+        </div>
+        <div class="hero-stat">
+          <p class="hero-stat-num">100+</p>
+          <p class="hero-stat-label">Pouch Designs</p>
+        </div>
+        <div class="hero-stat">
+          <p class="hero-stat-num">15+</p>
+          <p class="hero-stat-label">Product Types</p>
+        </div>
+        <div class="hero-stat">
+          <p class="hero-stat-num">100%</p>
+          <p class="hero-stat-label">Handmade</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="about" aria-labelledby="about-heading">
+      <div class="wrap">
+        <div class="about-grid reveal">
+          <div>
+            <p class="eyebrow">The Story</p>
+            <h2 class="section-heading" id="about-heading"><strong>Crafted</strong> in Ontario.<br>Filtered by <strong>Nobody.</strong></h2>
+            <p class="about-text">Sarcastic Signage is a one-woman operation run by Patricia out of Ontario, Canada. Every product is made by hand — no factories, no mass production, no corporate inspirational quotes about "living, laughing, and loving."</p>
+            <p class="about-text">What started as a hobby turned into a full crafting obsession. Wooden signs, tote bags, pouches, apparel, accessories — if Patricia can put a sarcastic saying on it, she probably already has. Over 200 tote designs and counting.</p>
+          </div>
+          <div class="about-sidebar">
+            <div class="about-quote">
+              <blockquote>"I don't do inspirational. I do relatable."</blockquote>
+              <cite>Patricia, Chief Sarcasm Officer</cite>
+            </div>
+            <div class="about-card">
+              <h3>Ready to Order?</h3>
+              <p>Browse the photos, pick your favourites, and contact Patricia directly. Custom requests always welcome.</p>
+              <a href="tel:6137006677" aria-label="Call or text Patricia at 613-700-6677">Call / Text: 613-700-6677 &rarr;</a>
+              <a href="mailto:patriciapkcjs@hotmail.com" aria-label="Email Patricia">Email Patricia &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section class="products" id="products" aria-labelledby="products-heading">
+      <div class="wrap">
+        <div class="products-header reveal">
+          <p class="eyebrow">The Collection</p>
+          <h2 class="section-heading" id="products-heading"><strong>Browse</strong> &amp; Shop</h2>
+          <p class="section-sub">Click any item to view the full photo album. See something you love? Contact Patricia to order.</p>
+        </div>
+
+        <!-- WOODEN SIGNS -->
+        <div class="cat-block reveal">
+          <div class="cat-header">
+            <h3 class="cat-title">Wooden Signs</h3>
+            <span class="cat-count">4 items</span>
+          </div>
+          <p class="cat-desc">The flagship product — bold sayings on quality wood. Two sizes, framed or unframed.</p>
+          <div class="grid g-2-1">
+            <article class="pc tall">
+              <div class="pc-img bg-wood" style="flex:1;">
+                <span class="pc-img-icon" aria-hidden="true">&#x1FAB5;</span>
+                <span class="pc-img-text">Photo album available</span>
+              </div>
+              <div class="pc-body">
+                <h4 class="pc-name">5&times;7 Unframed Signs</h4>
+                <p class="pc-detail">Small but mighty. Perfect for shelves, ledges, or any surface that needs attitude.</p>
+                <p class="pc-price">$15</p>
+              </div>
+              <div class="pc-act">
+                <a href="https://photos.app.goo.gl/TgeMebcWwSzzK1Cg9" target="_blank" rel="noopener noreferrer" class="btn-album" aria-label="View 5 by 7 unframed signs on Google Photos">View Album &rarr;</a>
+              </div>
+            </article>
+            <div style="display:flex;flex-direction:column;gap:var(--space-md);">
+              <article class="pc" style="flex:1;">
+                <div class="pc-img bg-wood"><span class="pc-img-icon" aria-hidden="true">&#x1F5BC;&#xFE0F;</span></div>
+                <div class="pc-body">
+                  <h4 class="pc-name">5&times;7 Pre-framed</h4>
+                  <p class="pc-detail">Ready to hang right out of the package.</p>
+                  <p class="pc-price">$15</p>
+                </div>
+                <div class="pc-act">
+                  <a href="https://photos.app.goo.gl/CZ9viWsWYtvU8B886" target="_blank" rel="noopener noreferrer" class="btn-album" aria-label="View 5 by 7 pre-framed signs on Google Photos">View Album &rarr;</a>
+                </div>
+              </article>
+              <article class="pc" style="flex:1;">
+                <div class="pc-img bg-wood"><span class="pc-img-icon" aria-hidden="true">&#x1FAB5;</span></div>
+                <div class="pc-body">
+                  <h4 class="pc-name">8&times;10 Unframed</h4>
+                  <p class="pc-detail">More surface area for more elaborate opinions.</p>
+                  <p class="pc-price">$20</p>
+                </div>
+                <div class="pc-act">
+                  <a href="https://photos.app.goo.gl/yVk8xjSjenVhzvfa7" target="_blank" rel="noopener noreferrer" class="btn-album" aria-label="View 8 by 10 unframed signs on Google Photos">View Album &rarr;</a>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="grid g-row" style="margin-top:var(--space-md);">
+            <article class="pc wide">
+              <div class="pc-img bg-wood"><span class="pc-img-icon" aria-hidden="true">&#x1F5BC;&#xFE0F;</span></div>
+              <div class="pc-body">
+                <h4 class="pc-name">8&times;10 Pre-framed Signs</h4>
+                <p class="pc-detail">Larger, framed, and ready to command a wall.</p>
+                <p class="pc-price" style="padding-top:4px;">$20</p>
+              </div>
+              <div class="pc-act">
+                <a href="https://photos.app.goo.gl/vkrEcV8fTVEnizqy8" target="_blank" rel="noopener noreferrer" class="btn-album" style="width:auto;padding:10px 20px;" aria-label="View 8 by 10 pre-framed signs on Google Photos">View Album &rarr;</a>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- TOTES & POUCHES -->
+        <div class="cat-block reveal">
+          <div class="cat-header">
+            <h3 class="cat-title">Tote Bags &amp; Pouches</h3>
+            <span class="cat-count">2 items</span>
+          </div>
+          <p class="cat-desc">Over 200 tote designs across five colours. Plus 100+ zippered pouches.</p>
+          <div class="grid g-2-1">
+            <article class="pc">
+              <div class="pc-img bg-tote">
+                <span class="pc-img-icon" aria-hidden="true">&#x1F6CD;&#xFE0F;</span>
+                <span class="pc-img-text">200+ designs</span>
+              </div>
+              <div class="pc-body">
+                <h4 class="pc-name">All Tote Bags</h4>
+                <p class="pc-detail">200+ designs. Browse by colour or see the full collection.</p>
+                <div class="chips">
+                  <a href="https://photos.app.goo.gl/Caa1ELRAju7qfP3h9" target="_blank" rel="noopener noreferrer" class="chip" aria-label="View natural canvas tote bags"><span class="chip-dot" style="background:#f5f0e0;border:1px solid #ccc;" aria-hidden="true"></span> Natural</a>
+                  <a href="https://photos.app.goo.gl/gosaf5Vu4JGgtzLX9" target="_blank" rel="noopener noreferrer" class="chip" aria-label="View black tote bags"><span class="chip-dot" style="background:#222;" aria-hidden="true"></span> Black</a>
+                  <a href="https://photos.app.goo.gl/3Vdkraczxc1Lixje6" target="_blank" rel="noopener noreferrer" class="chip" aria-label="View navy tote bags"><span class="chip-dot" style="background:#1b2a4a;" aria-hidden="true"></span> Navy</a>
+                  <a href="https://photos.app.goo.gl/SdvNZEvyy5w4XCkh6" target="_blank" rel="noopener noreferrer" class="chip" aria-label="View burgundy tote bags"><span class="chip-dot" style="background:#6b1c2a;" aria-hidden="true"></span> Burgundy</a>
+                  <a href="https://photos.app.goo.gl/7rCnBxgExFucbhhY6" target="_blank" rel="noopener noreferrer" class="chip" aria-label="View grey tote bags"><span class="chip-dot" style="background:#8a8a8a;" aria-hidden="true"></span> Grey</a>
+                </div>
+                <p class="pc-price">$15</p>
+              </div>
+              <div class="pc-act">
+                <a href="https://photos.app.goo.gl/9z4P55iuCs4CJNqM7" target="_blank" rel="noopener noreferrer" class="btn-album" aria-label="View all tote bag designs on Google Photos">View All Totes &rarr;</a>
+              </div>
+            </article>
+            <article class="pc">
+              <div class="pc-img bg-tote">
+                <span class="pc-img-icon" aria-hidden="true">&#x1F45C;</span>
+                <span class="pc-img-text">100+ designs</span>
+              </div>
+              <div class="pc-body">
+                <h4 class="pc-name">Zippered Pouches</h4>
+                <p class="pc-detail">100+ designs. For makeup, coins, or anything worth keeping together.</p>
+                <p class="pc-price">$6</p>
+              </div>
+              <div class="pc-act">
+                <a href="https://photos.app.goo.gl/qEg9GaAJa5RSPjsq9" target="_blank" rel="noopener noreferrer" class="btn-album" aria-label="View zippered pouches on Google Photos">View Album &rarr;</a>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- ACCESSORIES -->
+        <div class="cat-block reveal">
+          <div class="cat-header">
+            <h3 class="cat-title">Accessories</h3>
+            <span class="cat-count">2 items</span>
+          </div>
+          <div class="grid g-1-1">
+            <article class="pc">
+              <div class="pc-img bg-acc">
+                <span class="pc-img-icon" aria-hidden="true">&#x1F40A;</span>
+                <span class="pc-img-text">Photo album available</span>
+              </div>
+              <div class="pc-body">
+                <h4 class="pc-name">Silicone Croc Charms</h4>
+                <p class="pc-detail">Tiny attitude for your shoes. Clips onto Crocs and Croc-style footwear.</p>
+                <p class="pc-price">$2 each &middot; 3 for $5</p>
+              </div>
+              <div class="pc-act">
+                <a href="https://photos.app.goo.gl/jqK1BJn38Sqz7NGcA" target="_blank" rel="noopener noreferrer" class="btn-album" aria-label="View Croc charms on Google Photos">View Album &rarr;</a>
+              </div>
+            </article>
+            <article class="pc dim">
+              <div class="pc-img bg-acc">
+                <span class="pc-img-icon" aria-hidden="true">&#x1F5DD;&#xFE0F;</span>
+                <span class="pc-img-text">Coming soon</span>
+              </div>
+              <div class="pc-body">
+                <h4 class="pc-name">Key Chains &amp; Zipper Pulls</h4>
+                <p class="pc-detail">Sarcasm for your keys. Album coming before launch.</p>
+                <p class="pc-price">$7 each &middot; 3 for $20</p>
+                <span class="soon-tag">Coming Soon</span>
+              </div>
+              <div class="pc-act"><span class="btn-soon">Album Coming Soon</span></div>
+            </article>
+          </div>
+        </div>
+
+        <!-- APPAREL -->
+        <div class="cat-block reveal">
+          <div class="cat-header">
+            <h3 class="cat-title">Apparel</h3>
+            <span class="cat-count">4 items</span>
+          </div>
+          <p class="cat-desc">Photo albums coming before launch. Contact Patricia for current stock.</p>
+          <div class="grid g-fill">
+            <article class="pc dim">
+              <div class="pc-img bg-wear"><span class="pc-img-icon" aria-hidden="true">&#x1F455;</span></div>
+              <div class="pc-body"><h4 class="pc-name">T-Shirts</h4><p class="pc-price">$20</p><span class="soon-tag">Coming Soon</span></div>
+              <div class="pc-act"><span class="btn-soon">Album Coming Soon</span></div>
+            </article>
+            <article class="pc dim">
+              <div class="pc-img bg-wear"><span class="pc-img-icon" aria-hidden="true">&#x1F9E2;</span></div>
+              <div class="pc-body"><h4 class="pc-name">Baseball Caps</h4><p class="pc-price">$15</p><span class="soon-tag">Coming Soon</span></div>
+              <div class="pc-act"><span class="btn-soon">Album Coming Soon</span></div>
+            </article>
+            <article class="pc dim">
+              <div class="pc-img bg-wear"><span class="pc-img-icon" aria-hidden="true">&#x1F393;</span></div>
+              <div class="pc-body"><h4 class="pc-name">Swiftie Toques</h4><p class="pc-price">$15</p><span class="soon-tag">Coming Soon</span></div>
+              <div class="pc-act"><span class="btn-soon">Album Coming Soon</span></div>
+            </article>
+            <article class="pc dim">
+              <div class="pc-img bg-wear"><span class="pc-img-icon" aria-hidden="true">&#x1F468;&#x200D;&#x1F373;</span></div>
+              <div class="pc-body"><h4 class="pc-name">BBQ Aprons</h4><p class="pc-price">$8 &ndash; $15</p><span class="soon-tag">Coming Soon</span></div>
+              <div class="pc-act"><span class="btn-soon">Album Coming Soon</span></div>
+            </article>
+          </div>
+        </div>
+
+        <!-- HOME & KITCHEN -->
+        <div class="cat-block reveal">
+          <div class="cat-header">
+            <h3 class="cat-title">Home &amp; Kitchen</h3>
+            <span class="cat-count">3 items</span>
+          </div>
+          <p class="cat-desc">Albums coming before launch. Contact Patricia for availability.</p>
+          <div class="grid g-3">
+            <article class="pc dim">
+              <div class="pc-img bg-home"><span class="pc-img-icon" aria-hidden="true">&#x1F373;</span></div>
+              <div class="pc-body"><h4 class="pc-name">Pot Holders</h4><span class="soon-tag">Coming Soon</span></div>
+              <div class="pc-act"><span class="btn-soon">Album Coming Soon</span></div>
+            </article>
+            <article class="pc dim">
+              <div class="pc-img bg-home"><span class="pc-img-icon" aria-hidden="true">&#x1F9C7;</span></div>
+              <div class="pc-body"><h4 class="pc-name">Tea Towels</h4><span class="soon-tag">Coming Soon</span></div>
+              <div class="pc-act"><span class="btn-soon">Album Coming Soon</span></div>
+            </article>
+            <article class="pc dim">
+              <div class="pc-img bg-home"><span class="pc-img-icon" aria-hidden="true">&#x1F377;</span></div>
+              <div class="pc-body"><h4 class="pc-name">Wine Bottle Bags</h4><p class="pc-price">$6</p><span class="soon-tag">Coming Soon</span></div>
+              <div class="pc-act"><span class="btn-soon">Album Coming Soon</span></div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact" aria-labelledby="contact-heading">
+      <div class="wrap">
+        <div class="contact-grid">
+          <div class="reveal">
+            <p class="eyebrow" style="color:var(--color-amber-light);">How to Order</p>
+            <h2 class="contact-heading" id="contact-heading"><strong>Want Something?</strong><br>Just Ask.</h2>
+            <p class="contact-body">See something you love? Reach out to Patricia directly. Custom requests welcome — if it's sarcastic, she can probably make it.</p>
+            <a href="tel:6137006677" class="c-item" aria-label="Call or text Patricia at 613-700-6677">
+              <div class="c-icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg></div>
+              <div><p class="c-label">Call or Text</p><p class="c-value">613-700-6677</p></div>
+            </a>
+            <a href="mailto:patriciapkcjs@hotmail.com" class="c-item" aria-label="Email Patricia at patriciapkcjs@hotmail.com">
+              <div class="c-icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></div>
+              <div><p class="c-label">Email</p><p class="c-value">patriciapkcjs@hotmail.com</p></div>
+            </a>
+            <a href="https://facebook.com/sarcastic.signage" target="_blank" rel="noopener noreferrer" class="c-item" aria-label="Find Sarcastic Signage on Facebook (opens in new tab)">
+              <div class="c-icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></div>
+              <div><p class="c-label">Facebook</p><p class="c-value">sarcastic.signage</p></div>
+            </a>
+          </div>
+          <div class="how-box reveal">
+            <h3>How It Works</h3>
+            <ol>
+              <li>Browse the photo albums linked in the product list above.</li>
+              <li>Find something you love — screenshot it or note the item name.</li>
+              <li>Call, text, or email Patricia to arrange purchase.</li>
+              <li>Pay by Interac e-Transfer or cash. Pickup or local Ontario delivery.</li>
+            </ol>
+            <p class="how-quip">"No, we don't ship internationally. Yes, we've thought about it. No, we still won't."</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ADULT 18+ -->
+    <section class="adults" id="adults" aria-labelledby="adults-heading">
+      <div class="wrap">
+        <div class="adults-flex">
+          <div class="adults-label">
+            <div class="adults-badge-row">
+              <span class="adults-badge" aria-label="Adults only, 18 and over">18+</span>
+              <h2 class="adults-title" id="adults-heading">Adults Only</h2>
+            </div>
+          </div>
+          <div class="adults-content">
+            <p class="adults-desc">Magnetic canvas signs for adults who appreciate humour that's a little more... unfiltered. $5 each. Must be 18+ to purchase.</p>
+            <nav aria-label="Adult 18+ product collections">
+              <ul class="a-links" role="list">
+                <li><a href="https://photos.app.goo.gl/cK1VNCKT5wr71AaS8" target="_blank" rel="noopener noreferrer" class="a-link" aria-label="View adult Nature and Animals signs, $5 each">&#x1F33F; Nature &amp; Animals</a></li>
+                <li><a href="https://photos.app.goo.gl/AdfViuDBsiR4sekLA" target="_blank" rel="noopener noreferrer" class="a-link" aria-label="View adult Weed signs, $5 each">&#x1F331; Weed</a></li>
+                <li><a href="https://photos.app.goo.gl/ZkybrJPwJZ7b4T9" target="_blank" rel="noopener noreferrer" class="a-link" aria-label="View adult Health and Self-care signs, $5 each">&#x1F48A; Health &amp; Self-care</a></li>
+                <li><a href="https://photos.app.goo.gl/ZAsW8U7gueo1rFzL9" target="_blank" rel="noopener noreferrer" class="a-link" aria-label="View adult People and Funny signs, $5 each">&#x1F602; People / Funny</a></li>
+                <li><a href="https://photos.app.goo.gl/MntfzXsSxCYFpWCm8" target="_blank" rel="noopener noreferrer" class="a-link" aria-label="View adult Inspiration, Pride, and Misc signs, $5 each">&#x1F308; Inspiration / Pride / Misc</a></li>
+                <li><a href="https://photos.app.goo.gl/fCGqERX1SLiTjEqM9" target="_blank" rel="noopener noreferrer" class="a-link all" aria-label="View all adult signs, $5 each">&rarr; View All Adult Signs</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="wrap">
+      <div class="footer-inner">
+        <div>
+          <p class="footer-brand">Sarcastic <strong>Signage</strong></p>
+          <p class="footer-tag">Handmade with attitude in Ontario, Canada</p>
+        </div>
+        <nav aria-label="Footer navigation">
+          <ul class="footer-links" role="list">
+            <li><a href="tel:6137006677" aria-label="Call Patricia at 613-700-6677">613-700-6677</a></li>
+            <li><a href="mailto:patriciapkcjs@hotmail.com" aria-label="Email Patricia">Email</a></li>
+            <li><a href="https://facebook.com/sarcastic.signage" target="_blank" rel="noopener noreferrer" aria-label="Sarcastic Signage on Facebook (opens in new tab)">Facebook</a></li>
+          </ul>
+        </nav>
+      </div>
+      <p class="footer-copy">&copy; 2025 Sarcastic Signage &middot; Patricia &middot; Ontario, Canada &middot; All products handmade</p>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    function closeMobile() {
+      mobileMenu.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      hamburger.setAttribute('aria-label', 'Open navigation menu');
+      document.body.style.overflow = '';
+    }
+    hamburger.addEventListener('click', () => {
+      const open = mobileMenu.classList.toggle('open');
+      hamburger.setAttribute('aria-expanded', String(open));
+      hamburger.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
+      document.body.style.overflow = open ? 'hidden' : '';
+    });
+    document.addEventListener('click', e => {
+      if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target) && mobileMenu.classList.contains('open')) closeMobile();
+    });
+    const nav = document.getElementById('site-nav');
+    window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 16); }, { passive: true });
+    const rm = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!rm) {
+      const io = new IntersectionObserver(entries => {
+        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+      }, { threshold: 0.06, rootMargin: '0px 0px -24px 0px' });
+      document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+    } else {
+      document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
+    }
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const href = a.getAttribute('href');
+        if (href === '#') return;
+        const t = document.querySelector(href);
+        if (t) { e.preventDefault(); closeMobile(); t.scrollIntoView({ behavior: rm ? 'instant' : 'smooth' }); if (!t.hasAttribute('tabindex')) t.setAttribute('tabindex', '-1'); t.focus({ preventScroll: true }); }
+      });
+    });
+  </script>
+</body>
+</html>

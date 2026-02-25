@@ -1,0 +1,1765 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sarcastic Signage — Signs That Say What You're Thinking</title>
+  <meta name="description" content="Handmade sarcastic signs, totes, and gifts by Patricia in Ontario, Canada. Bold. Blunt. Handmade with love and attitude.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@400;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+  <style>
+    /* =============================================
+       CLF TOKENS — Dark Bold Direction
+       ============================================= */
+    :root {
+      --color-dark:           #141420;
+      --color-dark-mid:       #1e1e2e;
+      --color-dark-surface:   #252535;
+      --color-dark-raised:    #2e2e42;
+      --color-cream:          #faf7f2;
+      --color-coral:          #ff6b35;
+      --color-coral-hover:    #ff8454;
+      --color-coral-dim:      rgba(255,107,53,0.12);
+      --color-teal:           #00c9a7;
+      --color-teal-dim:       rgba(0,201,167,0.12);
+      --color-off-white:      #ede9e3;
+      --color-muted:          #7a7a8e;
+      --color-muted-light:    #aaaabb;
+      --color-border:         rgba(255,255,255,0.08);
+      --color-error:          #e55353;
+
+      --font-display:         'Bebas Neue', Impact, sans-serif;
+      --font-body:            'DM Sans', system-ui, sans-serif;
+      --font-hand:            'Caveat', cursive;
+
+      --font-size-base:       17px;
+      --line-height-body:     1.65;
+      --line-height-heading:  1.05;
+
+      --nav-h:                68px;
+      --ticker-h:             40px;
+      --pad-section:          clamp(64px, 10vw, 120px);
+      --pad-x:                clamp(20px, 5vw, 48px);
+      --max-w:                1240px;
+      --radius:               10px;
+      --radius-sm:            6px;
+
+      --space-xs: 4px;
+      --space-sm: 8px;
+      --space-md: 16px;
+      --space-lg: 24px;
+      --space-xl: 40px;
+      --space-2xl: 64px;
+
+      --shadow-sm: 0 2px 8px rgba(0,0,0,0.3);
+      --shadow-md: 0 8px 24px rgba(0,0,0,0.4);
+
+      --transition-fast:   150ms ease;
+      --transition-normal: 280ms ease;
+    }
+
+    /* =============================================
+       RESET
+       ============================================= */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: calc(var(--nav-h) + var(--ticker-h));
+      font-size: var(--font-size-base);
+    }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--color-dark-mid);
+      color: var(--color-off-white);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img  { max-width: 100%; display: block; }
+    a    { text-decoration: none; color: inherit; }
+    button { border: none; cursor: pointer; font-family: inherit; background: none; }
+    ul   { list-style: none; }
+
+    .wrap {
+      width: 100%;
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 var(--pad-x);
+    }
+
+    /* =============================================
+       SKIP LINK (WCAG first-focusable requirement)
+       ============================================= */
+    .skip-link {
+      position: absolute;
+      top: -200%;
+      left: 16px;
+      background: var(--color-coral);
+      color: #fff;
+      padding: 12px 20px;
+      border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: 0.9rem;
+      z-index: 9999;
+      transition: top var(--transition-fast);
+    }
+    .skip-link:focus {
+      top: 0;
+      outline: 3px solid #fff;
+      outline-offset: 2px;
+    }
+
+    /* =============================================
+       STICKY NAVIGATION
+       ============================================= */
+    .site-nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: var(--nav-h);
+      background: var(--color-dark);
+      border-bottom: 1px solid var(--color-border);
+      z-index: 100;
+      transition: box-shadow var(--transition-normal);
+    }
+    .site-nav.scrolled { box-shadow: 0 4px 20px rgba(0,0,0,0.5); }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 var(--pad-x);
+      gap: var(--space-xl);
+    }
+
+    .nav-brand {
+      font-family: var(--font-display);
+      font-size: clamp(1.4rem, 3vw, 1.8rem);
+      letter-spacing: 0.04em;
+      color: var(--color-off-white);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .nav-brand span { color: var(--color-coral); }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: var(--space-xl);
+    }
+    .nav-links a {
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--color-muted-light);
+      transition: color var(--transition-fast);
+    }
+    .nav-links a:hover,
+    .nav-links a:focus-visible { color: var(--color-coral); }
+    .nav-links a:focus-visible { outline: 2px solid var(--color-coral); outline-offset: 4px; border-radius: 2px; }
+
+    .nav-phone {
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+      background: var(--color-coral);
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: var(--radius-sm);
+      font-weight: 700;
+      font-size: 0.9rem;
+      white-space: nowrap;
+      min-height: 44px;
+      transition: background var(--transition-fast), transform var(--transition-fast);
+    }
+    .nav-phone:hover, .nav-phone:focus-visible {
+      background: var(--color-coral-hover);
+      transform: translateY(-1px);
+    }
+    .nav-phone:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      padding: 8px;
+      border-radius: var(--radius-sm);
+      background: var(--color-dark-surface);
+      min-width: 44px;
+      min-height: 44px;
+      align-items: center;
+      justify-content: center;
+    }
+    .hamburger:focus-visible { outline: 2px solid var(--color-coral); outline-offset: 2px; }
+
+    .hamburger span {
+      display: block;
+      width: 22px; height: 2px;
+      background: var(--color-off-white);
+      border-radius: 2px;
+      transition: transform var(--transition-fast), opacity var(--transition-fast);
+    }
+    .hamburger[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+    .hamburger[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: var(--nav-h);
+      left: 0; right: 0;
+      background: var(--color-dark);
+      border-bottom: 1px solid var(--color-border);
+      padding: var(--space-lg) var(--pad-x);
+      z-index: 99;
+    }
+    .mobile-menu.open { display: block; }
+
+    .mobile-menu a {
+      display: block;
+      padding: 14px 0;
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: var(--color-off-white);
+      border-bottom: 1px solid var(--color-border);
+      transition: color var(--transition-fast);
+    }
+    .mobile-menu a:hover { color: var(--color-coral); }
+    .mobile-menu a:last-child { border-bottom: none; }
+    .mob-phone {
+      display: flex !important;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-sm);
+      margin-top: var(--space-md) !important;
+      background: var(--color-coral) !important;
+      color: #fff !important;
+      padding: 14px 24px !important;
+      border-radius: var(--radius-sm);
+      font-weight: 700;
+      border-bottom: none !important;
+      min-height: 48px;
+    }
+
+    /* =============================================
+       TICKER STRIP
+       ============================================= */
+    .ticker-wrap {
+      position: fixed;
+      top: var(--nav-h);
+      left: 0; right: 0;
+      height: var(--ticker-h);
+      background: var(--color-coral);
+      overflow: hidden;
+      z-index: 98;
+    }
+    .ticker-track {
+      display: flex;
+      width: max-content;
+      animation: ticker 32s linear infinite;
+      height: 100%;
+      align-items: center;
+    }
+    .ticker-item {
+      white-space: nowrap;
+      padding: 0 var(--space-xl);
+      font-family: var(--font-display);
+      font-size: 1rem;
+      letter-spacing: 0.06em;
+      color: #fff;
+    }
+    .ticker-sep {
+      color: rgba(255,255,255,0.5);
+      margin: 0 var(--space-md);
+    }
+
+    /* =============================================
+       HERO
+       ============================================= */
+    .hero {
+      min-height: 100vh;
+      background: var(--color-dark);
+      display: flex;
+      align-items: center;
+      padding-top: calc(var(--nav-h) + var(--ticker-h) + var(--space-2xl));
+      padding-bottom: var(--space-2xl);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-bg-text {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%) rotate(-12deg);
+      font-family: var(--font-display);
+      font-size: clamp(100px, 20vw, 260px);
+      letter-spacing: 0.02em;
+      color: rgba(255,255,255,0.025);
+      pointer-events: none;
+      user-select: none;
+      white-space: nowrap;
+    }
+    .hero-inner { position: relative; z-index: 1; }
+
+    .hero-eyebrow {
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--color-coral);
+      margin-bottom: var(--space-lg);
+      animation: slideRight 0.6s ease both;
+    }
+    .hero-headline {
+      font-family: var(--font-display);
+      font-size: clamp(3.5rem, 9vw, 8rem);
+      line-height: var(--line-height-heading);
+      letter-spacing: 0.02em;
+      color: var(--color-off-white);
+      max-width: 900px;
+      animation: fadeUp 0.7s ease 0.1s both;
+    }
+    .hero-headline em { font-style: normal; color: var(--color-coral); }
+
+    .hero-underline {
+      display: block;
+      height: 4px;
+      width: 120px;
+      background: var(--color-teal);
+      margin-top: var(--space-md);
+      animation: scaleInX 0.5s ease 0.5s both;
+      transform-origin: left;
+    }
+    .hero-sub {
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      color: var(--color-muted-light);
+      margin-top: var(--space-lg);
+      max-width: 520px;
+      line-height: 1.65;
+      animation: fadeUp 0.7s ease 0.3s both;
+    }
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: var(--space-md);
+      flex-wrap: wrap;
+      margin-top: var(--space-xl);
+      animation: fadeUp 0.7s ease 0.45s both;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-sm);
+      background: var(--color-coral);
+      color: #fff;
+      padding: 16px 32px;
+      border-radius: var(--radius-sm);
+      font-weight: 700;
+      font-size: 1rem;
+      min-height: 52px;
+      transition: background var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+    }
+    .btn-primary:hover, .btn-primary:focus-visible {
+      background: var(--color-coral-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(255,107,53,0.4);
+    }
+    .btn-primary:focus-visible { outline: 3px solid var(--color-coral); outline-offset: 3px; }
+
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-sm);
+      border: 2px solid var(--color-border);
+      color: var(--color-muted-light);
+      padding: 14px 28px;
+      border-radius: var(--radius-sm);
+      font-weight: 600;
+      font-size: 1rem;
+      min-height: 52px;
+      transition: border-color var(--transition-fast), color var(--transition-fast);
+    }
+    .btn-ghost:hover, .btn-ghost:focus-visible { border-color: var(--color-teal); color: var(--color-teal); }
+    .btn-ghost:focus-visible { outline: 2px solid var(--color-teal); outline-offset: 3px; }
+
+    .hero-stats {
+      display: flex;
+      gap: var(--space-xl);
+      margin-top: var(--space-2xl);
+      padding-top: var(--space-xl);
+      border-top: 1px solid var(--color-border);
+      flex-wrap: wrap;
+      animation: fadeIn 0.8s ease 0.7s both;
+    }
+    .stat { display: flex; flex-direction: column; gap: 2px; }
+    .stat-num {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      letter-spacing: 0.02em;
+      color: var(--color-teal);
+      line-height: 1;
+    }
+    .stat-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-muted);
+    }
+
+    /* =============================================
+       ABOUT
+       ============================================= */
+    .about {
+      background: var(--color-cream);
+      color: #2a1a0e;
+      padding: var(--pad-section) 0;
+    }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(40px, 6vw, 80px);
+      align-items: center;
+    }
+    .about-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--color-coral);
+      margin-bottom: var(--space-md);
+    }
+    .about-heading {
+      font-family: var(--font-display);
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      line-height: var(--line-height-heading);
+      letter-spacing: 0.02em;
+      color: #1e1a2a;
+      margin-bottom: var(--space-lg);
+    }
+    .about-body {
+      font-size: 1.05rem;
+      line-height: var(--line-height-body);
+      color: #3a3550;
+    }
+    .about-body + .about-body { margin-top: var(--space-md); }
+
+    .about-pull {
+      background: #1e1a2a;
+      color: var(--color-off-white);
+      padding: var(--space-xl) clamp(var(--space-lg), 4vw, var(--space-2xl));
+      border-radius: var(--radius);
+      border-left: 4px solid var(--color-coral);
+    }
+    .about-pull blockquote {
+      font-family: var(--font-hand);
+      font-size: clamp(1.4rem, 3vw, 1.9rem);
+      line-height: 1.4;
+      color: var(--color-off-white);
+    }
+    .about-pull cite {
+      display: block;
+      margin-top: var(--space-md);
+      font-family: var(--font-body);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-coral);
+      font-style: normal;
+    }
+
+    /* =============================================
+       PRODUCTS
+       ============================================= */
+    .products {
+      background: var(--color-dark-mid);
+      padding: var(--pad-section) 0;
+    }
+    .section-header { margin-bottom: var(--space-2xl); }
+
+    .section-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--color-coral);
+      margin-bottom: var(--space-sm);
+    }
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      letter-spacing: 0.02em;
+      color: var(--color-off-white);
+      line-height: var(--line-height-heading);
+    }
+    .section-sub {
+      font-size: 1rem;
+      color: var(--color-muted-light);
+      margin-top: var(--space-sm);
+      max-width: 600px;
+      line-height: 1.6;
+    }
+
+    /* Category block — visible section dividers */
+    .category-block { margin-bottom: clamp(40px, 7vw, 80px); }
+
+    .category-header {
+      display: flex;
+      align-items: center;
+      gap: var(--space-md);
+      margin-bottom: var(--space-lg);
+    }
+    /* Horizontal rule extends from heading to edge — catches eye during scrolling */
+    .category-header::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(to right, rgba(255,255,255,0.15), transparent);
+    }
+    .category-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.5rem, 3vw, 2.2rem);
+      letter-spacing: 0.06em;
+      color: var(--color-off-white);
+      white-space: nowrap;
+    }
+    .category-count {
+      background: var(--color-teal-dim);
+      color: var(--color-teal);
+      border: 1px solid rgba(0,201,167,0.3);
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+    .category-desc {
+      font-size: 0.95rem;
+      color: var(--color-muted-light);
+      margin-bottom: var(--space-xl);
+      line-height: 1.6;
+    }
+
+    /* Product grids — varied layouts to avoid identical-cards monotony */
+    .product-grid { display: grid; gap: var(--space-md); }
+
+    /* Featured: first card larger, others fill */
+    .product-grid-featured {
+      grid-template-columns: 1.6fr 1fr 1fr;
+      grid-template-rows: auto auto;
+    }
+    .card-featured {
+      grid-column: 1;
+      grid-row: 1 / 3;
+    }
+    .card-featured .product-img { aspect-ratio: 3/4; }
+
+    .product-grid-2 { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
+    .product-grid-3 { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
+    .product-grid-4 { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
+
+    /* Product card */
+    .product-card {
+      background: var(--color-dark-surface);
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--color-border);
+      display: flex;
+      flex-direction: column;
+      transition: transform var(--transition-normal), box-shadow var(--transition-normal), border-color var(--transition-normal);
+    }
+    .product-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-color: rgba(255,107,53,0.25);
+    }
+    .product-card.is-coming { opacity: 0.72; }
+
+    /* Product image placeholder */
+    .product-img {
+      aspect-ratio: 4/3;
+      position: relative;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+    .product-img-inner {
+      width: 100%; height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-sm);
+      text-align: center;
+      padding: var(--space-md);
+    }
+    .product-img-icon {
+      font-size: 2.5rem;
+      opacity: 0.35;
+      line-height: 1;
+    }
+    .product-img-text {
+      font-family: var(--font-hand);
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.35);
+      line-height: 1.4;
+    }
+
+    /* Distinct gradient per product category — not flat gray */
+    .pat-signs       { background: linear-gradient(135deg, #2a1a10 0%, #4a2a18 60%, #3a1e10 100%); }
+    .pat-totes       { background: linear-gradient(135deg, #0d1a2a 0%, #1a2a40 60%, #0f2035 100%); }
+    .pat-accessories { background: linear-gradient(135deg, #1a0d2a 0%, #2a1a40 60%, #1e1030 100%); }
+    .pat-apparel     { background: linear-gradient(135deg, #0d2a1a 0%, #1a3a2a 60%, #102a1e 100%); }
+    .pat-home        { background: linear-gradient(135deg, #2a2a0d 0%, #3a3a1a 60%, #2a2a10 100%); }
+
+    .coming-badge {
+      position: absolute;
+      top: var(--space-md); right: var(--space-md);
+      background: var(--color-dark-mid);
+      color: var(--color-muted-light);
+      border: 1px solid var(--color-border);
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .product-body {
+      padding: var(--space-md) var(--space-lg);
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      gap: var(--space-sm);
+    }
+    .product-name {
+      font-family: var(--font-display);
+      font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+      letter-spacing: 0.04em;
+      color: var(--color-off-white);
+      line-height: 1.2;
+    }
+    .card-featured .product-name { font-size: clamp(1.4rem, 3vw, 1.9rem); }
+
+    .product-detail {
+      font-size: 0.9rem;
+      color: var(--color-muted-light);
+      line-height: 1.5;
+    }
+    .product-price {
+      display: inline-block;
+      background: var(--color-teal-dim);
+      color: var(--color-teal);
+      border: 1px solid rgba(0,201,167,0.3);
+      padding: 4px 12px;
+      border-radius: var(--radius-sm);
+      font-size: 0.9rem;
+      font-weight: 700;
+      align-self: flex-start;
+    }
+    .product-footer { margin-top: auto; padding-top: var(--space-md); }
+
+    .btn-view {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-xs);
+      color: var(--color-coral);
+      font-weight: 600;
+      font-size: 0.9rem;
+      min-height: 44px;
+      padding: 8px 0;
+      transition: gap var(--transition-fast);
+      text-decoration: underline;
+      text-decoration-color: transparent;
+      text-underline-offset: 3px;
+    }
+    .btn-view:hover, .btn-view:focus-visible {
+      gap: var(--space-sm);
+      text-decoration-color: currentColor;
+    }
+    .btn-view:focus-visible { outline: 2px solid var(--color-coral); outline-offset: 3px; border-radius: 2px; }
+
+    .btn-coming {
+      display: inline-flex;
+      align-items: center;
+      color: var(--color-muted);
+      font-size: 0.85rem;
+      font-style: italic;
+      min-height: 44px;
+      padding: 8px 0;
+    }
+
+    /* Tote colour chips */
+    .tote-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-sm);
+      margin-bottom: var(--space-xl);
+    }
+    .tote-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--color-dark-surface);
+      border: 1px solid var(--color-border);
+      border-radius: 24px;
+      padding: 8px 16px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--color-muted-light);
+      min-height: 44px;
+      transition: border-color var(--transition-fast), color var(--transition-fast);
+    }
+    .tote-chip:hover, .tote-chip:focus-visible { border-color: var(--color-coral); color: var(--color-coral); }
+    .tote-chip:focus-visible { outline: 2px solid var(--color-coral); outline-offset: 3px; }
+    .chip-dot { width: 14px; height: 14px; border-radius: 50%; border: 2px solid rgba(255,255,255,0.15); flex-shrink: 0; }
+
+    /* =============================================
+       CONTACT
+       ============================================= */
+    .contact {
+      background: var(--color-dark);
+      padding: var(--pad-section) 0;
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(40px, 6vw, 80px);
+      align-items: start;
+    }
+    .contact-heading {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      letter-spacing: 0.02em;
+      color: var(--color-off-white);
+      line-height: var(--line-height-heading);
+      margin-bottom: var(--space-lg);
+    }
+    .contact-intro {
+      font-size: 1.05rem;
+      color: var(--color-muted-light);
+      line-height: 1.65;
+      margin-bottom: var(--space-xl);
+    }
+    .contact-ways {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-md);
+    }
+    .contact-way {
+      display: flex;
+      align-items: center;
+      gap: var(--space-md);
+      padding: var(--space-lg);
+      background: var(--color-dark-surface);
+      border-radius: var(--radius);
+      border: 1px solid var(--color-border);
+      min-height: 72px;
+      transition: border-color var(--transition-fast), transform var(--transition-fast);
+      color: inherit;
+    }
+    .contact-way:hover, .contact-way:focus-visible {
+      border-color: var(--color-coral);
+      transform: translateX(4px);
+    }
+    .contact-way:focus-visible { outline: 2px solid var(--color-coral); outline-offset: 3px; }
+
+    .contact-icon {
+      width: 44px; height: 44px;
+      background: var(--color-coral-dim);
+      border-radius: var(--radius-sm);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .contact-icon svg { width: 20px; height: 20px; color: var(--color-coral); }
+
+    .contact-way-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-muted);
+      margin-bottom: 2px;
+    }
+    .contact-way-value {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--color-off-white);
+    }
+
+    .contact-how {
+      background: var(--color-dark-surface);
+      border-radius: var(--radius);
+      border: 1px solid var(--color-border);
+      padding: var(--space-xl);
+    }
+    .contact-how h3 {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      letter-spacing: 0.04em;
+      color: var(--color-off-white);
+      margin-bottom: var(--space-md);
+    }
+    .contact-how p {
+      font-size: 0.95rem;
+      color: var(--color-muted-light);
+      line-height: 1.65;
+    }
+    .contact-how p + p { margin-top: var(--space-md); }
+    .contact-quip {
+      margin-top: var(--space-lg);
+      font-family: var(--font-hand);
+      font-size: 1.2rem;
+      color: var(--color-teal);
+      line-height: 1.4;
+    }
+
+    /* =============================================
+       ADULTS 18+
+       ============================================= */
+    .adults {
+      background: var(--color-dark-mid);
+      padding: clamp(32px, 5vw, 56px) 0;
+      border-top: 1px solid var(--color-border);
+    }
+    .adults-header {
+      display: flex;
+      align-items: center;
+      gap: var(--space-md);
+      margin-bottom: var(--space-md);
+    }
+    .adults-badge {
+      background: rgba(229,83,83,0.1);
+      color: #e55353;
+      border: 1px solid rgba(229,83,83,0.3);
+      padding: 3px 12px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    .adults-title {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      letter-spacing: 0.06em;
+      color: var(--color-muted-light);
+    }
+    .adults-desc {
+      font-size: 0.9rem;
+      color: var(--color-muted);
+      margin-bottom: var(--space-lg);
+      line-height: 1.6;
+      max-width: 600px;
+    }
+    .adults-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-sm);
+    }
+    .adults-link {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-xs);
+      padding: 10px 16px;
+      background: var(--color-dark-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+      color: var(--color-muted-light);
+      min-height: 44px;
+      transition: border-color var(--transition-fast), color var(--transition-fast);
+    }
+    .adults-link:hover, .adults-link:focus-visible {
+      border-color: rgba(229,83,83,0.4);
+      color: #e55353;
+    }
+    .adults-link:focus-visible { outline: 2px solid #e55353; outline-offset: 3px; }
+    .adults-link.view-all { border-style: dashed; border-color: rgba(229,83,83,0.3); color: #e55353; }
+
+    /* =============================================
+       FOOTER
+       ============================================= */
+    .footer {
+      background: var(--color-dark);
+      border-top: 1px solid var(--color-border);
+      padding: var(--space-xl) 0;
+    }
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-lg);
+    }
+    .footer-brand {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      letter-spacing: 0.04em;
+      color: var(--color-off-white);
+    }
+    .footer-brand span { color: var(--color-coral); }
+    .footer-tagline { font-size: 0.8rem; color: var(--color-muted); margin-top: 4px; }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-lg);
+    }
+    .footer-links a {
+      font-size: 0.85rem;
+      color: var(--color-muted-light);
+      transition: color var(--transition-fast);
+    }
+    .footer-links a:hover { color: var(--color-coral); }
+    .footer-links a:focus-visible { outline: 2px solid var(--color-coral); outline-offset: 3px; border-radius: 2px; }
+
+    .footer-copy {
+      font-size: 0.8rem;
+      color: var(--color-muted);
+      text-align: center;
+      padding-top: var(--space-lg);
+      border-top: 1px solid var(--color-border);
+      margin-top: var(--space-lg);
+    }
+
+    /* =============================================
+       SCROLL REVEAL
+       ============================================= */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .reveal.visible { opacity: 1; transform: none; }
+
+    /* =============================================
+       KEYFRAMES
+       ============================================= */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(28px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; } to { opacity: 1; }
+    }
+    @keyframes slideRight {
+      from { opacity: 0; transform: translateX(-24px); }
+      to   { opacity: 1; transform: translateX(0); }
+    }
+    @keyframes scaleInX {
+      from { transform: scaleX(0); }
+      to   { transform: scaleX(1); }
+    }
+    @keyframes ticker {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+
+    /* =============================================
+       REDUCED MOTION
+       ============================================= */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+      .ticker-track { animation: none; }
+      .reveal { opacity: 1; transform: none; }
+    }
+
+    /* =============================================
+       RESPONSIVE
+       ============================================= */
+    @media (max-width: 1024px) {
+      .product-grid-featured { grid-template-columns: 1fr 1fr; }
+      .card-featured { grid-column: 1 / -1; grid-row: auto; }
+      .card-featured .product-img { aspect-ratio: 16/7; }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links, .nav-phone { display: none; }
+      .hamburger { display: flex; }
+      .about-grid { grid-template-columns: 1fr; }
+      .about-pull { order: -1; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .product-grid-featured,
+      .product-grid-4 { grid-template-columns: 1fr; }
+      .card-featured .product-img { aspect-ratio: 4/3; }
+    }
+
+    @media (max-width: 480px) {
+      .hero-actions { flex-direction: column; align-items: stretch; }
+      .btn-primary, .btn-ghost { justify-content: center; }
+      .hero-stats { gap: var(--space-lg); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== SKIP TO CONTENT (first focusable element) ===== -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ===== STICKY NAV ===== -->
+  <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="#" class="nav-brand" aria-label="Sarcastic Signage — return to top">
+        Sarcastic <span>Signage</span>
+      </a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="#products">Products</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <a href="tel:6137006677" class="nav-phone" aria-label="Call Patricia at 613‑700‑6677">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+        613‑700‑6677
+      </a>
+
+      <button class="hamburger" id="hamburger"
+              aria-expanded="false"
+              aria-controls="mobile-menu"
+              aria-label="Open navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== MOBILE MENU ===== -->
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#products" onclick="closeMobileMenu()">Products</a>
+    <a href="#about"    onclick="closeMobileMenu()">About</a>
+    <a href="#contact"  onclick="closeMobileMenu()">Contact</a>
+    <a href="tel:6137006677" class="mob-phone" aria-label="Call Patricia at 613‑700‑6677">
+      📞 613‑700‑6677
+    </a>
+  </div>
+
+  <!-- ===== TICKER ===== -->
+  <div class="ticker-wrap" aria-hidden="true">
+    <div class="ticker-track">
+      <span class="ticker-item">Handmade in Ontario 🇨🇦 <span class="ticker-sep">✦</span> Custom orders welcome <span class="ticker-sep">✦</span> 200+ tote designs <span class="ticker-sep">✦</span> Signs that say what you're thinking <span class="ticker-sep">✦</span> Zero filter. 100% handmade. <span class="ticker-sep">✦</span></span>
+      <span class="ticker-item">Handmade in Ontario 🇨🇦 <span class="ticker-sep">✦</span> Custom orders welcome <span class="ticker-sep">✦</span> 200+ tote designs <span class="ticker-sep">✦</span> Signs that say what you're thinking <span class="ticker-sep">✦</span> Zero filter. 100% handmade. <span class="ticker-sep">✦</span></span>
+    </div>
+  </div>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main id="main-content">
+
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero-bg-text" aria-hidden="true">SARCASM</div>
+      <div class="wrap">
+        <div class="hero-inner">
+          <p class="hero-eyebrow">Handmade in Ontario, Canada</p>
+          <h1 class="hero-headline" id="hero-heading">
+            Signs That Say<br>What You're <em>Thinking</em>
+          </h1>
+          <span class="hero-underline" aria-hidden="true"></span>
+          <p class="hero-sub">Handmade signs, totes, and gifts with zero filter. If it's sarcastic, we make it.</p>
+          <div class="hero-actions">
+            <a href="#products" class="btn-primary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              Browse Products
+            </a>
+            <a href="#contact" class="btn-ghost">Get in Touch</a>
+          </div>
+          <div class="hero-stats" aria-label="Quick facts">
+            <div class="stat">
+              <span class="stat-num" aria-label="Over 200">200+</span>
+              <span class="stat-label">Tote Designs</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num" aria-label="Over 100">100+</span>
+              <span class="stat-label">Pouch Designs</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">15+</span>
+              <span class="stat-label">Product Types</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">100%</span>
+              <span class="stat-label">Handmade</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="about" aria-labelledby="about-heading">
+      <div class="wrap">
+        <div class="about-grid">
+          <div class="reveal">
+            <p class="about-label">The Story</p>
+            <h2 class="about-heading" id="about-heading">
+              Made with Love.<br>Delivered with Attitude.
+            </h2>
+            <p class="about-body">Run by Patricia in Ontario, Canada, Sarcastic Signage is where attitude meets craftsmanship. Every product is handmade with love — and a heavy dose of sarcasm.</p>
+            <p class="about-body">Whether you need the perfect gift for someone who appreciates blunt honesty, or just want your home decor to finally reflect your real personality, you're in the right place.</p>
+          </div>
+          <div class="about-pull reveal">
+            <blockquote>
+              "Yes, they're all handmade. No, I won't make a 'Live Laugh Love' sign."
+            </blockquote>
+            <cite>— Patricia, Founder &amp; Chief Sarcasm Officer</cite>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section class="products" id="products" aria-labelledby="products-heading">
+      <div class="wrap">
+
+        <div class="section-header reveal">
+          <p class="section-label">The Collection</p>
+          <h2 class="section-title" id="products-heading">Shop the Attitude</h2>
+          <p class="section-sub">Every item handmade. Browse the photo albums — if you love something, just reach out to Patricia.</p>
+        </div>
+
+        <!-- ── WOODEN SIGNS ── -->
+        <div class="category-block reveal" id="wooden-signs">
+          <div class="category-header">
+            <h3 class="category-title">Wooden Signs</h3>
+            <span class="category-count">4 options</span>
+          </div>
+          <p class="category-desc">The flagship product — bold sayings on quality wood. Two sizes, framed or unframed.</p>
+
+          <div class="product-grid product-grid-featured">
+            <!-- Featured card: 5×7 Unframed -->
+            <article class="product-card card-featured" aria-labelledby="sign-5x7u-name">
+              <!-- Replace with: assets/images/signs/5x7-unframed/ -->
+              <div class="product-img">
+                <div class="product-img-inner pat-signs">
+                  <span class="product-img-icon" aria-hidden="true">🪵</span>
+                  <span class="product-img-text">Photo coming soon<br>📸 signs/5x7-unframed/</span>
+                </div>
+              </div>
+              <div class="product-body">
+                <h4 class="product-name" id="sign-5x7u-name">5×7 Unframed Signs</h4>
+                <p class="product-detail">Ready to display on a shelf, ledge, or anywhere with attitude. Small but mighty.</p>
+                <span class="product-price">$15</span>
+                <div class="product-footer">
+                  <a href="https://photos.app.goo.gl/TgeMebcWwSzzK1Cg9"
+                     target="_blank" rel="noopener noreferrer"
+                     class="btn-view"
+                     aria-label="View 5×7 Unframed Wooden Signs collection on Google Photos — $15">
+                    View Collection →
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- 5×7 Pre-framed -->
+            <article class="product-card" aria-labelledby="sign-5x7f-name">
+              <!-- Replace with: assets/images/signs/5x7-framed/ -->
+              <div class="product-img">
+                <div class="product-img-inner pat-signs">
+                  <span class="product-img-icon" aria-hidden="true">🖼️</span>
+                  <span class="product-img-text">Photo coming soon</span>
+                </div>
+              </div>
+              <div class="product-body">
+                <h4 class="product-name" id="sign-5x7f-name">5×7 Pre-framed Signs</h4>
+                <span class="product-price">$15</span>
+                <div class="product-footer">
+                  <a href="https://photos.app.goo.gl/CZ9viWsWYtvU8B886"
+                     target="_blank" rel="noopener noreferrer"
+                     class="btn-view"
+                     aria-label="View 5×7 Pre-framed Wooden Signs collection on Google Photos — $15">
+                    View Collection →
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- 8×10 Unframed -->
+            <article class="product-card" aria-labelledby="sign-8x10u-name">
+              <!-- Replace with: assets/images/signs/8x10-unframed/ -->
+              <div class="product-img">
+                <div class="product-img-inner pat-signs">
+                  <span class="product-img-icon" aria-hidden="true">🪵</span>
+                  <span class="product-img-text">Photo coming soon</span>
+                </div>
+              </div>
+              <div class="product-body">
+                <h4 class="product-name" id="sign-8x10u-name">8×10 Unframed Signs</h4>
+                <span class="product-price">$20</span>
+                <div class="product-footer">
+                  <a href="https://photos.app.goo.gl/yVk8xjSjenVhzvfa7"
+                     target="_blank" rel="noopener noreferrer"
+                     class="btn-view"
+                     aria-label="View 8×10 Unframed Wooden Signs collection on Google Photos — $20">
+                    View Collection →
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- 8×10 Pre-framed -->
+            <article class="product-card" aria-labelledby="sign-8x10f-name">
+              <!-- Replace with: assets/images/signs/8x10-framed/ -->
+              <div class="product-img">
+                <div class="product-img-inner pat-signs">
+                  <span class="product-img-icon" aria-hidden="true">🖼️</span>
+                  <span class="product-img-text">Photo coming soon</span>
+                </div>
+              </div>
+              <div class="product-body">
+                <h4 class="product-name" id="sign-8x10f-name">8×10 Pre-framed Signs</h4>
+                <span class="product-price">$20</span>
+                <div class="product-footer">
+                  <a href="https://photos.app.goo.gl/vkrEcV8fTVEnizqy8"
+                     target="_blank" rel="noopener noreferrer"
+                     class="btn-view"
+                     aria-label="View 8×10 Pre-framed Wooden Signs collection on Google Photos — $20">
+                    View Collection →
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- ── TOTES & POUCHES ── -->
+        <div class="category-block reveal" id="totes">
+          <div class="category-header">
+            <h3 class="category-title">Tote Bags &amp; Pouches</h3>
+            <span class="category-count">200+ designs</span>
+          </div>
+          <p class="category-desc">Over 200 tote designs across five colours. Plus 100+ zippered pouches. Browse by colour or see the full collection.</p>
+
+          <!-- Colour chips — quick browse by colour -->
+          <nav aria-label="Browse tote bags by colour">
+            <ul class="tote-chips" role="list">
+              <li>
+                <a href="https://photos.app.goo.gl/Caa1ELRAju7qfP3h9"
+                   target="_blank" rel="noopener noreferrer"
+                   class="tote-chip"
+                   aria-label="View Black Tote Bags collection on Google Photos">
+                  <span class="chip-dot" style="background:#1a1a1a;" aria-hidden="true"></span>
+                  Black Totes
+                </a>
+              </li>
+              <li>
+                <a href="https://photos.app.goo.gl/gosaf5Vu4JGgtzLX9"
+                   target="_blank" rel="noopener noreferrer"
+                   class="tote-chip"
+                   aria-label="View Natural Tote Bags collection on Google Photos">
+                  <span class="chip-dot" style="background:#d4c5a9;" aria-hidden="true"></span>
+                  Natural Totes
+                </a>
+              </li>
+              <li>
+                <a href="https://photos.app.goo.gl/3Vdkraczxc1Lixje6"
+                   target="_blank" rel="noopener noreferrer"
+                   class="tote-chip"
+                   aria-label="View Yellow Tote Bags collection on Google Photos">
+                  <span class="chip-dot" style="background:#f5c842;" aria-hidden="true"></span>
+                  Yellow Totes
+                </a>
+              </li>
+              <li>
+                <a href="https://photos.app.goo.gl/SdvNZEvyy5w4XCkh6"
+                   target="_blank" rel="noopener noreferrer"
+                   class="tote-chip"
+                   aria-label="View Pink Tote Bags collection on Google Photos">
+                  <span class="chip-dot" style="background:#f4a4c0;" aria-hidden="true"></span>
+                  Pink Totes
+                </a>
+              </li>
+              <li>
+                <a href="https://photos.app.goo.gl/7rCnBxgExFucbhhY6"
+                   target="_blank" rel="noopener noreferrer"
+                   class="tote-chip"
+                   aria-label="View Shopper's Tote Bags collection on Google Photos">
+                  <span class="chip-dot" style="background:#a0c4ff;" aria-hidden="true"></span>
+                  Shopper's Totes
+                </a>
+              </li>
+              <li>
+                <a href="https://photos.app.goo.gl/9z4P55iuCs4CJNqM7"
+                   target="_blank" rel="noopener noreferrer"
+                   class="tote-chip"
+                   style="border-color:rgba(255,107,53,0.3); color:var(--color-coral);"
+                   aria-label="View all Tote Bags collection — 200 plus designs — on Google Photos">
+                  🛍️ View All Tote Bags
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="product-grid product-grid-2">
+            <!-- Zippered Pouches -->
+            <article class="product-card" aria-labelledby="pouches-name">
+              <!-- Replace with: assets/images/pouches/ -->
+              <div class="product-img">
+                <div class="product-img-inner pat-totes">
+                  <span class="product-img-icon" aria-hidden="true">👜</span>
+                  <span class="product-img-text">Photo coming soon<br>📸 pouches/</span>
+                </div>
+              </div>
+              <div class="product-body">
+                <h4 class="product-name" id="pouches-name">Zippered Pouches</h4>
+                <p class="product-detail">100+ designs. Perfect for makeup, coins, or carrying your attitude in style.</p>
+                <span class="product-price">$6</span>
+                <div class="product-footer">
+                  <a href="https://photos.app.goo.gl/qEg9GaAJa5RSPjsq9"
+                     target="_blank" rel="noopener noreferrer"
+                     class="btn-view"
+                     aria-label="View Zippered Pouches collection on Google Photos — $6 each">
+                    View Pouches →
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Tote bags overview -->
+            <article class="product-card" aria-labelledby="totes-all-name">
+              <!-- Replace with: assets/images/totes/ -->
+              <div class="product-img">
+                <div class="product-img-inner pat-totes">
+                  <span class="product-img-icon" aria-hidden="true">🛍️</span>
+                  <span class="product-img-text">Photo coming soon<br>📸 totes/</span>
+                </div>
+              </div>
+              <div class="product-body">
+                <h4 class="product-name" id="totes-all-name">All Tote Bags</h4>
+                <p class="product-detail">200+ designs across five colours. One for every personality — and mood.</p>
+                <div class="product-footer">
+                  <a href="https://photos.app.goo.gl/9z4P55iuCs4CJNqM7"
+                     target="_blank" rel="noopener noreferrer"
+                     class="btn-view"
+                     aria-label="View all Tote Bags — 200 plus designs — on Google Photos">
+                    View All Totes →
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- ── ACCESSORIES ── -->
+        <div class="category-block reveal" id="accessories">
+          <div class="category-header">
+            <h3 class="category-title">Accessories</h3>
+            <span class="category-count">2 items</span>
+          </div>
+
+          <div class="product-grid product-grid-2">
+            <article class="product-card" aria-labelledby="crocs-name">
+              <!-- Replace with: assets/images/accessories/croc-charms/ -->
+              <div class="product-img">
+                <div class="product-img-inner pat-accessories">
+                  <span class="product-img-icon" aria-hidden="true">🐊</span>
+                  <span class="product-img-text">Photo coming soon<br>📸 accessories/croc-charms/</span>
+                </div>
+              </div>
+              <div class="product-body">
+                <h4 class="product-name" id="crocs-name">Silicone Croc Charms</h4>
+                <p class="product-detail">Tiny attitude for your shoes. Clip onto Crocs and Croc-style footwear.</p>
+                <span class="product-price">$2 each · 3 for $5</span>
+                <div class="product-footer">
+                  <a href="https://photos.app.goo.gl/jqK1BJn38Sqz7NGcA"
+                     target="_blank" rel="noopener noreferrer"
+                     class="btn-view"
+                     aria-label="View Silicone Croc Charms collection on Google Photos — $2 each or 3 for $5">
+                    View Charms →
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card is-coming" aria-labelledby="keychains-name">
+              <!-- Replace with: assets/images/accessories/keychains/ -->
+              <div class="product-img">
+                <div class="product-img-inner pat-accessories">
+                  <span class="coming-badge" aria-hidden="true">Coming Soon</span>
+                  <span class="product-img-icon" aria-hidden="true">🗝️</span>
+                  <span class="product-img-text">Album coming before launch</span>
+                </div>
+              </div>
+              <div class="product-body">
+                <h4 class="product-name" id="keychains-name">Key Chains &amp; Zipper Pulls</h4>
+                <p class="product-detail">Sarcasm you can carry on your keys. Photos coming before launch.</p>
+                <span class="product-price">$7 each · 3 for $20</span>
+                <div class="product-footer">
+                  <span class="btn-coming" aria-label="Key Chains and Zipper Pulls — photos coming soon">Photos coming soon</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- ── APPAREL ── -->
+        <div class="category-block reveal" id="apparel">
+          <div class="category-header">
+            <h3 class="category-title">Apparel</h3>
+            <span class="category-count">4 items · albums coming</span>
+          </div>
+
+          <div class="product-grid product-grid-4">
+            <article class="product-card is-coming" aria-labelledby="tshirts-name">
+              <!-- Replace with: assets/images/apparel/tshirts/ -->
+              <div class="product-img">
+                <div class="product-img-inner pat-apparel">
+                  <span class="coming-badge" aria-hidden="true">Coming Soon</span>
+                  <span class="product-img-icon" aria-hidden="true">👕</span>
+                  <span class="product-img-text">📸 apparel/tshirts/</span>
+                </div>
+              </div>
+              <div class="product-body">
+                <h4 class="product-name" id="tshirts-name">T-Shirts</h4>
+                <span class="product-price">$20</span>
+                <div class="product-footer">
+                  <span class="btn-coming" aria-label="T-Shirts — collection photos coming soon">Coming soon</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card is-coming" aria-labelledby="caps-name">
+              <!-- Replace with: assets/images/apparel/caps/ -->
+              <div class="product-img">
+                <div class="product-img-inner pat-apparel">
+                  <span class="coming-badge" aria-hidden="true">Coming Soon</span>
+                  <span class="product-img-icon" aria-hidden="true">🧢</span>
+                  <span class="product-img-text">📸 apparel/caps/</span>
+                </div>
+              </div>
+              <div class="product-body">
+                <h4 class="product-name" id="caps-name">Baseball Caps</h4>
+                <span class="product-price">$15</span>
+                <div class="product-footer">
+                  <span class="btn-coming" aria-label="Baseball Caps — collection photos coming soon">Coming soon</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card is-coming" aria-labelledby="toques-name">
+              <!-- Replace with: assets/images/apparel/toques/ -->
+              <div class="product-img">
+                <div class="product-img-inner pat-apparel">
+                  <span class="coming-badge" aria-hidden="true">Coming Soon</span>
+                  <span class="product-img-icon" aria-hidden="true">🎓</span>
+                  <span class="product-img-text">📸 apparel/toques/</span>
+                </div>
+              </div>
+              <div class="product-body">
+                <h4 class="product-name" id="toques-name">Swiftie Toques</h4>
+                <span class="product-price">$15</span>
+                <div class="product-footer">
+                  <span class="btn-coming" aria-label="Swiftie Toques — collection photos coming soon">Coming soon</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card is-coming" aria-labelledby="aprons-name">
+              <!-- Replace with: assets/images/apparel/aprons/ -->
+              <div class="product-img">
+                <div class="product-img-inner pat-apparel">
+                  <span class="coming-badge" aria-hidden="true">Coming Soon</span>
+                  <span class="product-img-icon" aria-hidden="true">👨‍🍳</span>
+                  <span class="product-img-text">📸 apparel/aprons/</span>
+                </div>
+              </div>
+              <div class="product-body">
+                <h4 class="product-name" id="aprons-name">BBQ Aprons</h4>
+                <span class="product-price">$8 – $15</span>
+                <div class="product-footer">
+                  <span class="btn-coming" aria-label="BBQ Aprons — collection photos coming soon">Coming soon</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- ── HOME & KITCHEN ── -->
+        <div class="category-block reveal" id="home-kitchen">
+          <div class="category-header">
+            <h3 class="category-title">Home &amp; Kitchen</h3>
+            <span class="category-count">3 items · albums coming</span>
+          </div>
+
+          <div class="product-grid product-grid-3">
+            <article class="product-card is-coming" aria-labelledby="potholders-name">
+              <!-- Replace with: assets/images/home/potholders/ -->
+              <div class="product-img">
+                <div class="product-img-inner pat-home">
+                  <span class="coming-badge" aria-hidden="true">Coming Soon</span>
+                  <span class="product-img-icon" aria-hidden="true">🍳</span>
+                  <span class="product-img-text">📸 home/potholders/</span>
+                </div>
+              </div>
+              <div class="product-body">
+                <h4 class="product-name" id="potholders-name">Pot Holders</h4>
+                <div class="product-footer">
+                  <span class="btn-coming" aria-label="Pot Holders — collection photos coming soon">Coming soon</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card is-coming" aria-labelledby="teatowels-name">
+              <!-- Replace with: assets/images/home/teatowels/ -->
+              <div class="product-img">
+                <div class="product-img-inner pat-home">
+                  <span class="coming-badge" aria-hidden="true">Coming Soon</span>
+                  <span class="product-img-icon" aria-hidden="true">🧇</span>
+                  <span class="product-img-text">📸 home/teatowels/</span>
+                </div>
+              </div>
+              <div class="product-body">
+                <h4 class="product-name" id="teatowels-name">Tea Towels</h4>
+                <div class="product-footer">
+                  <span class="btn-coming" aria-label="Tea Towels — collection photos coming soon">Coming soon</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card is-coming" aria-labelledby="winebags-name">
+              <!-- Replace with: assets/images/home/winebags/ -->
+              <div class="product-img">
+                <div class="product-img-inner pat-home">
+                  <span class="coming-badge" aria-hidden="true">Coming Soon</span>
+                  <span class="product-img-icon" aria-hidden="true">🍷</span>
+                  <span class="product-img-text">📸 home/winebags/</span>
+                </div>
+              </div>
+              <div class="product-body">
+                <h4 class="product-name" id="winebags-name">Reusable Wine Bottle Bags</h4>
+                <span class="product-price">$6</span>
+                <div class="product-footer">
+                  <span class="btn-coming" aria-label="Reusable Wine Bottle Bags — collection photos coming soon">Coming soon</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact" aria-labelledby="contact-heading">
+      <div class="wrap">
+        <div class="contact-grid">
+          <div class="reveal">
+            <p class="section-label">How to Order</p>
+            <h2 class="contact-heading" id="contact-heading">
+              Want Something?<br>Just Ask.
+            </h2>
+            <p class="contact-intro">See something you love? Just call or text Patricia directly. Custom requests welcome — if it's sarcastic, she can probably make it.</p>
+            <div class="contact-ways">
+              <a href="tel:6137006677" class="contact-way"
+                 aria-label="Call or text Patricia at 613‑700‑6677">
+                <div class="contact-icon">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+                </div>
+                <div>
+                  <p class="contact-way-label">Call or Text</p>
+                  <p class="contact-way-value">613‑700‑6677</p>
+                </div>
+              </a>
+
+              <a href="mailto:patriciapkcjs@hotmail.com" class="contact-way"
+                 aria-label="Email Patricia at patriciapkcjs@hotmail.com">
+                <div class="contact-icon">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                </div>
+                <div>
+                  <p class="contact-way-label">Email</p>
+                  <p class="contact-way-value">patriciapkcjs@hotmail.com</p>
+                </div>
+              </a>
+
+              <a href="https://facebook.com/sarcastic.signage"
+                 target="_blank" rel="noopener noreferrer"
+                 class="contact-way"
+                 aria-label="Find Sarcastic Signage on Facebook (opens in new tab)">
+                <div class="contact-icon">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                </div>
+                <div>
+                  <p class="contact-way-label">Facebook</p>
+                  <p class="contact-way-value">sarcastic.signage</p>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-how reveal">
+            <h3>How It Works</h3>
+            <p>Browse the photo albums above. When you find something you love, just reach out to Patricia directly — by call, text, or email.</p>
+            <p>Custom orders are welcome. If you have a specific saying or size in mind, just ask. If it's sarcastic, chances are she can make it.</p>
+            <p><strong style="color:var(--color-off-white);">Payment:</strong> Interac e-Transfer or cash. Pickup or local delivery available in Ontario.</p>
+            <p class="contact-quip">"No, we don't ship internationally. Yes, we've thought about it. No, we still won't."</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ADULT 18+ -->
+    <section class="adults" id="adults" aria-labelledby="adults-heading">
+      <div class="wrap">
+        <div class="adults-header">
+          <span class="adults-badge" aria-label="Adults only, 18 and over">18+</span>
+          <h2 class="adults-title" id="adults-heading">Adults Only</h2>
+        </div>
+        <p class="adults-desc">Magnetic canvas signs for adults who appreciate humour that's a little more… unfiltered. $5 each. Must be 18+ to purchase.</p>
+
+        <nav aria-label="Adult 18+ product collections">
+          <ul class="adults-links" role="list">
+            <li>
+              <a href="https://photos.app.goo.gl/cK1VNCKT5wr71AaS8"
+                 target="_blank" rel="noopener noreferrer"
+                 class="adults-link"
+                 aria-label="View adult Nature and Animals signs on Google Photos — $5 each">
+                🌿 Nature &amp; Animals
+              </a>
+            </li>
+            <li>
+              <a href="https://photos.app.goo.gl/AdfViuDBsiR4sekLA"
+                 target="_blank" rel="noopener noreferrer"
+                 class="adults-link"
+                 aria-label="View adult Weed signs on Google Photos — $5 each">
+                🌱 Weed
+              </a>
+            </li>
+            <li>
+              <a href="https://photos.app.goo.gl/ZkybrJPwJZ7b4T9"
+                 target="_blank" rel="noopener noreferrer"
+                 class="adults-link"
+                 aria-label="View adult Health and Self-care signs on Google Photos — $5 each">
+                💊 Health &amp; Self-care
+              </a>
+            </li>
+            <li>
+              <a href="https://photos.app.goo.gl/ZAsW8U7gueo1rFzL9"
+                 target="_blank" rel="noopener noreferrer"
+                 class="adults-link"
+                 aria-label="View adult People and Funny signs on Google Photos — $5 each">
+                😂 People / Funny
+              </a>
+            </li>
+            <li>
+              <a href="https://photos.app.goo.gl/MntfzXsSxCYFpWCm8"
+                 target="_blank" rel="noopener noreferrer"
+                 class="adults-link"
+                 aria-label="View adult Inspiration, Pride and Misc signs on Google Photos — $5 each">
+                🌈 Inspiration / Pride / Misc
+              </a>
+            </li>
+            <li>
+              <a href="https://photos.app.goo.gl/fCGqERX1SLiTjEqM9"
+                 target="_blank" rel="noopener noreferrer"
+                 class="adults-link view-all"
+                 aria-label="View all adult signs collection on Google Photos — $5 each">
+                → View All Adult Signs
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="wrap">
+      <div class="footer-inner">
+        <div>
+          <p class="footer-brand">Sarcastic <span>Signage</span></p>
+          <p class="footer-tagline">Handmade with attitude in Ontario, Canada 🇨🇦</p>
+        </div>
+        <nav aria-label="Footer navigation">
+          <ul class="footer-links" role="list">
+            <li><a href="tel:6137006677" aria-label="Call Patricia at 613‑700‑6677">📞 613‑700‑6677</a></li>
+            <li><a href="mailto:patriciapkcjs@hotmail.com" aria-label="Email Patricia">✉️ Email Patricia</a></li>
+            <li><a href="https://facebook.com/sarcastic.signage" target="_blank" rel="noopener noreferrer" aria-label="Sarcastic Signage on Facebook (opens in new tab)">Facebook</a></li>
+          </ul>
+        </nav>
+      </div>
+      <p class="footer-copy">© 2025 Sarcastic Signage · Patricia · Ontario, Canada · All products handmade</p>
+    </div>
+  </footer>
+
+  <script>
+    // ── Mobile nav ──
+    const hamburger   = document.getElementById('hamburger');
+    const mobileMenu  = document.getElementById('mobile-menu');
+
+    function closeMobileMenu() {
+      mobileMenu.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      hamburger.setAttribute('aria-label', 'Open navigation menu');
+    }
+
+    hamburger.addEventListener('click', () => {
+      const isOpen = mobileMenu.classList.toggle('open');
+      hamburger.setAttribute('aria-expanded', String(isOpen));
+      hamburger.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+    });
+
+    document.addEventListener('click', e => {
+      if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
+        closeMobileMenu();
+      }
+    });
+
+    // ── Nav scroll shadow ──
+    const nav = document.getElementById('site-nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 20);
+    }, { passive: true });
+
+    // ── Scroll reveal (respects prefers-reduced-motion) ──
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (!prefersReducedMotion) {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+      document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    } else {
+      document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
+    }
+
+    // ── Smooth scroll with focus management for a11y ──
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', e => {
+        const id = anchor.getAttribute('href');
+        const target = document.querySelector(id);
+        if (target) {
+          e.preventDefault();
+          closeMobileMenu();
+          target.scrollIntoView({ behavior: prefersReducedMotion ? 'instant' : 'smooth' });
+          // Move focus to the section for screen reader announcement
+          if (!target.hasAttribute('tabindex')) target.setAttribute('tabindex', '-1');
+          target.focus({ preventScroll: true });
+        }
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,1571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sarcastic Signage — Handmade with Attitude</title>
+  <meta name="description" content="Handmade sarcastic signs, totes, and gifts by Patricia in Ontario, Canada. Crafted with care and zero filter.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* =============================================
+       CLF TOKENS — Playful Product (craft-adapted)
+       Syne + DM Sans. Warm-dark base, hot coral energy.
+       ============================================= */
+    :root {
+      --color-primary:       #EA580C;
+      --color-primary-light: #F97316;
+      --color-primary-dark:  #C2410C;
+      --color-accent:        #1B4332;
+      --color-accent-light:  #2D6A4F;
+      --color-surface:       #FAFAF5;
+      --color-surface-alt:   #F0EDE5;
+      --color-surface-warm:  #FFF7ED;
+      --color-dark:          #1C1917;
+      --color-dark-soft:     #292524;
+      --color-text:          #1C1917;
+      --color-text-muted:    #78716C;
+      --color-border:        #D6D3D1;
+      --color-border-dark:   rgba(255,255,255,0.12);
+      --color-error:         #B91C1C;
+
+      --font-display: 'Syne', system-ui, sans-serif;
+      --font-body:    'DM Sans', system-ui, sans-serif;
+      --font-hand:    'Caveat', cursive;
+
+      --font-size-base:      17px;
+      --line-height-body:    1.65;
+      --line-height-heading: 1.05;
+
+      --nav-h:  64px;
+      --pad-section: clamp(64px, 10vw, 112px);
+      --pad-x:  clamp(20px, 5vw, 48px);
+      --max-w:  1120px;
+      --radius: 8px;
+      --radius-lg: 14px;
+      --radius-pill: 100px;
+
+      --space-xs:  4px;
+      --space-sm:  8px;
+      --space-md:  16px;
+      --space-lg:  24px;
+      --space-xl:  40px;
+      --space-2xl: 64px;
+      --space-3xl: 96px;
+
+      --shadow-sm:   0 1px 4px rgba(28,25,23,0.06);
+      --shadow-md:   0 4px 16px rgba(28,25,23,0.10);
+      --shadow-lg:   0 12px 40px rgba(28,25,23,0.14);
+      --shadow-hot:  0 6px 20px rgba(234,88,12,0.22);
+
+      --transition-fast:   150ms ease;
+      --transition-normal: 280ms ease;
+      --transition-bounce: 280ms cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    /* =============================================
+       RESET
+       ============================================= */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: var(--nav-h);
+      font-size: var(--font-size-base);
+    }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--color-surface);
+      color: var(--color-text);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img  { max-width: 100%; display: block; }
+    a    { text-decoration: none; color: inherit; }
+    button { border: none; cursor: pointer; font-family: inherit; background: none; }
+    ul   { list-style: none; }
+
+    .wrap {
+      width: 100%;
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 var(--pad-x);
+    }
+
+    /* =============================================
+       SKIP LINK
+       ============================================= */
+    .skip-link {
+      position: absolute;
+      top: -100%;
+      left: 16px;
+      background: var(--color-dark);
+      color: #fff;
+      padding: 12px 20px;
+      border-radius: 0 0 var(--radius) var(--radius);
+      font-size: 0.85rem;
+      font-weight: 500;
+      z-index: 9999;
+      transition: top var(--transition-fast);
+    }
+    .skip-link:focus { top: 0; outline: 3px solid var(--color-primary); outline-offset: 2px; }
+
+    /* =============================================
+       NAV — clean, blurred glass
+       ============================================= */
+    .site-nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: var(--nav-h);
+      background: rgba(250,250,245,0.88);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid transparent;
+      z-index: 100;
+      transition: border-color var(--transition-normal), box-shadow var(--transition-normal);
+    }
+    .site-nav.scrolled {
+      border-bottom-color: var(--color-border);
+      box-shadow: 0 1px 8px rgba(28,25,23,0.05);
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 var(--pad-x);
+    }
+
+    .nav-brand { line-height: 1; }
+    .nav-brand-main {
+      display: block;
+      font-family: var(--font-display);
+      font-size: clamp(1.05rem, 2.2vw, 1.25rem);
+      font-weight: 800;
+      color: var(--color-text);
+      letter-spacing: -0.02em;
+    }
+    .nav-brand-tag {
+      display: block;
+      font-family: var(--font-hand);
+      font-size: 0.82rem;
+      color: var(--color-primary);
+      margin-top: 0px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: clamp(20px, 3vw, 32px);
+    }
+    .nav-links a {
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--color-text-muted);
+      transition: color var(--transition-fast);
+      padding: 6px 0;
+    }
+    .nav-links a:hover,
+    .nav-links a:focus-visible { color: var(--color-text); }
+    .nav-links a:focus-visible { outline: 2px solid var(--color-primary); outline-offset: 4px; border-radius: 2px; }
+
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--color-primary);
+      color: #fff;
+      padding: 9px 18px;
+      border-radius: var(--radius-pill);
+      font-size: 0.8rem;
+      font-weight: 500;
+      min-height: 44px;
+      white-space: nowrap;
+      transition: background var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast);
+    }
+    .nav-cta:hover,
+    .nav-cta:focus-visible { background: var(--color-primary-light); box-shadow: var(--shadow-hot); transform: translateY(-1px); }
+    .nav-cta:focus-visible { outline: 3px solid var(--color-accent); outline-offset: 3px; }
+    .nav-cta svg { width: 15px; height: 15px; }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      padding: 10px;
+      min-width: 44px; min-height: 44px;
+      align-items: center; justify-content: center;
+      border-radius: var(--radius);
+    }
+    .hamburger:focus-visible { outline: 2px solid var(--color-primary); outline-offset: 2px; }
+    .hamburger span {
+      display: block; width: 20px; height: 2px;
+      background: var(--color-text); border-radius: 2px;
+      transition: transform var(--transition-fast), opacity var(--transition-fast);
+    }
+    .hamburger[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+    .hamburger[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: var(--nav-h); left: 0; right: 0; bottom: 0;
+      background: var(--color-surface);
+      padding: var(--space-lg) var(--pad-x);
+      z-index: 99;
+      overflow-y: auto;
+    }
+    .mobile-menu.open { display: block; }
+    .mobile-menu a {
+      display: block;
+      padding: 16px 0;
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: var(--color-text);
+      border-bottom: 1px solid var(--color-border);
+    }
+    .mobile-menu a:last-child { border-bottom: none; }
+    .mob-cta {
+      margin-top: var(--space-lg) !important;
+      background: var(--color-primary);
+      color: #fff !important;
+      padding: 16px !important;
+      text-align: center;
+      border-radius: var(--radius-pill);
+      border-bottom: none !important;
+      font-weight: 600 !important;
+    }
+
+    /* =============================================
+       HERO — dark left, sign right
+       ============================================= */
+    .hero {
+      display: grid;
+      grid-template-columns: 55fr 45fr;
+      min-height: 100vh;
+      min-height: 100svh;
+      padding-top: var(--nav-h);
+    }
+
+    .hero-content {
+      background: var(--color-dark);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: var(--space-3xl) clamp(32px, 5vw, 64px) var(--space-3xl) var(--pad-x);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-content::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 80% 20%, rgba(234,88,12,0.08) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .hero-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.1);
+      padding: 7px 16px;
+      border-radius: var(--radius-pill);
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: var(--color-primary-light);
+      letter-spacing: 0.04em;
+      width: fit-content;
+      margin-bottom: var(--space-xl);
+      position: relative;
+      z-index: 1;
+      animation: fadeIn 0.6s ease both;
+    }
+
+    .hero-h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.4rem, 5vw, 4rem);
+      font-weight: 800;
+      line-height: 1.02;
+      color: #fff;
+      letter-spacing: -0.03em;
+      position: relative;
+      z-index: 1;
+      animation: fadeUp 0.7s ease 0.1s both;
+    }
+    .hero-h1 em {
+      font-style: normal;
+      color: var(--color-primary);
+    }
+
+    .hero-sub {
+      font-size: clamp(0.92rem, 1.3vw, 1.05rem);
+      color: rgba(255,255,255,0.55);
+      margin-top: var(--space-lg);
+      line-height: 1.7;
+      max-width: 400px;
+      position: relative;
+      z-index: 1;
+      animation: fadeUp 0.7s ease 0.2s both;
+    }
+
+    .hero-btns {
+      display: flex;
+      align-items: center;
+      gap: var(--space-md);
+      flex-wrap: wrap;
+      margin-top: var(--space-xl);
+      position: relative;
+      z-index: 1;
+      animation: fadeUp 0.7s ease 0.3s both;
+    }
+
+    .btn-hot {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--color-primary);
+      color: #fff;
+      padding: 14px 28px;
+      border-radius: var(--radius-pill);
+      font-size: 0.88rem;
+      font-weight: 600;
+      min-height: 50px;
+      transition: background var(--transition-fast), transform var(--transition-bounce), box-shadow var(--transition-fast);
+    }
+    .btn-hot:hover,
+    .btn-hot:focus-visible {
+      background: var(--color-primary-light);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-hot);
+    }
+    .btn-hot:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid rgba(255,255,255,0.2);
+      color: rgba(255,255,255,0.7);
+      padding: 14px 28px;
+      border-radius: var(--radius-pill);
+      font-size: 0.88rem;
+      font-weight: 500;
+      min-height: 50px;
+      transition: border-color var(--transition-fast), color var(--transition-fast);
+    }
+    .btn-ghost:hover,
+    .btn-ghost:focus-visible { border-color: var(--color-primary); color: var(--color-primary-light); }
+    .btn-ghost:focus-visible { outline: 2px solid var(--color-primary); outline-offset: 3px; }
+
+    .hero-stats {
+      display: flex;
+      gap: var(--space-xl);
+      margin-top: var(--space-2xl);
+      position: relative;
+      z-index: 1;
+      animation: fadeUp 0.7s ease 0.45s both;
+    }
+    .hero-stat-num {
+      font-family: var(--font-display);
+      font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+      font-weight: 800;
+      color: var(--color-primary);
+      line-height: 1;
+      letter-spacing: -0.02em;
+    }
+    .hero-stat-label {
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: rgba(255,255,255,0.35);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-top: 4px;
+    }
+
+    /* Sign panel */
+    .hero-visual {
+      background: var(--color-accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: var(--space-2xl);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-visual::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 30% 30%, rgba(255,255,255,0.05), transparent 50%),
+        radial-gradient(circle at 70% 70%, rgba(0,0,0,0.12), transparent 50%);
+      pointer-events: none;
+    }
+
+    .wooden-sign {
+      position: relative;
+      z-index: 1;
+      background: #c4883a;
+      background-image:
+        repeating-linear-gradient(90deg, transparent 0, transparent 13px, rgba(0,0,0,0.06) 13px, rgba(0,0,0,0.06) 14px),
+        repeating-linear-gradient(180deg, rgba(255,255,255,0.02) 0, rgba(255,255,255,0.02) 2px, transparent 2px, transparent 7px);
+      padding: clamp(24px, 3.5vw, 44px) clamp(28px, 4vw, 52px);
+      border-radius: 3px;
+      max-width: 320px;
+      width: 88%;
+      border-top: 5px solid #9a6028;
+      border-bottom: 5px solid #9a6028;
+      box-shadow: inset 0 2px 3px rgba(0,0,0,0.2), 0 8px 32px rgba(0,0,0,0.35);
+      animation: signSwing 5s ease-in-out infinite, fadeIn 0.8s ease 0.3s both;
+    }
+    .wooden-sign::before {
+      content: '';
+      position: absolute;
+      inset: 7px;
+      border: 1.5px solid rgba(0,0,0,0.12);
+      pointer-events: none;
+    }
+    .sign-text {
+      font-family: var(--font-display);
+      font-size: clamp(1.05rem, 2.2vw, 1.5rem);
+      font-weight: 700;
+      line-height: 1.25;
+      color: #1a0c04;
+      text-align: center;
+    }
+    .sign-text em {
+      display: block;
+      font-family: var(--font-hand);
+      font-weight: 700;
+      font-style: normal;
+      font-size: 0.9em;
+      color: #4a2010;
+      margin-top: 4px;
+    }
+    .sign-note {
+      position: absolute;
+      font-family: var(--font-hand);
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.45);
+      line-height: 1.2;
+    }
+    .sign-note.top  { top: -26px; right: -4px; transform: rotate(5deg); }
+    .sign-note.btm  { bottom: -22px; left: -2px; transform: rotate(-3deg); }
+
+    @keyframes signSwing {
+      0%, 100% { transform: rotate(-1.2deg); }
+      50%      { transform: rotate(1.2deg); }
+    }
+    @keyframes fadeIn  { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes fadeUp  { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+
+    /* =============================================
+       ABOUT — light, warm
+       ============================================= */
+    .about {
+      background: var(--color-surface);
+      padding: var(--pad-section) 0;
+    }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 5fr 3fr;
+      gap: clamp(40px, 6vw, 72px);
+      align-items: start;
+    }
+
+    .eyebrow {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--color-primary);
+      margin-bottom: var(--space-sm);
+    }
+    .section-heading {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 800;
+      color: var(--color-text);
+      line-height: var(--line-height-heading);
+      letter-spacing: -0.02em;
+      margin-bottom: var(--space-xl);
+    }
+    .section-sub {
+      font-size: 0.95rem;
+      color: var(--color-text-muted);
+      line-height: 1.65;
+      max-width: 540px;
+    }
+
+    .about-text {
+      font-size: 1rem;
+      line-height: var(--line-height-body);
+      color: var(--color-text);
+    }
+    .about-text + .about-text { margin-top: var(--space-md); }
+
+    .about-sidebar { padding-top: var(--space-xs); }
+    .about-quote {
+      border-left: 3px solid var(--color-primary);
+      padding-left: var(--space-lg);
+      margin-bottom: var(--space-xl);
+    }
+    .about-quote blockquote {
+      font-family: var(--font-hand);
+      font-size: clamp(1.3rem, 2.5vw, 1.6rem);
+      line-height: 1.35;
+      color: var(--color-primary-dark);
+    }
+    .about-quote cite {
+      display: block;
+      margin-top: var(--space-sm);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-text-muted);
+      font-style: normal;
+    }
+
+    .about-card {
+      background: var(--color-dark);
+      color: #fff;
+      padding: var(--space-xl);
+      border-radius: var(--radius-lg);
+    }
+    .about-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: var(--space-md);
+    }
+    .about-card p {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.6;
+      margin-bottom: var(--space-md);
+    }
+    .about-card a {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--color-primary-light);
+      font-size: 0.88rem;
+      font-weight: 500;
+      min-height: 44px;
+      text-decoration: underline;
+      text-decoration-color: transparent;
+      text-underline-offset: 3px;
+      transition: text-decoration-color var(--transition-fast);
+    }
+    .about-card a:hover { text-decoration-color: currentColor; }
+    .about-card a:focus-visible { outline: 2px solid var(--color-primary); outline-offset: 3px; border-radius: 2px; }
+    .about-card a + a { margin-top: var(--space-xs); display: flex; }
+
+    /* =============================================
+       PRODUCTS
+       ============================================= */
+    .products {
+      background: var(--color-surface-alt);
+      padding: var(--pad-section) 0;
+      border-top: 1px solid var(--color-border);
+    }
+    .products-header { margin-bottom: var(--space-2xl); }
+
+    /* Category block */
+    .cat-block + .cat-block { margin-top: clamp(48px, 8vw, 72px); }
+
+    .cat-header {
+      display: flex;
+      align-items: baseline;
+      gap: var(--space-md);
+      padding-bottom: var(--space-md);
+      border-bottom: 2px solid var(--color-dark);
+      margin-bottom: var(--space-md);
+    }
+    .cat-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.2rem, 2.3vw, 1.6rem);
+      font-weight: 800;
+      color: var(--color-text);
+      letter-spacing: -0.01em;
+    }
+    .cat-count {
+      background: var(--color-dark);
+      color: #fff;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      padding: 3px 10px;
+      border-radius: var(--radius-pill);
+    }
+    .cat-desc {
+      font-size: 0.88rem;
+      font-style: italic;
+      color: var(--color-text-muted);
+      line-height: 1.6;
+      margin-bottom: var(--space-lg);
+      max-width: 520px;
+    }
+
+    /* Bento grid — deliberately varied */
+    .bento {
+      display: grid;
+      gap: var(--space-md);
+    }
+    .bento-2-1 { grid-template-columns: 1.4fr 1fr; }
+    .bento-1-1 { grid-template-columns: 1fr 1fr; }
+    .bento-3   { grid-template-columns: repeat(3, 1fr); }
+    .bento-fill { grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }
+
+    /* Product card */
+    .p-card {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: box-shadow var(--transition-normal), transform var(--transition-bounce);
+    }
+    .p-card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-4px);
+    }
+    .p-card.dim { opacity: 0.55; pointer-events: auto; }
+    .p-card.dim:hover { opacity: 0.7; transform: none; box-shadow: none; }
+    .p-card.tall { grid-row: span 2; }
+
+    .p-img {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 6px;
+      padding: var(--space-lg);
+      min-height: 130px;
+    }
+    .tall .p-img { min-height: 180px; flex: 1; }
+    .p-img-icon { font-size: 2rem; opacity: 0.25; line-height: 1; }
+    .p-img-text {
+      font-family: var(--font-hand);
+      font-size: 0.78rem;
+      color: var(--color-text-muted);
+      text-align: center;
+      opacity: 0.6;
+    }
+
+    .bg-wood  { background: linear-gradient(135deg, #F2E4CC, #DFC9A0); }
+    .bg-tote  { background: linear-gradient(135deg, #DCEEF7, #B8D6E8); }
+    .bg-acc   { background: linear-gradient(135deg, #F5D9D0, #E8BFB2); }
+    .bg-wear  { background: linear-gradient(135deg, #D4EDD4, #B8DEB8); }
+    .bg-home  { background: linear-gradient(135deg, #EDE4CC, #D8CFA4); }
+
+    .p-body {
+      padding: var(--space-lg);
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      flex: 1;
+    }
+    .p-name {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--color-text);
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+    }
+    .tall .p-name { font-size: 1.2rem; }
+    .p-detail {
+      font-size: 0.84rem;
+      color: var(--color-text-muted);
+      line-height: 1.55;
+    }
+    .p-price {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--color-primary);
+      margin-top: auto;
+      padding-top: var(--space-sm);
+    }
+    .soon-tag {
+      display: inline-flex;
+      align-items: center;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--color-text-muted);
+      background: var(--color-surface-alt);
+      border: 1px dashed var(--color-border);
+      padding: 3px 10px;
+      border-radius: var(--radius-pill);
+      width: fit-content;
+    }
+
+    .p-action { padding: 0 var(--space-lg) var(--space-lg); }
+    .btn-album {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      width: 100%;
+      background: var(--color-dark);
+      color: #fff;
+      padding: 11px 16px;
+      border-radius: var(--radius);
+      font-size: 0.8rem;
+      font-weight: 500;
+      min-height: 44px;
+      transition: background var(--transition-fast), box-shadow var(--transition-fast);
+    }
+    .btn-album:hover,
+    .btn-album:focus-visible { background: var(--color-dark-soft); box-shadow: var(--shadow-md); }
+    .btn-album:focus-visible { outline: 3px solid var(--color-primary); outline-offset: 3px; }
+
+    .btn-soon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      color: var(--color-text-muted);
+      border: 1px dashed var(--color-border);
+      padding: 11px 16px;
+      border-radius: var(--radius);
+      font-size: 0.8rem;
+      font-style: italic;
+      min-height: 44px;
+    }
+
+    /* Tote chips */
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-xs);
+      margin-top: var(--space-sm);
+    }
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: var(--color-surface-alt);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-pill);
+      padding: 5px 12px;
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: var(--color-text-muted);
+      min-height: 30px;
+      transition: border-color var(--transition-fast), color var(--transition-fast), transform var(--transition-bounce);
+    }
+    .chip:hover,
+    .chip:focus-visible { border-color: var(--color-primary); color: var(--color-primary); transform: translateY(-1px); }
+    .chip:focus-visible { outline: 2px solid var(--color-primary); outline-offset: 2px; }
+    .chip-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+
+    /* =============================================
+       CONTACT — dark section
+       ============================================= */
+    .contact {
+      background: var(--color-dark);
+      padding: var(--pad-section) 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .contact::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 0% 50%, rgba(234,88,12,0.06), transparent 50%);
+      pointer-events: none;
+    }
+    .contact-grid {
+      position: relative; z-index: 1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(40px, 6vw, 72px);
+      align-items: start;
+    }
+
+    .contact-heading {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      font-weight: 800;
+      line-height: 1.05;
+      color: #fff;
+      letter-spacing: -0.02em;
+      margin-bottom: var(--space-lg);
+    }
+    .contact-body {
+      font-size: 0.92rem;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.7;
+      margin-bottom: var(--space-xl);
+    }
+
+    .c-item {
+      display: flex;
+      align-items: center;
+      gap: var(--space-md);
+      padding: var(--space-lg);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--radius-lg);
+      margin-bottom: var(--space-sm);
+      color: #fff;
+      min-height: 68px;
+      transition: border-color var(--transition-fast), background var(--transition-fast);
+    }
+    .c-item:hover,
+    .c-item:focus-visible {
+      border-color: var(--color-primary);
+      background: rgba(234,88,12,0.06);
+    }
+    .c-item:focus-visible { outline: 2px solid var(--color-primary); outline-offset: 3px; }
+    .c-icon {
+      width: 42px; height: 42px;
+      background: rgba(255,255,255,0.07);
+      border-radius: var(--radius);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .c-icon svg { width: 18px; height: 18px; color: var(--color-primary-light); }
+    .c-label {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+      margin-bottom: 2px;
+    }
+    .c-value { font-size: 0.95rem; color: #fff; }
+
+    .how-box {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: var(--radius-lg);
+      padding: var(--space-xl);
+    }
+    .how-box h3 {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: var(--space-lg);
+    }
+    .how-box ol {
+      list-style: none;
+      counter-reset: steps;
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-md);
+    }
+    .how-box ol li {
+      counter-increment: steps;
+      display: flex;
+      gap: var(--space-md);
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.6;
+    }
+    .how-box ol li::before {
+      content: counter(steps);
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--color-primary);
+      min-width: 20px;
+      flex-shrink: 0;
+    }
+    .how-quip {
+      margin-top: var(--space-xl);
+      font-family: var(--font-hand);
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.3);
+      line-height: 1.45;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding-top: var(--space-lg);
+    }
+
+    /* =============================================
+       ADULT 18+
+       ============================================= */
+    .adults {
+      background: var(--color-surface);
+      border-top: 1px solid var(--color-border);
+      padding: clamp(36px, 5vw, 56px) 0;
+    }
+    .adults-flex {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-2xl);
+      flex-wrap: wrap;
+    }
+    .adults-label { flex-shrink: 0; }
+    .adults-badge-row {
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+    }
+    .adults-badge {
+      background: rgba(185,28,28,0.08);
+      color: #B91C1C;
+      border: 1px solid rgba(185,28,28,0.2);
+      padding: 4px 12px;
+      border-radius: var(--radius-pill);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    .adults-title {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--color-text-muted);
+    }
+    .adults-content { flex: 1; min-width: 260px; }
+    .adults-desc {
+      font-size: 0.86rem;
+      color: var(--color-text-muted);
+      line-height: 1.6;
+      margin-bottom: var(--space-md);
+    }
+    .a-links { display: flex; flex-wrap: wrap; gap: var(--space-xs); }
+    .a-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 14px;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius);
+      font-size: 0.8rem;
+      color: var(--color-text-muted);
+      min-height: 44px;
+      transition: border-color var(--transition-fast), color var(--transition-fast);
+    }
+    .a-link:hover,
+    .a-link:focus-visible { border-color: #B91C1C; color: #B91C1C; }
+    .a-link:focus-visible { outline: 2px solid #B91C1C; outline-offset: 3px; }
+    .a-link.all {
+      border-style: dashed;
+      border-color: rgba(185,28,28,0.3);
+      color: #B91C1C;
+      font-weight: 600;
+    }
+
+    /* =============================================
+       FOOTER
+       ============================================= */
+    .footer {
+      background: var(--color-dark-soft);
+      border-top: 3px solid var(--color-primary);
+      padding: var(--space-xl) 0;
+    }
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-lg);
+    }
+    .footer-brand {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: #fff;
+    }
+    .footer-tag {
+      font-family: var(--font-hand);
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.35);
+      margin-top: 1px;
+    }
+    .footer-links { display: flex; flex-wrap: wrap; gap: var(--space-lg); }
+    .footer-links a {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.45);
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+      transition: color var(--transition-fast);
+    }
+    .footer-links a:hover { color: var(--color-primary-light); }
+    .footer-links a:focus-visible { outline: 2px solid var(--color-primary); outline-offset: 3px; border-radius: 2px; }
+    .footer-copy {
+      font-size: 0.7rem;
+      color: rgba(255,255,255,0.2);
+      text-align: center;
+      padding-top: var(--space-lg);
+      border-top: 1px solid rgba(255,255,255,0.05);
+      margin-top: var(--space-lg);
+    }
+
+    /* =============================================
+       SCROLL REVEAL
+       ============================================= */
+    .reveal {
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .reveal.visible { opacity: 1; transform: none; }
+
+    /* =============================================
+       RESPONSIVE
+       ============================================= */
+    @media (max-width: 1024px) {
+      .hero { grid-template-columns: 1fr; min-height: auto; }
+      .hero-content { padding: var(--space-2xl) var(--pad-x); }
+      .hero-visual { min-height: 360px; }
+      .about-grid { grid-template-columns: 1fr; }
+      .about-sidebar { padding-top: 0; }
+      .contact-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links, .nav-cta { display: none; }
+      .hamburger { display: flex; }
+      .hero-visual { min-height: 280px; padding: var(--space-xl); }
+      .hero-stats { gap: var(--space-lg); flex-wrap: wrap; }
+      .hero-stat { min-width: calc(50% - var(--space-lg)); }
+      .bento-2-1, .bento-1-1, .bento-3 { grid-template-columns: 1fr; }
+      .p-card.tall { grid-row: auto; }
+      .adults-flex { flex-direction: column; gap: var(--space-lg); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+      .reveal { opacity: 1; transform: none; }
+      .wooden-sign { animation: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- NAV -->
+  <header class="site-nav" id="site-nav" role="banner">
+    <div class="nav-inner">
+      <a href="#" class="nav-brand" aria-label="Sarcastic Signage home">
+        <span class="nav-brand-main">Sarcastic Signage</span>
+        <span class="nav-brand-tag" aria-hidden="true">handmade with attitude</span>
+      </a>
+      <nav aria-label="Main navigation">
+        <ul class="nav-links" role="list">
+          <li><a href="#products">Products</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#adults">18+</a></li>
+        </ul>
+      </nav>
+      <a href="tel:6137006677" class="nav-cta" aria-label="Call or text Patricia at 613-700-6677">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+        613-700-6677
+      </a>
+      <button class="hamburger" id="hamburger" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobile-menu" role="navigation" aria-label="Mobile navigation">
+      <a href="#products">Products</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="#adults">18+ Signs</a>
+      <a href="tel:6137006677" class="mob-cta">Call / Text: 613-700-6677</a>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-h1">
+      <div class="hero-content">
+        <span class="hero-pill" aria-hidden="true">&#x2714;&#xFE0F; 100% Handmade in Ontario</span>
+        <h1 class="hero-h1" id="hero-h1">Signs That Say<br>What You're <em>Thinking</em></h1>
+        <p class="hero-sub">Handmade signs, totes &amp; gifts with zero filter. Crafted by hand in Ontario. Delivered with attitude.</p>
+        <div class="hero-btns">
+          <a href="#products" class="btn-hot">Browse Products &darr;</a>
+          <a href="#contact" class="btn-ghost">Get in Touch</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <p class="hero-stat-num">200+</p>
+            <p class="hero-stat-label">Tote Designs</p>
+          </div>
+          <div class="hero-stat">
+            <p class="hero-stat-num">100+</p>
+            <p class="hero-stat-label">Pouch Designs</p>
+          </div>
+          <div class="hero-stat">
+            <p class="hero-stat-num">15+</p>
+            <p class="hero-stat-label">Product Types</p>
+          </div>
+          <div class="hero-stat">
+            <p class="hero-stat-num">100%</p>
+            <p class="hero-stat-label">Handmade</p>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <span class="sign-note top">yes, it's real wood &darr;</span>
+        <div class="wooden-sign">
+          <p class="sign-text">I'm Not Arguing.<br>I'm Just Explaining<br>Why I'm Right.<em>-- a sign, probably</em></p>
+        </div>
+        <span class="sign-note btm">handmade by Patricia</span>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="about" aria-labelledby="about-heading">
+      <div class="wrap">
+        <div class="about-grid reveal">
+          <div>
+            <p class="eyebrow">The Story</p>
+            <h2 class="section-heading" id="about-heading">Crafted in Ontario.<br>Filtered by Nobody.</h2>
+            <p class="about-text">Sarcastic Signage is a one-woman operation run by Patricia out of Ontario, Canada. Every product is made by hand — no factories, no mass production, no corporate inspirational quotes about "living, laughing, and loving."</p>
+            <p class="about-text">What started as a hobby turned into a full crafting obsession. Wooden signs, tote bags, pouches, apparel, accessories — if Patricia can put a sarcastic saying on it, she probably already has. Over 200 tote designs and counting.</p>
+          </div>
+          <div class="about-sidebar">
+            <div class="about-quote">
+              <blockquote>"I don't do inspirational. I do relatable."</blockquote>
+              <cite>Patricia, Chief Sarcasm Officer</cite>
+            </div>
+            <div class="about-card">
+              <h3>Ready to Order?</h3>
+              <p>Browse the photos, pick your favourites, and contact Patricia directly. Custom requests always welcome.</p>
+              <a href="tel:6137006677" aria-label="Call or text Patricia at 613-700-6677">Call / Text: 613-700-6677 &rarr;</a>
+              <a href="mailto:patriciapkcjs@hotmail.com" aria-label="Email Patricia">Email Patricia &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section class="products" id="products" aria-labelledby="products-heading">
+      <div class="wrap">
+        <div class="products-header reveal">
+          <p class="eyebrow">The Collection</p>
+          <h2 class="section-heading" id="products-heading">Browse &amp; Shop</h2>
+          <p class="section-sub">Click any item to view the full photo album. See something you love? Contact Patricia to order.</p>
+        </div>
+
+        <!-- WOODEN SIGNS — 2+1 bento -->
+        <div class="cat-block reveal">
+          <div class="cat-header">
+            <h3 class="cat-title">Wooden Signs</h3>
+            <span class="cat-count">4 items</span>
+          </div>
+          <p class="cat-desc">The flagship product — bold sayings on quality wood. Two sizes, framed or unframed.</p>
+          <div class="bento bento-2-1">
+            <article class="p-card tall">
+              <div class="p-img bg-wood" style="flex:1;">
+                <span class="p-img-icon" aria-hidden="true">&#x1FAB5;</span>
+                <span class="p-img-text">Photo album available</span>
+              </div>
+              <div class="p-body">
+                <h4 class="p-name" id="sign-5x7u">5&times;7 Unframed Signs</h4>
+                <p class="p-detail">Small but mighty. Perfect for shelves, ledges, or any surface that needs attitude.</p>
+                <p class="p-price">$15</p>
+              </div>
+              <div class="p-action">
+                <a href="https://photos.app.goo.gl/TgeMebcWwSzzK1Cg9" target="_blank" rel="noopener noreferrer"
+                   class="btn-album" aria-label="View 5 by 7 unframed signs photo album on Google Photos">View Album &rarr;</a>
+              </div>
+            </article>
+            <div style="display:flex;flex-direction:column;gap:var(--space-md);">
+              <article class="p-card" style="flex:1;">
+                <div class="p-img bg-wood">
+                  <span class="p-img-icon" aria-hidden="true">&#x1F5BC;&#xFE0F;</span>
+                </div>
+                <div class="p-body">
+                  <h4 class="p-name">5&times;7 Pre-framed</h4>
+                  <p class="p-detail">Ready to hang right out of the package.</p>
+                  <p class="p-price">$15</p>
+                </div>
+                <div class="p-action">
+                  <a href="https://photos.app.goo.gl/CZ9viWsWYtvU8B886" target="_blank" rel="noopener noreferrer"
+                     class="btn-album" aria-label="View 5 by 7 pre-framed signs photo album on Google Photos">View Album &rarr;</a>
+                </div>
+              </article>
+              <article class="p-card" style="flex:1;">
+                <div class="p-img bg-wood">
+                  <span class="p-img-icon" aria-hidden="true">&#x1FAB5;</span>
+                </div>
+                <div class="p-body">
+                  <h4 class="p-name">8&times;10 Unframed</h4>
+                  <p class="p-detail">More surface area for more elaborate opinions.</p>
+                  <p class="p-price">$20</p>
+                </div>
+                <div class="p-action">
+                  <a href="https://photos.app.goo.gl/yVk8xjSjenVhzvfa7" target="_blank" rel="noopener noreferrer"
+                     class="btn-album" aria-label="View 8 by 10 unframed signs photo album on Google Photos">View Album &rarr;</a>
+                </div>
+              </article>
+            </div>
+          </div>
+          <!-- 4th sign — full width row below -->
+          <div class="bento" style="margin-top:var(--space-md); grid-template-columns:1fr;">
+            <article class="p-card" style="display:grid; grid-template-columns:auto 1fr auto; align-items:center;">
+              <div class="p-img bg-wood" style="min-height:auto; padding:var(--space-lg); min-width:100px;">
+                <span class="p-img-icon" aria-hidden="true">&#x1F5BC;&#xFE0F;</span>
+              </div>
+              <div class="p-body">
+                <h4 class="p-name">8&times;10 Pre-framed Signs</h4>
+                <p class="p-detail">Larger, framed, and ready to command a wall.</p>
+                <p class="p-price" style="padding-top:4px;">$20</p>
+              </div>
+              <div style="padding:var(--space-lg);">
+                <a href="https://photos.app.goo.gl/vkrEcV8fTVEnizqy8" target="_blank" rel="noopener noreferrer"
+                   class="btn-album" style="width:auto; padding:10px 20px;" aria-label="View 8 by 10 pre-framed signs photo album on Google Photos">View Album &rarr;</a>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- TOTES & POUCHES — side by side, totes bigger -->
+        <div class="cat-block reveal">
+          <div class="cat-header">
+            <h3 class="cat-title">Tote Bags &amp; Pouches</h3>
+            <span class="cat-count">2 items</span>
+          </div>
+          <p class="cat-desc">Over 200 tote designs across five colours. Plus 100+ zippered pouches.</p>
+          <div class="bento bento-2-1">
+            <article class="p-card">
+              <div class="p-img bg-tote">
+                <span class="p-img-icon" aria-hidden="true">&#x1F6CD;&#xFE0F;</span>
+                <span class="p-img-text">200+ designs</span>
+              </div>
+              <div class="p-body">
+                <h4 class="p-name">All Tote Bags</h4>
+                <p class="p-detail">200+ designs. Browse by colour or see the full collection.</p>
+                <div class="chips">
+                  <a href="https://photos.app.goo.gl/Caa1ELRAju7qfP3h9" target="_blank" rel="noopener noreferrer" class="chip" aria-label="View natural canvas tote bags">
+                    <span class="chip-dot" style="background:#f5f0e0;border:1px solid #ccc;" aria-hidden="true"></span> Natural
+                  </a>
+                  <a href="https://photos.app.goo.gl/gosaf5Vu4JGgtzLX9" target="_blank" rel="noopener noreferrer" class="chip" aria-label="View black tote bags">
+                    <span class="chip-dot" style="background:#222;" aria-hidden="true"></span> Black
+                  </a>
+                  <a href="https://photos.app.goo.gl/3Vdkraczxc1Lixje6" target="_blank" rel="noopener noreferrer" class="chip" aria-label="View navy tote bags">
+                    <span class="chip-dot" style="background:#1b2a4a;" aria-hidden="true"></span> Navy
+                  </a>
+                  <a href="https://photos.app.goo.gl/SdvNZEvyy5w4XCkh6" target="_blank" rel="noopener noreferrer" class="chip" aria-label="View burgundy tote bags">
+                    <span class="chip-dot" style="background:#6b1c2a;" aria-hidden="true"></span> Burgundy
+                  </a>
+                  <a href="https://photos.app.goo.gl/7rCnBxgExFucbhhY6" target="_blank" rel="noopener noreferrer" class="chip" aria-label="View grey tote bags">
+                    <span class="chip-dot" style="background:#8a8a8a;" aria-hidden="true"></span> Grey
+                  </a>
+                </div>
+                <p class="p-price">$15</p>
+              </div>
+              <div class="p-action">
+                <a href="https://photos.app.goo.gl/9z4P55iuCs4CJNqM7" target="_blank" rel="noopener noreferrer"
+                   class="btn-album" aria-label="View all tote bag designs on Google Photos">View All Totes &rarr;</a>
+              </div>
+            </article>
+            <article class="p-card">
+              <div class="p-img bg-tote">
+                <span class="p-img-icon" aria-hidden="true">&#x1F45C;</span>
+                <span class="p-img-text">100+ designs</span>
+              </div>
+              <div class="p-body">
+                <h4 class="p-name">Zippered Pouches</h4>
+                <p class="p-detail">100+ designs. For makeup, coins, or anything worth keeping together.</p>
+                <p class="p-price">$6</p>
+              </div>
+              <div class="p-action">
+                <a href="https://photos.app.goo.gl/qEg9GaAJa5RSPjsq9" target="_blank" rel="noopener noreferrer"
+                   class="btn-album" aria-label="View zippered pouches on Google Photos">View Album &rarr;</a>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- ACCESSORIES -->
+        <div class="cat-block reveal">
+          <div class="cat-header">
+            <h3 class="cat-title">Accessories</h3>
+            <span class="cat-count">2 items</span>
+          </div>
+          <div class="bento bento-1-1">
+            <article class="p-card">
+              <div class="p-img bg-acc">
+                <span class="p-img-icon" aria-hidden="true">&#x1F40A;</span>
+                <span class="p-img-text">Photo album available</span>
+              </div>
+              <div class="p-body">
+                <h4 class="p-name">Silicone Croc Charms</h4>
+                <p class="p-detail">Tiny attitude for your shoes. Clips onto Crocs and Croc-style footwear.</p>
+                <p class="p-price">$2 each &middot; 3 for $5</p>
+              </div>
+              <div class="p-action">
+                <a href="https://photos.app.goo.gl/jqK1BJn38Sqz7NGcA" target="_blank" rel="noopener noreferrer"
+                   class="btn-album" aria-label="View Croc charms photo album on Google Photos">View Album &rarr;</a>
+              </div>
+            </article>
+            <article class="p-card dim">
+              <div class="p-img bg-acc">
+                <span class="p-img-icon" aria-hidden="true">&#x1F5DD;&#xFE0F;</span>
+                <span class="p-img-text">Coming soon</span>
+              </div>
+              <div class="p-body">
+                <h4 class="p-name">Key Chains &amp; Zipper Pulls</h4>
+                <p class="p-detail">Sarcasm for your keys. Album coming before launch.</p>
+                <p class="p-price">$7 each &middot; 3 for $20</p>
+                <span class="soon-tag">Coming Soon</span>
+              </div>
+              <div class="p-action"><span class="btn-soon">Album Coming Soon</span></div>
+            </article>
+          </div>
+        </div>
+
+        <!-- APPAREL — 4-column fill -->
+        <div class="cat-block reveal">
+          <div class="cat-header">
+            <h3 class="cat-title">Apparel</h3>
+            <span class="cat-count">4 items</span>
+          </div>
+          <p class="cat-desc">Photo albums coming before launch. Contact Patricia for current stock.</p>
+          <div class="bento bento-fill">
+            <article class="p-card dim">
+              <div class="p-img bg-wear"><span class="p-img-icon" aria-hidden="true">&#x1F455;</span></div>
+              <div class="p-body">
+                <h4 class="p-name">T-Shirts</h4>
+                <p class="p-price">$20</p>
+                <span class="soon-tag">Coming Soon</span>
+              </div>
+              <div class="p-action"><span class="btn-soon">Album Coming Soon</span></div>
+            </article>
+            <article class="p-card dim">
+              <div class="p-img bg-wear"><span class="p-img-icon" aria-hidden="true">&#x1F9E2;</span></div>
+              <div class="p-body">
+                <h4 class="p-name">Baseball Caps</h4>
+                <p class="p-price">$15</p>
+                <span class="soon-tag">Coming Soon</span>
+              </div>
+              <div class="p-action"><span class="btn-soon">Album Coming Soon</span></div>
+            </article>
+            <article class="p-card dim">
+              <div class="p-img bg-wear"><span class="p-img-icon" aria-hidden="true">&#x1F393;</span></div>
+              <div class="p-body">
+                <h4 class="p-name">Swiftie Toques</h4>
+                <p class="p-price">$15</p>
+                <span class="soon-tag">Coming Soon</span>
+              </div>
+              <div class="p-action"><span class="btn-soon">Album Coming Soon</span></div>
+            </article>
+            <article class="p-card dim">
+              <div class="p-img bg-wear"><span class="p-img-icon" aria-hidden="true">&#x1F468;&#x200D;&#x1F373;</span></div>
+              <div class="p-body">
+                <h4 class="p-name">BBQ Aprons</h4>
+                <p class="p-price">$8 &ndash; $15</p>
+                <span class="soon-tag">Coming Soon</span>
+              </div>
+              <div class="p-action"><span class="btn-soon">Album Coming Soon</span></div>
+            </article>
+          </div>
+        </div>
+
+        <!-- HOME & KITCHEN -->
+        <div class="cat-block reveal">
+          <div class="cat-header">
+            <h3 class="cat-title">Home &amp; Kitchen</h3>
+            <span class="cat-count">3 items</span>
+          </div>
+          <p class="cat-desc">Albums coming before launch. Contact Patricia for availability.</p>
+          <div class="bento bento-3">
+            <article class="p-card dim">
+              <div class="p-img bg-home"><span class="p-img-icon" aria-hidden="true">&#x1F373;</span></div>
+              <div class="p-body">
+                <h4 class="p-name">Pot Holders</h4>
+                <span class="soon-tag">Coming Soon</span>
+              </div>
+              <div class="p-action"><span class="btn-soon">Album Coming Soon</span></div>
+            </article>
+            <article class="p-card dim">
+              <div class="p-img bg-home"><span class="p-img-icon" aria-hidden="true">&#x1F9C7;</span></div>
+              <div class="p-body">
+                <h4 class="p-name">Tea Towels</h4>
+                <span class="soon-tag">Coming Soon</span>
+              </div>
+              <div class="p-action"><span class="btn-soon">Album Coming Soon</span></div>
+            </article>
+            <article class="p-card dim">
+              <div class="p-img bg-home"><span class="p-img-icon" aria-hidden="true">&#x1F377;</span></div>
+              <div class="p-body">
+                <h4 class="p-name">Wine Bottle Bags</h4>
+                <p class="p-price">$6</p>
+                <span class="soon-tag">Coming Soon</span>
+              </div>
+              <div class="p-action"><span class="btn-soon">Album Coming Soon</span></div>
+            </article>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact" aria-labelledby="contact-heading">
+      <div class="wrap">
+        <div class="contact-grid">
+          <div class="reveal">
+            <p class="eyebrow" style="color:var(--color-primary-light);">How to Order</p>
+            <h2 class="contact-heading" id="contact-heading">Want Something?<br>Just Ask.</h2>
+            <p class="contact-body">See something you love? Reach out to Patricia directly. Custom requests welcome — if it's sarcastic, she can probably make it.</p>
+
+            <a href="tel:6137006677" class="c-item" aria-label="Call or text Patricia at 613-700-6677">
+              <div class="c-icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg></div>
+              <div><p class="c-label">Call or Text</p><p class="c-value">613-700-6677</p></div>
+            </a>
+            <a href="mailto:patriciapkcjs@hotmail.com" class="c-item" aria-label="Email Patricia at patriciapkcjs@hotmail.com">
+              <div class="c-icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></div>
+              <div><p class="c-label">Email</p><p class="c-value">patriciapkcjs@hotmail.com</p></div>
+            </a>
+            <a href="https://facebook.com/sarcastic.signage" target="_blank" rel="noopener noreferrer" class="c-item" aria-label="Find Sarcastic Signage on Facebook (opens in new tab)">
+              <div class="c-icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></div>
+              <div><p class="c-label">Facebook</p><p class="c-value">sarcastic.signage</p></div>
+            </a>
+          </div>
+
+          <div class="how-box reveal">
+            <h3>How It Works</h3>
+            <ol>
+              <li>Browse the photo albums linked in the product list above.</li>
+              <li>Find something you love — screenshot it or note the item name.</li>
+              <li>Call, text, or email Patricia to arrange purchase.</li>
+              <li>Pay by Interac e-Transfer or cash. Pickup or local Ontario delivery.</li>
+            </ol>
+            <p class="how-quip">"No, we don't ship internationally. Yes, we've thought about it. No, we still won't."</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ADULT 18+ -->
+    <section class="adults" id="adults" aria-labelledby="adults-heading">
+      <div class="wrap">
+        <div class="adults-flex">
+          <div class="adults-label">
+            <div class="adults-badge-row">
+              <span class="adults-badge" aria-label="Adults only, 18 and over">18+</span>
+              <h2 class="adults-title" id="adults-heading">Adults Only</h2>
+            </div>
+          </div>
+          <div class="adults-content">
+            <p class="adults-desc">Magnetic canvas signs for adults who appreciate humour that's a little more... unfiltered. $5 each. Must be 18+ to purchase.</p>
+            <nav aria-label="Adult 18+ product collections">
+              <ul class="a-links" role="list">
+                <li><a href="https://photos.app.goo.gl/cK1VNCKT5wr71AaS8" target="_blank" rel="noopener noreferrer" class="a-link" aria-label="View adult Nature and Animals signs, $5 each">&#x1F33F; Nature &amp; Animals</a></li>
+                <li><a href="https://photos.app.goo.gl/AdfViuDBsiR4sekLA" target="_blank" rel="noopener noreferrer" class="a-link" aria-label="View adult Weed signs, $5 each">&#x1F331; Weed</a></li>
+                <li><a href="https://photos.app.goo.gl/ZkybrJPwJZ7b4T9" target="_blank" rel="noopener noreferrer" class="a-link" aria-label="View adult Health and Self-care signs, $5 each">&#x1F48A; Health &amp; Self-care</a></li>
+                <li><a href="https://photos.app.goo.gl/ZAsW8U7gueo1rFzL9" target="_blank" rel="noopener noreferrer" class="a-link" aria-label="View adult People and Funny signs, $5 each">&#x1F602; People / Funny</a></li>
+                <li><a href="https://photos.app.goo.gl/MntfzXsSxCYFpWCm8" target="_blank" rel="noopener noreferrer" class="a-link" aria-label="View adult Inspiration, Pride, and Misc signs, $5 each">&#x1F308; Inspiration / Pride / Misc</a></li>
+                <li><a href="https://photos.app.goo.gl/fCGqERX1SLiTjEqM9" target="_blank" rel="noopener noreferrer" class="a-link all" aria-label="View all adult signs, $5 each">&rarr; View All Adult Signs</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="wrap">
+      <div class="footer-inner">
+        <div>
+          <p class="footer-brand">Sarcastic Signage</p>
+          <p class="footer-tag">Handmade with attitude in Ontario, Canada</p>
+        </div>
+        <nav aria-label="Footer navigation">
+          <ul class="footer-links" role="list">
+            <li><a href="tel:6137006677" aria-label="Call Patricia at 613-700-6677">613-700-6677</a></li>
+            <li><a href="mailto:patriciapkcjs@hotmail.com" aria-label="Email Patricia">Email</a></li>
+            <li><a href="https://facebook.com/sarcastic.signage" target="_blank" rel="noopener noreferrer" aria-label="Sarcastic Signage on Facebook (opens in new tab)">Facebook</a></li>
+          </ul>
+        </nav>
+      </div>
+      <p class="footer-copy">&copy; 2025 Sarcastic Signage &middot; Patricia &middot; Ontario, Canada &middot; All products handmade</p>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    function closeMobile() {
+      mobileMenu.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      hamburger.setAttribute('aria-label', 'Open navigation menu');
+    }
+
+    hamburger.addEventListener('click', () => {
+      const open = mobileMenu.classList.toggle('open');
+      hamburger.setAttribute('aria-expanded', String(open));
+      hamburger.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
+      if (open) document.body.style.overflow = 'hidden';
+      else document.body.style.overflow = '';
+    });
+
+    document.addEventListener('click', e => {
+      if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
+        if (mobileMenu.classList.contains('open')) {
+          closeMobile();
+          document.body.style.overflow = '';
+        }
+      }
+    });
+
+    const nav = document.getElementById('site-nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 16);
+    }, { passive: true });
+
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (!reducedMotion) {
+      const io = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+          if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+        });
+      }, { threshold: 0.06, rootMargin: '0px 0px -24px 0px' });
+      document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+    } else {
+      document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const href = a.getAttribute('href');
+        if (href === '#') return;
+        const t = document.querySelector(href);
+        if (t) {
+          e.preventDefault();
+          closeMobile();
+          document.body.style.overflow = '';
+          t.scrollIntoView({ behavior: reducedMotion ? 'instant' : 'smooth' });
+          if (!t.hasAttribute('tabindex')) t.setAttribute('tabindex', '-1');
+          t.focus({ preventScroll: true });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
