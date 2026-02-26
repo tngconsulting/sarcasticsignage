@@ -1,0 +1,1263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sarcastic Signage — Handmade Signs with Attitude</title>
+  <meta name="description" content="Handmade signs, totes, and gifts with unapologetic personality. Made by Patricia in Ontario, Canada.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@400;700&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+  <style>
+    /* ============================================================
+       CHROMATIC SIGN SHOP — V9
+       Design: Psychedelic brand-true, editorial structure
+       Fonts: Anton (display) + DM Sans (body) + Caveat (accent)
+    ============================================================ */
+    :root {
+      --ink:        #120820;
+      --ink-soft:   #1E1230;
+      --chalk:      #F4EFE6;
+      --chalk-alt:  #EDE6D8;
+      --off-white:  #FDF9F4;
+
+      --pink:       #E8196A;
+      --orange:     #F5821F;
+      --yellow:     #F0B429;
+      --green:      #3D9E28;
+      --purple:     #7B2D8B;
+
+      --spectrum:   linear-gradient(90deg, #7B2D8B 0%, #E8196A 25%, #F5821F 50%, #F0B429 75%, #3D9E28 100%);
+      --sarcastic-text: linear-gradient(90deg, #F0B429 0%, #F5821F 45%, #E8196A 100%);
+
+      --font-display: 'Anton', sans-serif;
+      --font-hand:    'Caveat', cursive;
+      --font-body:    'DM Sans', sans-serif;
+
+      --space-xs:  0.375rem;
+      --space-sm:  0.75rem;
+      --space-md:  1.25rem;
+      --space-lg:  2rem;
+      --space-xl:  3.5rem;
+      --space-2xl: 6rem;
+
+      --max-width: 1240px;
+      --radius-sm: 4px;
+      --radius-md: 8px;
+      --trans: 250ms ease;
+    }
+
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-body);
+      font-size: 17px;
+      line-height: 1.65;
+      color: var(--ink);
+      background: var(--off-white);
+      overflow-x: hidden;
+    }
+
+    /* ── Skip link ── */
+    .skip-link {
+      position: absolute;
+      top: -50px;
+      left: 1rem;
+      background: var(--pink);
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+      font-weight: 700;
+      text-decoration: none;
+      z-index: 9999;
+      transition: top var(--trans);
+    }
+    .skip-link:focus { top: 0; }
+
+    /* ============================================================
+       NAV
+    ============================================================ */
+    .nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      background: rgba(18, 8, 32, 0.96);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 2px solid transparent;
+      border-image: var(--spectrum) 1;
+    }
+
+    .nav-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 var(--space-lg);
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-brand {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      letter-spacing: 0.04em;
+      text-decoration: none;
+      background: var(--sarcastic-text);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: var(--space-lg);
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: rgba(255,255,255,0.75);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      transition: color var(--trans);
+      position: relative;
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -3px; left: 0;
+      width: 0; height: 2px;
+      background: var(--pink);
+      transition: width var(--trans);
+    }
+    .nav-links a:hover { color: #fff; }
+    .nav-links a:hover::after { width: 100%; }
+
+    .nav-cta {
+      background: var(--pink);
+      color: #fff !important;
+      padding: 0.45rem 1.1rem;
+      border-radius: var(--radius-sm);
+      font-weight: 700 !important;
+      transition: background var(--trans) !important;
+    }
+    .nav-cta::after { display: none !important; }
+    .nav-cta:hover { background: var(--orange) !important; }
+
+    /* hamburger */
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 6px;
+    }
+    .nav-toggle span {
+      display: block;
+      width: 24px; height: 2px;
+      background: #fff;
+      border-radius: 2px;
+      transition: var(--trans);
+    }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 999;
+      background: rgba(18, 8, 32, 0.98);
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-lg);
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      color: #fff;
+      font-family: var(--font-display);
+      font-size: 2rem;
+      letter-spacing: 0.06em;
+      text-decoration: none;
+      transition: color var(--trans);
+    }
+    .mobile-menu a:hover { color: var(--pink); }
+    .mobile-close {
+      position: absolute;
+      top: 1.25rem; right: 1.5rem;
+      background: none; border: none;
+      color: #fff; font-size: 2rem;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-toggle { display: flex; }
+    }
+
+    /* ============================================================
+       HERO — psychedelic mesh gradient
+    ============================================================ */
+    .hero {
+      min-height: 100vh;
+      padding: calc(64px + var(--space-2xl)) var(--space-lg) var(--space-2xl);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-2xl);
+      align-items: center;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .hero-bg {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      background:
+        radial-gradient(ellipse at 5%   8%,  rgba(123, 45, 139, 0.92) 0%, transparent 45%),
+        radial-gradient(ellipse at 92%  6%,  rgba(232, 25, 106, 0.88) 0%, transparent 45%),
+        radial-gradient(ellipse at 96% 92%,  rgba(245, 130, 31, 0.82) 0%, transparent 45%),
+        radial-gradient(ellipse at 6%  94%,  rgba(61,  158, 40, 0.82) 0%, transparent 45%),
+        radial-gradient(ellipse at 50% 50%,  rgba(240, 180, 41, 0.40) 0%, transparent 55%),
+        #1A0A30;
+      opacity: 1;
+      pointer-events: none;
+    }
+
+    /* hero bg only covers hero section */
+    .hero-section {
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      background:
+        radial-gradient(ellipse at 5%   8%,  rgba(123, 45, 139, 0.92) 0%, transparent 45%),
+        radial-gradient(ellipse at 92%  6%,  rgba(232, 25, 106, 0.88) 0%, transparent 45%),
+        radial-gradient(ellipse at 96% 92%,  rgba(245, 130, 31, 0.82) 0%, transparent 45%),
+        radial-gradient(ellipse at 6%  94%,  rgba(61,  158, 40, 0.82) 0%, transparent 45%),
+        radial-gradient(ellipse at 50% 50%,  rgba(240, 180, 41, 0.40) 0%, transparent 55%),
+        #1A0A30;
+    }
+
+    .hero-section > * { position: relative; z-index: 1; }
+
+    .hero {
+      min-height: 100vh;
+      padding: calc(64px + var(--space-xl)) var(--space-lg) var(--space-2xl);
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: var(--space-xl);
+      align-items: center;
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    .hero-eyebrow {
+      font-family: var(--font-hand);
+      font-size: 1.3rem;
+      color: rgba(255,255,255,0.65);
+      margin-bottom: var(--space-sm);
+      display: block;
+    }
+
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(3.5rem, 8vw, 7rem);
+      line-height: 0.95;
+      letter-spacing: 0.02em;
+      color: #fff;
+      margin-bottom: var(--space-md);
+    }
+
+    .hero-title .gradient-word {
+      display: block;
+      background: var(--sarcastic-text);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-body {
+      font-size: 1.15rem;
+      color: rgba(255,255,255,0.72);
+      max-width: 480px;
+      margin-bottom: var(--space-lg);
+      line-height: 1.7;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: var(--space-md);
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--pink);
+      color: #fff;
+      padding: 0.85rem 2rem;
+      border-radius: var(--radius-sm);
+      font-weight: 700;
+      font-size: 1rem;
+      text-decoration: none;
+      letter-spacing: 0.03em;
+      transition: background var(--trans), transform var(--trans);
+      white-space: nowrap;
+    }
+    .btn-primary:hover {
+      background: var(--orange);
+      transform: translateY(-2px);
+    }
+
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: transparent;
+      color: rgba(255,255,255,0.85);
+      border: 2px solid rgba(255,255,255,0.3);
+      padding: 0.85rem 2rem;
+      border-radius: var(--radius-sm);
+      font-weight: 600;
+      font-size: 1rem;
+      text-decoration: none;
+      letter-spacing: 0.03em;
+      transition: border-color var(--trans), color var(--trans);
+      white-space: nowrap;
+    }
+    .btn-ghost:hover {
+      border-color: rgba(255,255,255,0.7);
+      color: #fff;
+    }
+
+    /* mock sign in hero */
+    .hero-sign-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-sign {
+      background: var(--chalk);
+      border-radius: var(--radius-md);
+      padding: var(--space-xl) var(--space-lg);
+      width: 100%;
+      max-width: 380px;
+      box-shadow:
+        0 0 0 6px rgba(240,180,41,0.3),
+        0 0 0 12px rgba(232,25,106,0.15),
+        0 24px 60px rgba(0,0,0,0.5);
+      position: relative;
+      transform: rotate(2deg);
+    }
+    .hero-sign::before {
+      content: '';
+      position: absolute;
+      inset: -6px;
+      border-radius: calc(var(--radius-md) + 6px);
+      background: var(--spectrum);
+      z-index: -1;
+      opacity: 0.8;
+    }
+
+    .sign-label {
+      font-family: var(--font-hand);
+      font-size: 0.9rem;
+      color: var(--pink);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: var(--space-sm);
+      display: block;
+    }
+
+    .sign-headline {
+      font-family: var(--font-display);
+      font-size: 2.2rem;
+      line-height: 1.05;
+      letter-spacing: 0.03em;
+      color: var(--ink);
+      margin-bottom: var(--space-md);
+    }
+
+    .sign-subtext {
+      font-family: var(--font-hand);
+      font-size: 1.05rem;
+      color: #555;
+      border-top: 2px dashed var(--chalk-alt);
+      padding-top: var(--space-sm);
+      margin-top: var(--space-sm);
+    }
+
+    .sign-price {
+      display: inline-block;
+      margin-top: var(--space-sm);
+      background: var(--pink);
+      color: #fff;
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      padding: 0.25rem 0.75rem;
+      border-radius: 2px;
+      letter-spacing: 0.05em;
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding-top: calc(64px + var(--space-lg));
+        min-height: auto;
+        padding-bottom: var(--space-xl);
+      }
+      .hero-body { margin: 0 auto var(--space-lg); }
+      .hero-actions { justify-content: center; }
+      .hero-sign-wrap { display: none; }
+    }
+
+    /* ============================================================
+       ABOUT SECTION
+    ============================================================ */
+    .about-section {
+      background: var(--ink);
+      color: #fff;
+      padding: var(--space-2xl) var(--space-lg);
+    }
+
+    .about-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-2xl);
+      align-items: start;
+    }
+
+    .about-left {}
+
+    .about-stat-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-lg);
+      margin-bottom: var(--space-xl);
+    }
+
+    .about-stat {
+      border-left: 3px solid var(--pink);
+      padding-left: var(--space-md);
+    }
+    .about-stat:nth-child(2) { border-color: var(--orange); }
+    .about-stat:nth-child(3) { border-color: var(--yellow); }
+    .about-stat:nth-child(4) { border-color: var(--green); }
+
+    .stat-number {
+      font-family: var(--font-display);
+      font-size: 3rem;
+      line-height: 1;
+      letter-spacing: 0.02em;
+      color: #fff;
+      display: block;
+    }
+
+    .stat-label {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.5);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 0.25rem;
+      display: block;
+    }
+
+    .about-tagline {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+      line-height: 1.1;
+      letter-spacing: 0.03em;
+      color: #fff;
+    }
+    .about-tagline em {
+      font-style: normal;
+      background: var(--sarcastic-text);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .about-right {}
+
+    .section-label {
+      font-family: var(--font-hand);
+      font-size: 1rem;
+      color: var(--pink);
+      letter-spacing: 0.06em;
+      margin-bottom: var(--space-sm);
+      display: block;
+    }
+
+    .about-text {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.72);
+      line-height: 1.8;
+      margin-bottom: var(--space-lg);
+    }
+
+    .about-quote {
+      border-left: 3px solid transparent;
+      border-image: var(--spectrum) 1;
+      padding-left: var(--space-md);
+      font-family: var(--font-hand);
+      font-size: 1.4rem;
+      color: rgba(255,255,255,0.9);
+      line-height: 1.5;
+      font-style: italic;
+    }
+
+    @media (max-width: 768px) {
+      .about-inner { grid-template-columns: 1fr; }
+      .about-stat-row { grid-template-columns: 1fr 1fr; }
+    }
+
+    /* ============================================================
+       PRODUCTS SECTION
+    ============================================================ */
+    .products-section {
+      background: var(--chalk);
+      padding: var(--space-2xl) var(--space-lg);
+    }
+
+    .products-header {
+      max-width: var(--max-width);
+      margin: 0 auto var(--space-xl);
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: var(--space-lg);
+      flex-wrap: wrap;
+    }
+
+    .products-heading-group {}
+
+    .products-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      line-height: 0.95;
+      letter-spacing: 0.03em;
+      color: var(--ink);
+    }
+
+    .products-meta {
+      font-size: 0.95rem;
+      color: #777;
+      margin-top: var(--space-sm);
+    }
+
+    .products-view-all {
+      color: var(--pink);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: 0.04em;
+      white-space: nowrap;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: gap var(--trans);
+    }
+    .products-view-all:hover { gap: 0.75rem; }
+
+    /* category bands */
+    .category-band {
+      max-width: var(--max-width);
+      margin: 0 auto var(--space-xl);
+    }
+
+    .band-header {
+      display: flex;
+      align-items: center;
+      gap: var(--space-md);
+      margin-bottom: var(--space-md);
+      padding-bottom: var(--space-sm);
+      border-bottom: 1px solid var(--chalk-alt);
+    }
+
+    .band-number {
+      font-family: var(--font-display);
+      font-size: 0.85rem;
+      letter-spacing: 0.1em;
+      color: rgba(0,0,0,0.3);
+    }
+
+    .band-title {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      letter-spacing: 0.06em;
+      color: var(--ink);
+    }
+
+    .band-dot {
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .band-dot.pink   { background: var(--pink); }
+    .band-dot.orange { background: var(--orange); }
+    .band-dot.yellow { background: var(--yellow); }
+    .band-dot.green  { background: var(--green); }
+    .band-dot.purple { background: var(--purple); }
+
+    .band-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: var(--space-md);
+    }
+
+    .product-card {
+      background: var(--off-white);
+      border-radius: var(--radius-md);
+      padding: var(--space-md);
+      position: relative;
+      border-left: 4px solid;
+      transition: transform var(--trans), box-shadow var(--trans);
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+    }
+    .product-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    }
+
+    .product-card.c-pink   { border-color: var(--pink); }
+    .product-card.c-orange { border-color: var(--orange); }
+    .product-card.c-yellow { border-color: var(--yellow); }
+    .product-card.c-green  { border-color: var(--green); }
+    .product-card.c-purple { border-color: var(--purple); }
+
+    .card-icon {
+      font-size: 2rem;
+      margin-bottom: var(--space-sm);
+      line-height: 1;
+    }
+
+    .card-name {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      letter-spacing: 0.04em;
+      color: var(--ink);
+      margin-bottom: 0.35rem;
+    }
+
+    .card-desc {
+      font-size: 0.875rem;
+      color: #666;
+      line-height: 1.5;
+      flex: 1;
+    }
+
+    .card-price {
+      display: inline-block;
+      margin-top: var(--space-sm);
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: var(--ink);
+    }
+
+    /* ============================================================
+       PROCESS SECTION
+    ============================================================ */
+    .process-section {
+      background: var(--off-white);
+      padding: var(--space-2xl) var(--space-lg);
+    }
+
+    .process-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    .process-top {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: var(--space-xl);
+      align-items: start;
+      margin-bottom: var(--space-2xl);
+    }
+
+    .process-heading {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 5vw, 4.5rem);
+      line-height: 0.95;
+      letter-spacing: 0.03em;
+      color: var(--ink);
+      position: sticky;
+      top: calc(64px + var(--space-lg));
+    }
+
+    .process-steps {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-lg);
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: 48px 1fr;
+      gap: var(--space-md);
+      align-items: start;
+    }
+
+    .step-num {
+      width: 48px; height: 48px;
+      border-radius: 50%;
+      background: var(--ink);
+      color: #fff;
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      letter-spacing: 0.05em;
+    }
+    .step:nth-child(1) .step-num { background: var(--pink); }
+    .step:nth-child(2) .step-num { background: var(--orange); }
+    .step:nth-child(3) .step-num { background: var(--yellow); color: var(--ink); }
+    .step:nth-child(4) .step-num { background: var(--green); }
+    .step:nth-child(5) .step-num { background: var(--purple); }
+
+    .step-title {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      letter-spacing: 0.04em;
+      color: var(--ink);
+      margin-bottom: 0.35rem;
+    }
+
+    .step-body {
+      font-size: 0.95rem;
+      color: #666;
+      line-height: 1.65;
+    }
+
+    @media (max-width: 768px) {
+      .process-top { grid-template-columns: 1fr; }
+      .process-heading { position: static; }
+    }
+
+    /* ============================================================
+       CONTACT SECTION
+    ============================================================ */
+    .contact-section {
+      background: var(--pink);
+      padding: var(--space-2xl) var(--space-lg);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact-section::before {
+      content: 'SIGNS';
+      position: absolute;
+      right: -2rem; top: 50%;
+      transform: translateY(-50%);
+      font-family: var(--font-display);
+      font-size: 18vw;
+      color: rgba(255,255,255,0.07);
+      letter-spacing: 0.05em;
+      pointer-events: none;
+      white-space: nowrap;
+    }
+
+    .contact-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-xl);
+      align-items: center;
+    }
+
+    .contact-heading {
+      font-family: var(--font-display);
+      font-size: clamp(3rem, 7vw, 6rem);
+      line-height: 0.9;
+      letter-spacing: 0.03em;
+      color: #fff;
+    }
+
+    .contact-right {}
+
+    .contact-text {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.85);
+      margin-bottom: var(--space-lg);
+      line-height: 1.7;
+    }
+
+    .btn-white {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: #fff;
+      color: var(--pink);
+      padding: 0.9rem 2.2rem;
+      border-radius: var(--radius-sm);
+      font-weight: 700;
+      font-size: 1rem;
+      text-decoration: none;
+      letter-spacing: 0.03em;
+      transition: transform var(--trans), box-shadow var(--trans);
+    }
+    .btn-white:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    }
+
+    .contact-links {
+      display: flex;
+      gap: var(--space-md);
+      margin-top: var(--space-md);
+      flex-wrap: wrap;
+    }
+
+    .contact-link {
+      color: rgba(255,255,255,0.75);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: color var(--trans);
+    }
+    .contact-link:hover { color: #fff; }
+
+    @media (max-width: 768px) {
+      .contact-inner { grid-template-columns: 1fr; }
+      .contact-section::before { display: none; }
+    }
+
+    /* ============================================================
+       FOOTER
+    ============================================================ */
+    footer {
+      background: var(--ink-soft);
+      border-top: 3px solid transparent;
+      border-image: var(--spectrum) 1;
+      padding: var(--space-lg) var(--space-lg);
+    }
+
+    .footer-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: var(--space-md);
+    }
+
+    .footer-brand {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      letter-spacing: 0.05em;
+      background: var(--sarcastic-text);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .footer-copy {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.4);
+    }
+
+    .footer-nav {
+      display: flex;
+      gap: var(--space-lg);
+      list-style: none;
+    }
+    .footer-nav a {
+      color: rgba(255,255,255,0.45);
+      text-decoration: none;
+      font-size: 0.85rem;
+      transition: color var(--trans);
+    }
+    .footer-nav a:hover { color: #fff; }
+
+    @media (max-width: 600px) {
+      .footer-inner { flex-direction: column; text-align: center; }
+      .footer-nav { flex-wrap: wrap; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- NAV -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="#main-content" class="nav-brand" aria-label="Sarcastic Signage — home">SARCASTIC SIGNAGE</a>
+      <ul class="nav-links" role="list">
+        <li><a href="#products">Shop</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#process">How It Works</a></li>
+        <li><a href="#contact" class="nav-cta">Get in Touch</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" id="navToggle">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Mobile navigation" aria-modal="true">
+    <button class="mobile-close" id="mobileClose" aria-label="Close menu">✕</button>
+    <a href="#products" onclick="closeMobileMenu()">Shop</a>
+    <a href="#about" onclick="closeMobileMenu()">About</a>
+    <a href="#process" onclick="closeMobileMenu()">How It Works</a>
+    <a href="#contact" onclick="closeMobileMenu()">Get in Touch</a>
+  </div>
+
+  <main id="main-content">
+
+    <!-- HERO -->
+    <section class="hero-section" aria-label="Hero">
+      <div class="hero">
+        <div class="hero-text">
+          <span class="hero-eyebrow">Handmade in Ontario, Canada</span>
+          <h1 class="hero-title">
+            <span class="gradient-word">SARCASTIC</span>
+            SIGNAGE
+          </h1>
+          <p class="hero-body">Bold, blunt, unapologetically honest signs for people who say what everyone else is thinking.</p>
+          <div class="hero-actions">
+            <a href="#products" class="btn-primary">Browse the Shop <span aria-hidden="true">→</span></a>
+            <a href="#about" class="btn-ghost">Our Story</a>
+          </div>
+        </div>
+
+        <div class="hero-sign-wrap" aria-hidden="true">
+          <div class="hero-sign">
+            <span class="sign-label">Best Seller</span>
+            <p class="sign-headline">I SMILE BECAUSE I HAVE NO IDEA WHAT'S GOING ON</p>
+            <p class="sign-subtext">— Hand-painted wood sign<br>One-of-a-kind &amp; made with love</p>
+            <span class="sign-price">From $35</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about-section" id="about" aria-labelledby="about-heading">
+      <div class="about-inner">
+        <div class="about-left">
+          <div class="about-stat-row">
+            <div class="about-stat">
+              <span class="stat-number">500+</span>
+              <span class="stat-label">Signs Sold</span>
+            </div>
+            <div class="about-stat">
+              <span class="stat-number">100%</span>
+              <span class="stat-label">Handmade</span>
+            </div>
+            <div class="about-stat">
+              <span class="stat-number">5★</span>
+              <span class="stat-label">Customer Love</span>
+            </div>
+            <div class="about-stat">
+              <span class="stat-number">1</span>
+              <span class="stat-label">Maker. Patricia.</span>
+            </div>
+          </div>
+          <h2 class="about-tagline" id="about-heading">
+            Signs that say<br><em>what needs saying.</em>
+          </h2>
+        </div>
+
+        <div class="about-right">
+          <span class="section-label">The Story</span>
+          <p class="about-text">Patricia started Sarcastic Signage because she couldn't find anything on the market that matched her personality — so she made her own. Every sign is hand-painted, wood-cut, or sewn by hand in her Ontario studio.</p>
+          <p class="about-text">No mass production. No templates copied from a catalog. Just a woman with a paintbrush, a sense of humour, and a deep appreciation for the art of saying exactly what you mean.</p>
+          <blockquote class="about-quote">"If it doesn't make you laugh, snort, or nod knowingly — it doesn't leave the studio."</blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section class="products-section" id="products" aria-labelledby="products-heading">
+      <div class="products-header">
+        <div class="products-heading-group">
+          <h2 class="products-title" id="products-heading">THE SHOP</h2>
+          <p class="products-meta">Handmade goods with personality. Every piece is one-of-a-kind.</p>
+        </div>
+        <a href="#contact" class="products-view-all" aria-label="View all products — contact us">Custom order <span aria-hidden="true">→</span></a>
+      </div>
+
+      <!-- 01 — Signs -->
+      <div class="category-band" aria-labelledby="band-signs">
+        <div class="band-header">
+          <span class="band-number">01</span>
+          <span class="band-dot pink" aria-hidden="true"></span>
+          <h3 class="band-title" id="band-signs">SIGNS</h3>
+        </div>
+        <div class="band-grid">
+          <a href="#contact" class="product-card c-pink" aria-label="Wood Signs — shop handpainted wood signs">
+            <span class="card-icon" aria-hidden="true">🪵</span>
+            <h4 class="card-name">WOOD SIGNS</h4>
+            <p class="card-desc">Hand-painted on reclaimed wood. Each one is a little different — just like the people who buy them.</p>
+            <span class="card-price">From $35</span>
+          </a>
+          <a href="#contact" class="product-card c-pink" aria-label="Framed Prints — shop framed sarcastic prints">
+            <span class="card-icon" aria-hidden="true">🖼️</span>
+            <h4 class="card-name">FRAMED PRINTS</h4>
+            <p class="card-desc">Professionally printed and ready to hang. Gallery-worthy wit for any room.</p>
+            <span class="card-price">From $28</span>
+          </a>
+          <a href="#contact" class="product-card c-pink" aria-label="Custom Signs — order a custom handpainted sign">
+            <span class="card-icon" aria-hidden="true">✏️</span>
+            <h4 class="card-name">CUSTOM SIGNS</h4>
+            <p class="card-desc">Got a saying that needs a home? Patricia will paint it for you.</p>
+            <span class="card-price">From $55</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- 02 — Totes -->
+      <div class="category-band" aria-labelledby="band-totes">
+        <div class="band-header">
+          <span class="band-number">02</span>
+          <span class="band-dot orange" aria-hidden="true"></span>
+          <h3 class="band-title" id="band-totes">TOTES &amp; BAGS</h3>
+        </div>
+        <div class="band-grid">
+          <a href="#contact" class="product-card c-orange" aria-label="Canvas Tote Bags — shop hand-lettered totes">
+            <span class="card-icon" aria-hidden="true">👜</span>
+            <h4 class="card-name">CANVAS TOTES</h4>
+            <p class="card-desc">Hand-lettered with the sentiments your grocery bag deserves. Reusable &amp; sturdy.</p>
+            <span class="card-price">From $22</span>
+          </a>
+          <a href="#contact" class="product-card c-orange" aria-label="Market Bags — shop woven market bags">
+            <span class="card-icon" aria-hidden="true">🌿</span>
+            <h4 class="card-name">MARKET BAGS</h4>
+            <p class="card-desc">Woven market-style bags with painted lettering. Farmers market ready.</p>
+            <span class="card-price">From $30</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- 03 — Accessories -->
+      <div class="category-band" aria-labelledby="band-accessories">
+        <div class="band-header">
+          <span class="band-number">03</span>
+          <span class="band-dot yellow" aria-hidden="true"></span>
+          <h3 class="band-title" id="band-accessories">ACCESSORIES</h3>
+        </div>
+        <div class="band-grid">
+          <a href="#contact" class="product-card c-yellow" aria-label="Keychains — shop handmade keychains">
+            <span class="card-icon" aria-hidden="true">🔑</span>
+            <h4 class="card-name">KEYCHAINS</h4>
+            <p class="card-desc">Small but mighty. Perfect stocking stuffers with a side of snark.</p>
+            <span class="card-price">From $12</span>
+          </a>
+          <a href="#contact" class="product-card c-yellow" aria-label="Magnets — shop handpainted magnets">
+            <span class="card-icon" aria-hidden="true">🧲</span>
+            <h4 class="card-name">MAGNETS</h4>
+            <p class="card-desc">Stick them on the fridge so everyone knows how you feel about Mondays.</p>
+            <span class="card-price">From $8</span>
+          </a>
+          <a href="#contact" class="product-card c-yellow" aria-label="Coasters — shop handmade painted coasters">
+            <span class="card-icon" aria-hidden="true">☕</span>
+            <h4 class="card-name">COASTERS</h4>
+            <p class="card-desc">Because your coffee table deserves commentary too. Ceramic with a waterproof seal.</p>
+            <span class="card-price">From $18</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- 04 — Apparel -->
+      <div class="category-band" aria-labelledby="band-apparel">
+        <div class="band-header">
+          <span class="band-number">04</span>
+          <span class="band-dot green" aria-hidden="true"></span>
+          <h3 class="band-title" id="band-apparel">APPAREL</h3>
+        </div>
+        <div class="band-grid">
+          <a href="#contact" class="product-card c-green" aria-label="Tees — shop graphic tees">
+            <span class="card-icon" aria-hidden="true">👕</span>
+            <h4 class="card-name">GRAPHIC TEES</h4>
+            <p class="card-desc">Wear your opinion. Unisex fit, high-quality screen-printed design.</p>
+            <span class="card-price">From $32</span>
+          </a>
+          <a href="#contact" class="product-card c-green" aria-label="Hats — shop embroidered hats">
+            <span class="card-icon" aria-hidden="true">🧢</span>
+            <h4 class="card-name">EMBROIDERED HATS</h4>
+            <p class="card-desc">Your head, your message. Structured cap with custom embroidery.</p>
+            <span class="card-price">From $28</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- 05 — Home -->
+      <div class="category-band" aria-labelledby="band-home">
+        <div class="band-header">
+          <span class="band-number">05</span>
+          <span class="band-dot purple" aria-hidden="true"></span>
+          <h3 class="band-title" id="band-home">HOME &amp; GIFTS</h3>
+        </div>
+        <div class="band-grid">
+          <a href="#contact" class="product-card c-purple" aria-label="Pillows — shop handmade throw pillows">
+            <span class="card-icon" aria-hidden="true">🛋️</span>
+            <h4 class="card-name">THROW PILLOWS</h4>
+            <p class="card-desc">Hand-lettered cotton covers that finally say what your couch should.</p>
+            <span class="card-price">From $38</span>
+          </a>
+          <a href="#contact" class="product-card c-purple" aria-label="Gift Sets — shop curated gift sets">
+            <span class="card-icon" aria-hidden="true">🎁</span>
+            <h4 class="card-name">GIFT SETS</h4>
+            <p class="card-desc">Curated bundles for the person in your life who has opinions. Beautifully packaged.</p>
+            <span class="card-price">From $48</span>
+          </a>
+          <a href="#contact" class="product-card c-purple" aria-label="Seasonal items — shop seasonal collections">
+            <span class="card-icon" aria-hidden="true">🍂</span>
+            <h4 class="card-name">SEASONAL</h4>
+            <p class="card-desc">Holiday-themed, birthday-ready, and every-occasion honest. Rotates by season.</p>
+            <span class="card-price">From $20</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="process-section" id="process" aria-labelledby="process-heading">
+      <div class="process-inner">
+        <div class="process-top">
+          <h2 class="process-heading" id="process-heading">HOW IT WORKS</h2>
+          <ol class="process-steps">
+            <li class="step">
+              <span class="step-num" aria-hidden="true">1</span>
+              <div>
+                <h3 class="step-title">BROWSE OR REACH OUT</h3>
+                <p class="step-body">Browse existing designs in the shop or send Patricia a message with your idea. Custom orders are welcomed and encouraged.</p>
+              </div>
+            </li>
+            <li class="step">
+              <span class="step-num" aria-hidden="true">2</span>
+              <div>
+                <h3 class="step-title">WE NAIL DOWN THE DETAILS</h3>
+                <p class="step-body">Size, wording, finish, and paint colours. Patricia will confirm everything before she picks up a brush.</p>
+              </div>
+            </li>
+            <li class="step">
+              <span class="step-num" aria-hidden="true">3</span>
+              <div>
+                <h3 class="step-title">HANDMADE WITH CARE</h3>
+                <p class="step-body">Every piece is made by hand in Patricia's Ontario studio. No shortcuts, no machines — just real craft.</p>
+              </div>
+            </li>
+            <li class="step">
+              <span class="step-num" aria-hidden="true">4</span>
+              <div>
+                <h3 class="step-title">SHIPS RIGHT TO YOU</h3>
+                <p class="step-body">Carefully packaged and shipped across Canada. Local pickup available in Ontario.</p>
+              </div>
+            </li>
+            <li class="step">
+              <span class="step-num" aria-hidden="true">5</span>
+              <div>
+                <h3 class="step-title">LOVE IT OR WE FIX IT</h3>
+                <p class="step-body">If something isn't right, Patricia makes it right. That's the handmade guarantee.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact-section" id="contact" aria-labelledby="contact-heading">
+      <div class="contact-inner">
+        <h2 class="contact-heading" id="contact-heading">LIKE WHAT<br>YOU SEE?</h2>
+        <div class="contact-right">
+          <p class="contact-text">Orders, custom requests, wholesale inquiries — Patricia reads everything. Drop her a message and she'll get back to you faster than you'd expect from someone this busy making things.</p>
+          <a href="mailto:hello@sarcasticsignage.ca" class="btn-white">Send a Message <span aria-hidden="true">→</span></a>
+          <div class="contact-links">
+            <a href="https://facebook.com" class="contact-link" aria-label="Follow Sarcastic Signage on Facebook">
+              <span aria-hidden="true">📘</span> Facebook
+            </a>
+            <a href="https://instagram.com" class="contact-link" aria-label="Follow Sarcastic Signage on Instagram">
+              <span aria-hidden="true">📷</span> Instagram
+            </a>
+            <a href="https://etsy.com" class="contact-link" aria-label="Shop Sarcastic Signage on Etsy">
+              <span aria-hidden="true">🛍️</span> Etsy
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-brand">SARCASTIC SIGNAGE</span>
+      <p class="footer-copy">© 2025 Sarcastic Signage. Handmade by Patricia in Ontario, Canada.</p>
+      <nav aria-label="Footer navigation">
+        <ul class="footer-nav" role="list">
+          <li><a href="#products">Shop</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#process">How It Works</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    const toggle  = document.getElementById('navToggle');
+    const menu    = document.getElementById('mobileMenu');
+    const closeBtn = document.getElementById('mobileClose');
+
+    function openMobileMenu() {
+      menu.classList.add('open');
+      toggle.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
+      closeBtn.focus();
+    }
+
+    function closeMobileMenu() {
+      menu.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+      toggle.focus();
+    }
+
+    toggle.addEventListener('click', openMobileMenu);
+    closeBtn.addEventListener('click', closeMobileMenu);
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && menu.classList.contains('open')) closeMobileMenu();
+    });
+  </script>
+</body>
+</html>
