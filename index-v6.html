@@ -215,10 +215,11 @@
     .mobile-menu {
       display: none;
       position: fixed;
-      top: var(--nav-h); left: 0; right: 0; bottom: 0;
+      top: var(--nav-h); left: 0; right: 0;
+      height: 100vh;
       background: var(--color-surface);
       padding: var(--space-lg) var(--pad-x);
-      z-index: 99;
+      z-index: 9999;
       overflow-y: auto;
     }
     .mobile-menu.open { display: block; }
@@ -1514,6 +1515,7 @@
       mobileMenu.classList.remove('open');
       hamburger.setAttribute('aria-expanded', 'false');
       hamburger.setAttribute('aria-label', 'Open navigation menu');
+      document.body.style.overflow = '';
     }
 
     hamburger.addEventListener('click', () => {

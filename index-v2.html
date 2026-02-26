@@ -215,10 +215,12 @@
       position: fixed;
       top: var(--nav-h);
       left: 0; right: 0;
+      height: 100vh;
       background: var(--color-dark);
       border-bottom: 1px solid var(--color-border);
       padding: var(--space-lg) var(--pad-x);
-      z-index: 99;
+      overflow-y: auto;
+      z-index: 9999;
     }
     .mobile-menu.open { display: block; }
 
@@ -1707,12 +1709,14 @@
       mobileMenu.classList.remove('open');
       hamburger.setAttribute('aria-expanded', 'false');
       hamburger.setAttribute('aria-label', 'Open navigation menu');
+      document.body.style.overflow = '';
     }
 
     hamburger.addEventListener('click', () => {
       const isOpen = mobileMenu.classList.toggle('open');
       hamburger.setAttribute('aria-expanded', String(isOpen));
       hamburger.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+      document.body.style.overflow = isOpen ? 'hidden' : '';
     });
 
     document.addEventListener('click', e => {

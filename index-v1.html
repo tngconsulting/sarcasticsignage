@@ -211,12 +211,14 @@
             top: var(--nav-height);
             left: 0;
             right: 0;
+            height: 100vh;
             background: var(--dark);
             border-bottom: 2px solid var(--coral);
             padding: 2rem;
+            overflow-y: auto;
             transform: translateY(-120%);
             transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-            z-index: 999;
+            z-index: 9999;
         }
 
         .mobile-menu.open { transform: translateY(0); }
@@ -1383,13 +1385,15 @@
 
         hamburger.addEventListener('click', () => {
             hamburger.classList.toggle('active');
-            mobileMenu.classList.toggle('open');
+            const isOpen = mobileMenu.classList.toggle('open');
+            document.body.style.overflow = isOpen ? 'hidden' : '';
         });
 
         mobileLinks.forEach(link => {
             link.addEventListener('click', () => {
                 hamburger.classList.remove('active');
                 mobileMenu.classList.remove('open');
+                document.body.style.overflow = '';
             });
         });
 
