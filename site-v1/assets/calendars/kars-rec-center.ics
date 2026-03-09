@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Sarcastic Signage//Events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+DTSTART:20261213T100000
+DTEND:20261213T150000
+SUMMARY:Kars Community Recreation Center Event — Sarcastic Signage
+DESCRIPTION:Come find Sarcastic Signage at the Kars Community Recreation Center! Handmade signs\, totes\, pouches\, accessories and more.\n\nHandmade in Ontario. Zero filter. Always relatable.
+LOCATION:Gloucester\, ON\, Canada
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR

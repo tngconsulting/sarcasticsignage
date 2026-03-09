@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Sarcastic Signage//Events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+DTSTART:20261128T160000
+DTEND:20261128T210000
+SUMMARY:Christmas Night Market (Kiwans Farms) — Sarcastic Signage
+DESCRIPTION:Come find Sarcastic Signage at the Christmas Night Market at Kiwans Farms! Perfect for holiday gift shopping. Handmade signs\, totes\, pouches\, accessories and more.\n\nHandmade in Ontario. Zero filter. Always relatable.
+LOCATION:Kiwans Farms\, ON\, Canada
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR

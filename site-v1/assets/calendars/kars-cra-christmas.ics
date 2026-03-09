@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Sarcastic Signage//Events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+DTSTART:20261129T100000
+DTEND:20261129T150000
+SUMMARY:Kars CRA Christmas Market — Sarcastic Signage
+DESCRIPTION:Come find Sarcastic Signage at the Kars CRA Christmas Market! Perfect holiday gift shopping. Handmade signs\, totes\, pouches\, accessories and more.\n\nHandmade in Ontario. Zero filter. Always relatable.
+LOCATION:Kars Community Recreation Center\, Kars\, ON\, Canada
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR

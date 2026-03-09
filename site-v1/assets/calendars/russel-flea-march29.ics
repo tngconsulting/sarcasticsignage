@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Sarcastic Signage//Events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+DTSTART:20260329T090000
+DTEND:20260329T150000
+SUMMARY:Russel Flea Market — Sarcastic Signage
+DESCRIPTION:Come find Sarcastic Signage at the Russel Flea Market! Handmade signs\, totes\, and more. Signs that say what you're thinking.\n\nHandmade in Ontario. Zero filter. Always relatable.
+LOCATION:Russel\, ON\, Canada
+URL:https://www.russellflea.ca/
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Adults Only — Sarcastic Signage. Magnetic canvas signs for adults who appreciate unfiltered humour. 18+ only. $5 each. Handmade in Ontario.">
+  <meta name="author" content="Patricia, Sarcastic Signage">
+  <meta name="robots" content="noindex">
+  <meta property="og:title" content="Adults Only — Sarcastic Signage">
+  <meta property="og:description" content="For adults who appreciate humour that's a little more... unfiltered. 18+ only.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#4A1942">
+  <title>Adults Only — Sarcastic Signage</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,700;0,900;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div id="page-header-mount"></div>
+
+  <!-- Age Gate Modal -->
+  <div id="age-gate-overlay" class="age-gate-overlay" role="dialog" aria-modal="true" aria-labelledby="age-gate-title" aria-describedby="age-gate-desc">
+    <div class="age-gate-card">
+      <div class="age-gate-icon" aria-hidden="true">🔞</div>
+      <h2 id="age-gate-title">Adults Only</h2>
+      <p id="age-gate-desc">This section contains content intended for adults 18 years of age and older. Please confirm your age to continue.</p>
+      <div class="age-gate-actions">
+        <button id="age-gate-yes" class="btn btn-primary btn-lg" aria-label="Yes, I am 18 or older — enter Adults Only section">
+          Yes, I&rsquo;m 18+
+        </button>
+        <button id="age-gate-no" class="btn btn-outline" style="color:var(--clr-grey-dark);border-color:var(--clr-grey-light);" aria-label="No, I am not 18 — go back to homepage">
+          No, Take Me Back
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <main id="main-content" tabindex="-1">
+
+    <!-- Page Hero -->
+    <section class="page-hero" aria-labelledby="adults-title">
+      <div class="container page-hero-content">
+        <h1 id="adults-title">Adults Only</h1>
+        <p>Magnetic canvas signs for people who appreciate humour that&rsquo;s a little more&hellip; unfiltered.</p>
+      </div>
+      <div class="torn-edge" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 60" preserveAspectRatio="none">
+          <path d="M0,60 L0,28 C20,22 35,38 55,30 C75,22 88,10 108,16 C128,22 138,36 158,32 C178,28 192,14 212,18 C232,22 244,38 264,34 C284,30 298,16 318,14 C338,12 352,28 372,30 C392,32 406,18 426,16 C446,14 460,30 480,32 C500,34 514,20 534,18 C554,16 568,32 588,34 C608,36 622,22 642,20 C662,18 676,34 696,36 C716,38 730,24 750,22 C770,20 784,36 804,38 C824,40 838,26 858,24 C878,22 892,38 912,40 C932,42 946,28 966,26 C986,24 1000,40 1020,42 C1040,44 1054,30 1074,28 C1094,26 1108,42 1128,44 C1148,46 1162,32 1182,30 C1202,28 1216,44 1236,46 C1256,48 1270,34 1290,32 C1310,30 1324,46 1344,48 C1364,50 1378,36 1398,34 L1440,32 L1440,60 Z"
+                fill="#FAF8F5"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ── ADULTS ONLY CONTENT ── -->
+    <section class="section" aria-label="Adults Only product gallery">
+      <div class="container">
+
+        <!-- Section Intro -->
+        <div class="adults-intro">
+          <div class="adults-intro-icon" aria-hidden="true">🔞</div>
+          <div class="adults-intro-text">
+            <h2>Magnetic Canvas Signs — Adults Edition</h2>
+            <p>
+              For the fridges, offices, and man-caves of those who appreciate humour with a little extra spice. Magnetic canvas signs, $5 each. Must be 18+ to purchase.
+            </p>
+          </div>
+        </div>
+
+        <!-- Age reminder -->
+        <div style="background:rgba(181,41,75,0.06);border:1px solid rgba(181,41,75,0.2);border-radius:var(--radius-md);padding:var(--sp-md) var(--sp-lg);margin-bottom:var(--sp-xl);display:flex;align-items:center;gap:var(--sp-sm);">
+          <span aria-hidden="true">⚠️</span>
+          <span style="font-size:0.9rem;color:var(--clr-magenta);font-weight:700;">Must be 18 years or older to purchase. By being on this page you&rsquo;ve confirmed you&rsquo;re an adult. Act like it.</span>
+        </div>
+
+        <!-- Product Grid -->
+        <div class="product-grid" id="adults-product-grid" aria-label="Adults Only products">
+
+          <article class="product-card" data-category="adults">
+            <div class="product-image-wrap">
+              <div class="placeholder-img adults" data-src="assets/images/products/adults-canvas-1.jpg" role="img" aria-label="Adults only magnetic canvas sign placeholder">
+                <span class="placeholder-icon" aria-hidden="true">🎨</span>
+                <span class="placeholder-label">Magnetic Canvas Sign</span>
+              </div>
+              <span class="product-badge" style="background:var(--clr-magenta);color:white;">18+</span>
+            </div>
+            <div class="product-card-body">
+              <span class="product-category" style="color:var(--clr-magenta);">Adults Only</span>
+              <p class="product-name">Adults Only Magnetic Canvas Sign #1</p>
+              <p class="product-price">$5 each</p>
+            </div>
+            <div class="product-card-footer">
+              <a href="contact.html" class="btn btn-sm btn-dark" style="width:100%;">Order This</a>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="adults">
+            <div class="product-image-wrap">
+              <div class="placeholder-img adults" data-src="assets/images/products/adults-canvas-2.jpg" role="img" aria-label="Adults only magnetic canvas sign placeholder">
+                <span class="placeholder-icon" aria-hidden="true">🎨</span>
+                <span class="placeholder-label">Magnetic Canvas Sign</span>
+              </div>
+              <span class="product-badge" style="background:var(--clr-magenta);color:white;">18+</span>
+            </div>
+            <div class="product-card-body">
+              <span class="product-category" style="color:var(--clr-magenta);">Adults Only</span>
+              <p class="product-name">Adults Only Magnetic Canvas Sign #2</p>
+              <p class="product-price">$5 each</p>
+            </div>
+            <div class="product-card-footer">
+              <a href="contact.html" class="btn btn-sm btn-dark" style="width:100%;">Order This</a>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="adults">
+            <div class="product-image-wrap">
+              <div class="placeholder-img adults" data-src="assets/images/products/adults-canvas-3.jpg" role="img" aria-label="Adults only magnetic canvas sign placeholder">
+                <span class="placeholder-icon" aria-hidden="true">🎨</span>
+                <span class="placeholder-label">Magnetic Canvas Sign</span>
+              </div>
+              <span class="product-badge" style="background:var(--clr-magenta);color:white;">18+</span>
+            </div>
+            <div class="product-card-body">
+              <span class="product-category" style="color:var(--clr-magenta);">Adults Only</span>
+              <p class="product-name">Adults Only Magnetic Canvas Sign #3</p>
+              <p class="product-price">$5 each</p>
+            </div>
+            <div class="product-card-footer">
+              <a href="contact.html" class="btn btn-sm btn-dark" style="width:100%;">Order This</a>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="adults">
+            <div class="product-image-wrap">
+              <div class="placeholder-img adults" data-src="assets/images/products/adults-canvas-4.jpg" role="img" aria-label="Adults only magnetic canvas sign placeholder">
+                <span class="placeholder-icon" aria-hidden="true">🎨</span>
+                <span class="placeholder-label">Magnetic Canvas Sign</span>
+              </div>
+              <span class="product-badge" style="background:var(--clr-magenta);color:white;">18+</span>
+            </div>
+            <div class="product-card-body">
+              <span class="product-category" style="color:var(--clr-magenta);">Adults Only</span>
+              <p class="product-name">Adults Only Magnetic Canvas Sign #4</p>
+              <p class="product-price">$5 each</p>
+            </div>
+            <div class="product-card-footer">
+              <a href="contact.html" class="btn btn-sm btn-dark" style="width:100%;">Order This</a>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="adults">
+            <div class="product-image-wrap">
+              <div class="placeholder-img adults" data-src="assets/images/products/adults-canvas-5.jpg" role="img" aria-label="Adults only magnetic canvas sign placeholder">
+                <span class="placeholder-icon" aria-hidden="true">🎨</span>
+                <span class="placeholder-label">Magnetic Canvas Sign</span>
+              </div>
+              <span class="product-badge" style="background:var(--clr-magenta);color:white;">18+</span>
+            </div>
+            <div class="product-card-body">
+              <span class="product-category" style="color:var(--clr-magenta);">Adults Only</span>
+              <p class="product-name">Adults Only Magnetic Canvas Sign #5</p>
+              <p class="product-price">$5 each</p>
+            </div>
+            <div class="product-card-footer">
+              <a href="contact.html" class="btn btn-sm btn-dark" style="width:100%;">Order This</a>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="adults">
+            <div class="product-image-wrap">
+              <div class="placeholder-img adults" data-src="assets/images/products/adults-canvas-6.jpg" role="img" aria-label="Adults only magnetic canvas sign placeholder">
+                <span class="placeholder-icon" aria-hidden="true">🎨</span>
+                <span class="placeholder-label">Magnetic Canvas Sign</span>
+              </div>
+              <span class="product-badge" style="background:var(--clr-magenta);color:white;">18+</span>
+            </div>
+            <div class="product-card-body">
+              <span class="product-category" style="color:var(--clr-magenta);">Adults Only</span>
+              <p class="product-name">Adults Only Magnetic Canvas Sign #6</p>
+              <p class="product-price">$5 each</p>
+            </div>
+            <div class="product-card-footer">
+              <a href="contact.html" class="btn btn-sm btn-dark" style="width:100%;">Order This</a>
+            </div>
+          </article>
+
+        </div><!-- /product-grid -->
+
+        <!-- How to Order Reminder -->
+        <div class="how-order-reminder" style="margin-top:var(--sp-3xl);">
+          <h3>How to Order</h3>
+          <p>See a sign you love? Screenshot it or note the number, then reach out to Patricia to arrange your order.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:var(--sp-sm);justify-content:center;">
+            <a href="tel:613-700-6677" class="btn btn-dark">Call / Text: 613-700-6677</a>
+            <a href="mailto:patriciapkcjs@hotmail.com" class="btn btn-outline" style="color:var(--clr-plum);border-color:var(--clr-plum);">Email Patricia</a>
+          </div>
+          <p style="margin-top:var(--sp-md);font-size:0.85rem;color:var(--clr-grey-mid);font-style:italic;">We accept Interac e-Transfer and Cash. Must be 18+ to purchase.</p>
+        </div>
+
+        <!-- Back to Main Shop -->
+        <div class="text-center" style="margin-top:var(--sp-2xl);">
+          <a href="shop.html" class="see-all-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            Back to Main Shop
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="contact-strip" aria-labelledby="adults-cta-title">
+      <div class="container contact-strip-inner">
+        <h2 id="adults-cta-title">See Something You Like?</h2>
+        <p>Reach out to Patricia to order. She&rsquo;s the maker, the shipper, and the whole operation.</p>
+        <div class="contact-buttons">
+          <a href="tel:613-700-6677" class="btn btn-outline btn-lg">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.1a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.3h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.29 6.29l.97-.97a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            613-700-6677
+          </a>
+          <a href="mailto:patriciapkcjs@hotmail.com" class="btn btn-ghost btn-lg">Email Patricia</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="page-footer-mount"></div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

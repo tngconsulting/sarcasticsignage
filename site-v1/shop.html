@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shop Sarcastic Signage — handmade signs, tote bags, zippered pouches, apparel & accessories. Signs that say what you're thinking. Made in Ontario.">
+  <meta name="author" content="Patricia, Sarcastic Signage">
+  <meta property="og:title" content="Shop — Sarcastic Signage">
+  <meta property="og:description" content="Handmade signs, totes, pouches, apparel & accessories. Crafted with attitude in Ontario, Canada.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#4A1942">
+  <title>Shop — Sarcastic Signage</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,700;0,900;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div id="page-header-mount"></div>
+
+  <main id="main-content" tabindex="-1">
+
+    <!-- Page Hero -->
+    <section class="page-hero" aria-labelledby="shop-title">
+      <div class="container page-hero-content">
+        <h1 id="shop-title">The Shop</h1>
+        <p>Signs, totes, pouches, apparel &amp; accessories. All handmade. All sarcastic.</p>
+      </div>
+      <div class="torn-edge" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 60" preserveAspectRatio="none">
+          <path d="M0,60 L0,28 C20,22 35,38 55,30 C75,22 88,10 108,16 C128,22 138,36 158,32 C178,28 192,14 212,18 C232,22 244,38 264,34 C284,30 298,16 318,14 C338,12 352,28 372,30 C392,32 406,18 426,16 C446,14 460,30 480,32 C500,34 514,20 534,18 C554,16 568,32 588,34 C608,36 622,22 642,20 C662,18 676,34 696,36 C716,38 730,24 750,22 C770,20 784,36 804,38 C824,40 838,26 858,24 C878,22 892,38 912,40 C932,42 946,28 966,26 C986,24 1000,40 1020,42 C1040,44 1054,30 1074,28 C1094,26 1108,42 1128,44 C1148,46 1162,32 1182,30 C1202,28 1216,44 1236,46 C1256,48 1270,34 1290,32 C1310,30 1324,46 1344,48 C1364,50 1378,36 1398,34 L1440,32 L1440,60 Z"
+                fill="#FAF8F5"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ── SHOP CONTENT ── -->
+    <section class="section" aria-label="Product catalogue">
+      <div class="container">
+
+        <!-- Search Bar -->
+        <div class="shop-search-wrap">
+          <form class="shop-search-form" id="shop-search-form" role="search">
+            <label for="shop-search-input" class="sr-only">Search products by name or category</label>
+            <input
+              type="search"
+              id="shop-search-input"
+              name="q"
+              class="shop-search-input"
+              placeholder="Search products — e.g. &ldquo;tote&rdquo;, &ldquo;signs&rdquo;, &ldquo;arguing&rdquo;&hellip;"
+              autocomplete="off"
+              aria-controls="product-grid"
+              aria-label="Search products"
+            >
+            <button type="submit" class="shop-search-btn" aria-label="Submit product search">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            </button>
+          </form>
+        </div>
+
+        <!-- Category Filters -->
+        <div class="category-filters" role="group" aria-label="Filter products by category">
+          <button class="filter-btn active" data-category="all" aria-pressed="true">All</button>
+          <button class="filter-btn" data-category="signs" aria-pressed="false">Signs</button>
+          <button class="filter-btn" data-category="totes" aria-pressed="false">Tote Bags</button>
+          <button class="filter-btn" data-category="pouches" aria-pressed="false">Pouches</button>
+          <button class="filter-btn" data-category="apparel" aria-pressed="false">Apparel</button>
+          <button class="filter-btn" data-category="accessories" aria-pressed="false">Accessories</button>
+          <a href="adults-only.html" class="filter-btn adults-filter" aria-label="Adults Only section — age verification required">Adults Only 18+</a>
+        </div>
+
+        <!-- Product Grid -->
+        <div class="product-grid" id="product-grid" aria-live="polite" aria-label="Products">
+
+          <!-- ── SIGNS ── -->
+          <article class="product-card" data-category="signs" data-name="i'm not arguing i'm just explaining why i'm right">
+            <div class="product-image-wrap">
+              <div class="placeholder-img signs" data-src="assets/images/products/sign-not-arguing.jpg" role="img" aria-label="Wooden sign placeholder">
+                <span class="placeholder-icon" aria-hidden="true">🪧</span>
+                <span class="placeholder-label">Wooden Sign</span>
+              </div>
+              <span class="product-badge">Signs</span>
+            </div>
+            <div class="product-card-body">
+              <span class="product-category">Signs</span>
+              <p class="product-name">I&rsquo;m Not Arguing. I&rsquo;m Just Explaining Why I&rsquo;m Right.</p>
+              <p class="product-price">Price varies by size &amp; frame</p>
+            </div>
+            <div class="product-card-footer">
+              <a href="contact.html" class="btn btn-sm btn-dark" style="width:100%;">Order This</a>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="signs" data-name="i smile because i have no idea what is going on">
+            <div class="product-image-wrap">
+              <div class="placeholder-img signs" data-src="assets/images/products/sign-smile.jpg" role="img" aria-label="Wooden sign placeholder">
+                <span class="placeholder-icon" aria-hidden="true">🪧</span>
+                <span class="placeholder-label">Wooden Sign</span>
+              </div>
+              <span class="product-badge">Signs</span>
+            </div>
+            <div class="product-card-body">
+              <span class="product-category">Signs</span>
+              <p class="product-name">I Smile Because I Have No Idea What Is Going On.</p>
+              <p class="product-price">Price varies by size &amp; frame</p>
+            </div>
+            <div class="product-card-footer">
+              <a href="contact.html" class="btn btn-sm btn-dark" style="width:100%;">Order This</a>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="signs" data-name="my patience is like my wifi signal barely there">
+            <div class="product-image-wrap">
+              <div class="placeholder-img signs" data-src="assets/images/products/sign-patience.jpg" role="img" aria-label="Wooden sign placeholder">
+                <span class="placeholder-icon" aria-hidden="true">🪧</span>
+                <span class="placeholder-label">Wooden Sign</span>
+              </div>
+              <span class="product-badge">Signs</span>
+            </div>
+            <div class="product-card-body">
+              <span class="product-category">Signs</span>
+              <p class="product-name">My Patience Is Like My Wi-Fi Signal &mdash; Barely There.</p>
+              <p class="product-price">Price varies by size &amp; frame</p>
+            </div>
+            <div class="product-card-footer">
+              <a href="contact.html" class="btn btn-sm btn-dark" style="width:100%;">Order This</a>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="signs" data-name="i used to have patience then the children arrived">
+            <div class="product-image-wrap">
+              <div class="placeholder-img signs" data-src="assets/images/products/sign-children.jpg" role="img" aria-label="Wooden sign placeholder">
+                <span class="placeholder-icon" aria-hidden="true">🪧</span>
+                <span class="placeholder-label">Wooden Sign</span>
+              </div>
+              <span class="product-badge">Signs</span>
+            </div>
+            <div class="product-card-body">
+              <span class="product-category">Signs</span>
+              <p class="product-name">I Used to Have Patience. Then the Children Arrived.</p>
+              <p class="product-price">Price varies by size &amp; frame</p>
+            </div>
+            <div class="product-card-footer">
+              <a href="contact.html" class="btn btn-sm btn-dark" style="width:100%;">Order This</a>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="signs" data-name="i followed my heart and it led me to the fridge">
+            <div class="product-image-wrap">
+              <div class="placeholder-img signs" data-src="assets/images/products/sign-fridge.jpg" role="img" aria-label="Wooden sign placeholder">
+                <span class="placeholder-icon" aria-hidden="true">🪧</span>
+                <span class="placeholder-label">Wooden Sign</span>
+              </div>
+              <span class="product-badge">Signs</span>
+            </div>
+            <div class="product-card-body">
+              <span class="product-category">Signs</span>
+              <p class="product-name">I Followed My Heart and It Led Me to the Fridge.</p>
+              <p class="product-price">Price varies by size &amp; frame</p>
+            </div>
+            <div class="product-card-footer">
+              <a href="contact.html" class="btn btn-sm btn-dark" style="width:100%;">Order This</a>
+            </div>
+          </article>
+
+          <!-- ── TOTE BAGS ── -->
+          <article class="product-card" data-category="totes" data-name="tote bags 200+ designs sarcastic">
+            <div class="product-image-wrap">
+              <div class="placeholder-img totes" data-src="assets/images/products/tote-sample-1.jpg" role="img" aria-label="Tote bag placeholder">
+                <span class="placeholder-icon" aria-hidden="true">👜</span>
+                <span class="placeholder-label">Tote Bag</span>
+              </div>
+              <span class="product-badge">Totes</span>
+            </div>
+            <div class="product-card-body">
+              <span class="product-category">Tote Bags</span>
+              <p class="product-name">Sarcastic Tote Bags — 200+ Designs Available</p>
+              <p class="product-price">Price varies by design</p>
+            </div>
+            <div class="product-card-footer">
+              <a href="contact.html" class="btn btn-sm btn-dark" style="width:100%;">Order This</a>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="totes" data-name="i need coffee and nobody to talk to me tote">
+            <div class="product-image-wrap">
+              <div class="placeholder-img totes" data-src="assets/images/products/tote-sample-2.jpg" role="img" aria-label="Tote bag placeholder">
+                <span class="placeholder-icon" aria-hidden="true">👜</span>
+                <span class="placeholder-label">Tote Bag</span>
+              </div>
+              <span class="product-badge">Totes</span>
+            </div>
+            <div class="product-card-body">
+              <span class="product-category">Tote Bags</span>
+              <p class="product-name">I Need Coffee and Nobody to Talk to Me</p>
+              <p class="product-price">Price varies by design</p>
+            </div>
+            <div class="product-card-footer">
+              <a href="contact.html" class="btn btn-sm btn-dark" style="width:100%;">Order This</a>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="totes" data-name="not today tote bag">
+            <div class="product-image-wrap">
+              <div class="placeholder-img totes" data-src="assets/images/products/tote-sample-3.jpg" role="img" aria-label="Tote bag placeholder">
+                <span class="placeholder-icon" aria-hidden="true">👜</span>
+                <span class="placeholder-label">Tote Bag</span>
+              </div>
+              <span class="product-badge">Totes</span>
+            </div>
+            <div class="product-card-body">
+              <span class="product-category">Tote Bags</span>
+              <p class="product-name">Not Today — Tote Bag</p>
+              <p class="product-price">Price varies by design</p>
+            </div>
+            <div class="product-card-footer">
+              <a href="contact.html" class="btn btn-sm btn-dark" style="width:100%;">Order This</a>
+            </div>
+          </article>
+
+          <!-- ── POUCHES ── -->
+          <article class="product-card" data-category="pouches" data-name="zippered pouch 100 designs">
+            <div class="product-image-wrap">
+              <div class="placeholder-img pouches" data-src="assets/images/products/pouch-sample-1.jpg" role="img" aria-label="Zippered pouch placeholder">
+                <span class="placeholder-icon" aria-hidden="true">👝</span>
+                <span class="placeholder-label">Zippered Pouch</span>
+              </div>
+              <span class="product-badge">Pouches</span>
+            </div>
+            <div class="product-card-body">
+              <span class="product-category">Zippered Pouches</span>
+              <p class="product-name">Zippered Pouches — ~100 Sarcastic Designs</p>
+              <p class="product-price">$6 each</p>
+            </div>
+            <div class="product-card-footer">
+              <a href="contact.html" class="btn btn-sm btn-dark" style="width:100%;">Order This</a>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="pouches" data-name="i can't adult today zippered pouch">
+            <div class="product-image-wrap">
+              <div class="placeholder-img pouches" data-src="assets/images/products/pouch-sample-2.jpg" role="img" aria-label="Zippered pouch placeholder">
+                <span class="placeholder-icon" aria-hidden="true">👝</span>
+                <span class="placeholder-label">Zippered Pouch</span>
+              </div>
+              <span class="product-badge">Pouches</span>
+            </div>
+            <div class="product-card-body">
+              <span class="product-category">Zippered Pouches</span>
+              <p class="product-name">I Can&rsquo;t Adult Today &mdash; Zippered Pouch</p>
+              <p class="product-price">$6 each</p>
+            </div>
+            <div class="product-card-footer">
+              <a href="contact.html" class="btn btn-sm btn-dark" style="width:100%;">Order This</a>
+            </div>
+          </article>
+
+          <!-- ── APPAREL ── -->
+          <article class="product-card" data-category="apparel" data-name="t-shirt sarcastic various designs">
+            <div class="product-image-wrap">
+              <div class="placeholder-img apparel" data-src="assets/images/products/tshirt-sample.jpg" role="img" aria-label="T-shirt placeholder">
+                <span class="placeholder-icon" aria-hidden="true">👕</span>
+                <span class="placeholder-label">T-Shirt</span>
+              </div>
+              <span class="product-badge">Apparel</span>
+            </div>
+            <div class="product-card-body">
+              <span class="product-category">Apparel</span>
+              <p class="product-name">Sarcastic T-Shirt — Various Designs</p>
+              <p class="product-price">$20</p>
+            </div>
+            <div class="product-card-footer">
+              <a href="contact.html" class="btn btn-sm btn-dark" style="width:100%;">Order This</a>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="apparel" data-name="baseball cap sarcastic hat">
+            <div class="product-image-wrap">
+              <div class="placeholder-img apparel" data-src="assets/images/products/cap-sample.jpg" role="img" aria-label="Baseball cap placeholder">
+                <span class="placeholder-icon" aria-hidden="true">🧢</span>
+                <span class="placeholder-label">Baseball Cap</span>
+              </div>
+              <span class="product-badge">Apparel</span>
+            </div>
+            <div class="product-card-body">
+              <span class="product-category">Apparel</span>
+              <p class="product-name">Baseball Cap — Sarcastic Design</p>
+              <p class="product-price">$15</p>
+            </div>
+            <div class="product-card-footer">
+              <a href="contact.html" class="btn btn-sm btn-dark" style="width:100%;">Order This</a>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="apparel" data-name="swiftie toque winter hat">
+            <div class="product-image-wrap">
+              <div class="placeholder-img apparel" data-src="assets/images/products/toque-sample.jpg" role="img" aria-label="Toque placeholder">
+                <span class="placeholder-icon" aria-hidden="true">🎩</span>
+                <span class="placeholder-label">Swiftie Toque</span>
+              </div>
+              <span class="product-badge">Apparel</span>
+            </div>
+            <div class="product-card-body">
+              <span class="product-category">Apparel</span>
+              <p class="product-name">Swiftie Toque</p>
+              <p class="product-price">$15</p>
+            </div>
+            <div class="product-card-footer">
+              <a href="contact.html" class="btn btn-sm btn-dark" style="width:100%;">Order This</a>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="apparel" data-name="bbq apron grilling apron sarcastic">
+            <div class="product-image-wrap">
+              <div class="placeholder-img apparel" data-src="assets/images/products/apron-sample.jpg" role="img" aria-label="BBQ apron placeholder">
+                <span class="placeholder-icon" aria-hidden="true">🍖</span>
+                <span class="placeholder-label">BBQ Apron</span>
+              </div>
+              <span class="product-badge">Apparel</span>
+            </div>
+            <div class="product-card-body">
+              <span class="product-category">Apparel</span>
+              <p class="product-name">BBQ Apron &mdash; Sarcastic Grilling Edition</p>
+              <p class="product-price">$8 &bull; Deluxe $15</p>
+            </div>
+            <div class="product-card-footer">
+              <a href="contact.html" class="btn btn-sm btn-dark" style="width:100%;">Order This</a>
+            </div>
+          </article>
+
+          <!-- ── ACCESSORIES ── -->
+          <article class="product-card" data-category="accessories" data-name="silicone croc charm jibbitz">
+            <div class="product-image-wrap">
+              <div class="placeholder-img accessories" data-src="assets/images/products/croc-charm-sample.jpg" role="img" aria-label="Silicone croc charm placeholder">
+                <span class="placeholder-icon" aria-hidden="true">✨</span>
+                <span class="placeholder-label">Silicone Croc Charm</span>
+              </div>
+              <span class="product-badge">Accessories</span>
+            </div>
+            <div class="product-card-body">
+              <span class="product-category">Accessories</span>
+              <p class="product-name">Silicone Croc Charms</p>
+              <p class="product-price">$2 each &bull; 3 for $5</p>
+            </div>
+            <div class="product-card-footer">
+              <a href="contact.html" class="btn btn-sm btn-dark" style="width:100%;">Order This</a>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="accessories" data-name="key chain keychain sarcastic">
+            <div class="product-image-wrap">
+              <div class="placeholder-img accessories" data-src="assets/images/products/keychain-sample.jpg" role="img" aria-label="Key chain placeholder">
+                <span class="placeholder-icon" aria-hidden="true">🔑</span>
+                <span class="placeholder-label">Key Chain</span>
+              </div>
+              <span class="product-badge">Accessories</span>
+            </div>
+            <div class="product-card-body">
+              <span class="product-category">Accessories</span>
+              <p class="product-name">Sarcastic Key Chain</p>
+              <p class="product-price">$7 each &bull; 3 for $20</p>
+            </div>
+            <div class="product-card-footer">
+              <a href="contact.html" class="btn btn-sm btn-dark" style="width:100%;">Order This</a>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="accessories" data-name="wine bottle bag gift bag">
+            <div class="product-image-wrap">
+              <div class="placeholder-img accessories" data-src="assets/images/products/wine-bag-sample.jpg" role="img" aria-label="Wine bottle bag placeholder">
+                <span class="placeholder-icon" aria-hidden="true">🍷</span>
+                <span class="placeholder-label">Wine Bottle Bag</span>
+              </div>
+              <span class="product-badge">Accessories</span>
+            </div>
+            <div class="product-card-body">
+              <span class="product-category">Accessories</span>
+              <p class="product-name">Sarcastic Wine Bottle Bag</p>
+              <p class="product-price">$6</p>
+            </div>
+            <div class="product-card-footer">
+              <a href="contact.html" class="btn btn-sm btn-dark" style="width:100%;">Order This</a>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="accessories" data-name="customized pot holders kitchen accessories">
+            <div class="product-image-wrap">
+              <div class="placeholder-img accessories" data-src="assets/images/products/pot-holder-sample.jpg" role="img" aria-label="Customized pot holder placeholder">
+                <span class="placeholder-icon" aria-hidden="true">🍳</span>
+                <span class="placeholder-label">Customized Pot Holder</span>
+              </div>
+              <span class="product-badge">Accessories</span>
+            </div>
+            <div class="product-card-body">
+              <span class="product-category">Accessories</span>
+              <p class="product-name">Customized Pot Holders</p>
+              <p class="product-price">Custom pricing — contact Patricia</p>
+            </div>
+            <div class="product-card-footer">
+              <a href="contact.html" class="btn btn-sm btn-dark" style="width:100%;">Get a Quote</a>
+            </div>
+          </article>
+
+          <!-- ── ADULTS ONLY TEASER ── -->
+          <article class="product-card" style="border: 2px dashed var(--clr-magenta);">
+            <div class="product-image-wrap">
+              <div class="placeholder-img adults" data-src="assets/images/products/adults-only-teaser.jpg" role="img" aria-label="Adults only section teaser">
+                <span class="placeholder-icon" aria-hidden="true">🔞</span>
+                <span class="placeholder-label">Adults Only Section<br><small style="font-weight:400;opacity:.8;">18+ required</small></span>
+              </div>
+              <span class="product-badge" style="background:var(--clr-magenta);color:white;">18+</span>
+            </div>
+            <div class="product-card-body">
+              <span class="product-category" style="color:var(--clr-magenta);">Adults Only</span>
+              <p class="product-name">Adults Only Magnetic Canvas Signs</p>
+              <p class="product-price">$5 each</p>
+            </div>
+            <div class="product-card-footer">
+              <a href="adults-only.html" class="btn btn-sm" style="width:100%;background:var(--clr-magenta);color:white;border-color:var(--clr-magenta);" aria-label="Visit Adults Only section — 18+ age verification required">Enter 18+ Section</a>
+            </div>
+          </article>
+
+          <!-- No Results Message -->
+          <div id="no-results" class="no-results" style="display:none;" role="status" aria-live="polite">
+            <h3>No products found.</h3>
+            <p>Try a different search term, or <a href="contact.html">contact Patricia</a> &mdash; she&rsquo;s made pretty much everything at this point.</p>
+          </div>
+
+        </div><!-- /product-grid -->
+
+        <!-- How to Order Reminder -->
+        <div class="how-order-reminder">
+          <h3>How to Order</h3>
+          <p>See something you like? Screenshot it or note the name, then reach out to Patricia directly to arrange purchase &amp; delivery.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:var(--sp-sm);justify-content:center;">
+            <a href="tel:613-700-6677" class="btn btn-dark">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.1a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.3h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.29 6.29l.97-.97a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              Call / Text: 613-700-6677
+            </a>
+            <a href="mailto:patriciapkcjs@hotmail.com" class="btn btn-outline" style="color:var(--clr-plum);border-color:var(--clr-plum);">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              Email Patricia
+            </a>
+          </div>
+          <p style="margin-top:var(--sp-md);font-size:0.85rem;color:var(--clr-grey-mid);font-style:italic;">We accept Interac e-Transfer and Cash.</p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <div id="page-footer-mount"></div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
