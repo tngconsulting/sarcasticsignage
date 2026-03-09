@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:sarcasticsignage.com)",
+      "WebFetch(domain:photos.app.goo.gl)",
+      "WebFetch(domain:photos.google.com)",
+      "Bash(python3 -c \":*)",
+      "Bash(node -e \":*)"
+    ]
+  }
+}
