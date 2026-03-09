@@ -1,0 +1,225 @@
+# Project: Sarcastic Signage
+
+The layout for Sarcastic Signage establishes a clear, artistic brand identity that balances a handcrafted aesthetic with a direct, humorous tone.
+
+### **Design and Brand Identity**
+
+* **Header and Logo:** The site features the previously described watercolor gradient logo with its distinctive torn-paper bottom edge.
+* **Typography:** The layout uses a clean, sans-serif font that mirrors the logo’s modern aesthetic.
+* **Imagery:** The hero section showcases an authentic workshop environment, emphasizing that these are handmade products rather than mass-produced items.
+
+### **Brand Identity and Tone**
+
+* The "Anti-Inspirational" Mission: The brand explicitly rejects corporate tropes like "Live, Laugh, Love," focusing instead on relatable, unfiltered humor.
+* Leadership: The business is a one-woman operation run by Patricia, who holds the title of "Chief Sarcasm Officer".
+* Product Philosophy: Every item is handmade with "zero filter" and "delivered with attitude".
+
+### **Business Operations**
+
+* **Location:** The business is based in **Ottawa, Canada**.
+* **Fulfillment:** All products are shipped; notably, local pickup is not an available option.
+* **Ordering Methods:** Customers can place orders directly through the website, by phone, or in person at local events.
+* **Support:** General inquiries and questions can be handled via email.
+
+### **Market Presence**
+
+The "Where to find us" section lists several upcoming local events in Ottawa:
+
+* **May 15–17:** Ottawa Art Fair, Booth 42
+* **June 11:** Ottawa Art Fair
+* **June 12:** Craft Show, Shaw Centre
+* **June 13:** Ottawa Realta, Event
+
+
+### **1. Core Brand Content**
+
+* **Primary Tagline:** "Handmade signs, totes & gifts with zero filter. Crafted by hand. Delivered with attitude."
+* **Mission Statement:** "Handmade signs, totes & gifts with zero filter. Crafted by hand. Delivered with attitude. Crafted in Ontario. Filtered by Nobody."
+* **Brand Philosophy:** "Sarcastic Signage is a one-woman operation run by Patricia out of Ontario, Canada. Every product is made by hand — no factories, no mass production, no corporate inspirational quotes about 'living, laughing, and loving.'"
+* **The Maker's Quote:** "I don't do inspirational. I do relatable." — Patricia, Chief Sarcasm Officer
+* **Product Range:** Wooden signs, over 200 tote designs and counting, pouches, apparel, and accessories.
+* **The "International" Policy:** "No, we don't ship internationally. Yes, we've thought about it. No, we still won't."
+
+### **2. Specific Product Copy**
+
+* **Example Sign Text:** "I'm Not Arguing. I'm Just Explaining Why I'm Right."
+* **Category Description:** "Signs That Say What You're Thinking."
+* **Adults Only Section:** "Magnetic canvas signs for adults who appreciate humour that's a little more... unfiltered. $5 each. Must be 18+ to purchase."
+
+### **3. Operational & Contact Data**
+
+* **Ordering Process:** Browse photo albums → screenshot or note item name → Call, text, or email Patricia to arrange purchase.
+* **Payment:** Interac e-Transfer or cash.
+* **Fulfillment:** Shipping available within Canada; **Local pickup available in Ottawa**.
+* **Phone/Text:** 613-700-6677.
+* **Email:** patriciapkcjs@hotmail.com.
+* **Social Media:** Facebook (sarcastic.signage).
+
+### **4. 2025 Event Schedule**
+
+* **Russel Flea Market:** Saturday, March 7, 9:00 AM - 3:00 PM (Russel).
+* **Carleton University Market:** Saturday, March 28, 9:00 AM - 3:00 PM (Ottawa).
+* **Christmas Night Market at Kiwans Farms:** Saturday, Nov 29, 4:00 PM - 9:00 PM (Kiwans Farms).
+* **Kars CRA Christmas Market:** Sunday, Nov 30, 10:00 AM - 3:00 PM (Kars Community Recreation Center).
+* **Kars Community Recreation Center Event:** Sunday, Dec 14, 10:00 AM - 3:00 PM (Gloucester).
+* **Gloucester Holiday Night Market:** Friday, Dec 19, 4:00 PM - 8:00 PM (Gloucester).
+
+### **5. Visual Assets & Layout Reference**
+
+* **Logo Layout:** Horizontal gradient (Deep Plum → Magenta → Red-Orange → Terracotta → Mossy Green).
+* **Artistic Style:** Heavy, organic watercolor/dry-brush texture.
+* **Bottom Edge:** Jagged, white negative space "torn-paper" effect.
+* **Typography:** White sans-serif; "SARCASTIC" (light/thin weight) above "SIGNAGE" (heavy/bold weight).
+
+---
+
+# Sample content you can use
+
+I'm Not Arguing.
+I'm Just Explaining
+Why I'm Right.
+
+Signs That Say
+What You're
+Thinking
+
+Handmade in Ontario, Canada
+
+Handmade signs, totes & gifts with zero filter. Crafted by hand. Delivered with attitude.
+
+Crafted in Ontario.
+Filtered by Nobody.
+Sarcastic Signage is a one-woman operation run by Patricia out of Ontario, Canada. Every product is made by hand — no factories, no mass production, no corporate inspirational quotes about "living, laughing, and loving."
+
+What started as a hobby turned into a full crafting obsession. Wooden signs, tote bags, pouches, apparel, accessories — if Patricia can put a sarcastic saying on it, she probably already has. Over 200 tote designs and counting.
+
+"I don't do inspirational. I do relatable."
+Patricia, Chief Sarcasm Officer
+
+Want Something?
+Just Ask.
+See something you love? Reach out to Patricia directly. Custom requests welcome — if it's sarcastic, she can probably make it.
+
+How It Works
+Browse the photo albums linked in the product list above.Find something you love — screenshot it or note the item name.Call, text, or email Patricia to arrange purchase.Pay by Interac e-Transfer or cash. Local pickup available in Ottawa..
+"No, we don't ship internationally. Yes, we've thought about it. No, we still won't."
+
+Call or Text
+613-700-6677
+
+---
+
+This summary captures the strategic and creative evolution of the **Sarcastic Signage** project to ensure continuity in your running log.
+
+---
+
+### **Project Log: Sarcastic Signage Web Development**
+
+#### **1. Key Decisions & Strategic Direction**
+
+* **Brand Authority:** Established Patricia as the "Chief Sarcasm Officer" to anchor the "unfiltered" and "relatable" brand voice.
+* **Sales Model Priority:** Shifted the primary conversion goal from online browsing to **in-person sales** ("Catch Us in the Wild"), reflecting how the majority of products are actually sold.
+* **Fulfillment Logic:** Corrected the initial "no pickup" assumption; the site must now explicitly support **local Ottawa pickup** and **Interac e-Transfer/Cash** payments.
+* **Navigation Hierarchy:** Decided on a "Next Stop" top-level alert banner to create immediate urgency for the nearest market date.
+
+#### **2. Context & Reasoning**
+
+* **Anti-Corporate Aesthetic:** The design rejects "Live, Laugh, Love" tropes in favor of a handmade, "zero filter" aesthetic that mirrors the physical products.
+* **Manual Order Flow:** Reasoning that since every item is handmade and unique, a "click-and-forget" e-commerce cart is less effective than a direct "screenshot and text" contact method.
+* **Geographic Focus:** Restricted operations to **Ontario/Canada** to simplify logistics and reinforce the local maker identity.
+
+#### **3. Key Constraints & Preferences**
+
+* **Technical Stack:** **Self-hosted** environment using a single-file delivery of semantic **HTML, CSS, and Vanilla JavaScript**.
+* **UI/UX Standards:** High priority on **scannability**, minimalist rhythm, and WCAG 2.2 accessibility.
+* **Privacy/Content:** Explicitly **no photos of Patricia** are to be used in the "Meet the Maker" section.
+* **Age Restrictions:** Must include a clear **18+ barrier** for the "Adults Only" magnetic canvas sign collection.
+
+#### **4. Sample Content & Data**
+
+* **Core Tagline:** "Handmade signs, totes & gifts with zero filter. Crafted by hand. Delivered with attitude."
+* **The "International" Policy:** "No, we don't ship internationally. Yes, we've thought about it. No, we still won't."
+* **Upcoming Events (2025):**
+* **Russel Flea Market:** March 7, 9 AM – 3 PM.
+* **Carleton University Market:** March 28, 9 AM – 3 PM.
+* **Christmas Night Market (Kiwans Farms):** Nov 29, 4 PM – 9 PM.
+* **Gloucester Holiday Night Market:** Dec 19, 4 PM – 8 PM.
+
+
+
+#### **5. Provided Layout Reference**
+
+> **Initial Mockup Elements:** A vibrant horizontal gradient (plum to mossy green) with a "torn-paper" bottom edge. Typography features "SARCASTIC" in a light weight stacked above "SIGNAGE" in a heavy, bold weight.
+
+#### **6. Open Questions & Next Steps**
+
+* **Calendar Integration:** Finalize the logic for the "Mark your calendar" links (e.g., .ics file generation vs. Google Calendar links).
+* **Gallery Implementation:** Determine the best method for displaying the "200+ tote designs" without compromising page load speed on a self-hosted server.
+
+---
+
+This **Product Requirements Document (PRD)** serves as the "source of truth" for the **Sarcastic Signage** self-hosted site. It captures the specific brand tone, operational logic, and technical constraints we've established to ensure the build remains consistent.
+
+---
+
+## **Product Requirements & Specifications: Sarcastic Signage**
+
+### **1. Brand Identity & Voice**
+
+* **Core Persona:** "Chief Sarcasm Officer" (Patricia).
+* **Tone:** Brutally honest, relatable, anti-inspirational, and "unfiltered."
+* **Visual Language:** Minimalist UI/UX with high scannability.
+* **Key Asset:** Watercolor gradient logo (Plum/Magenta/Orange/Green) with a "torn paper" bottom edge and white sans-serif typography.
+
+### **2. Target Audience & Market**
+
+* **Primary Demographic:** Adults (18+) seeking handmade gifts with "attitude."
+* **Geographic Focus:** Ottawa/Ontario, Canada.
+* **Sales Model:** Primarily in-person at events; secondary sales via phone/text/email for local pickup or domestic shipping.
+
+### **3. Functional Requirements**
+
+* **Event Management ("Catch Us in the Wild"):** A chronological list of upcoming markets with "Mark your calendar" functionality.
+* **Hero Section:** High-impact display of the brand logo and a "Next Stop" event alert banner.
+* **Catalog Display:** High-quality imagery of 200+ tote designs, wooden signs, and apparel.
+* **Age-Gated Content:** A specific "Adults Only" section for $5 magnetic signs (18+ requirement).
+* **Contact/Order Flow:** * No automated e-commerce checkout.
+* Direct contact buttons for Call/Text (613-700-6677) and Email.
+* Instructions for screenshotting items from photo albums.
+
+
+
+### **4. Operational Specifications**
+
+* **Shipping:** Canada-wide only; strictly no international shipping.
+* **Pickup:** Local pickup available in Ottawa.
+* **Payment:** Interac e-Transfer or Cash only.
+* **Hosting:** Self-hosted (Non-Squarespace).
+
+### **5. Technical Specifications**
+
+* **Stack:** Semantic HTML5, CSS3 (Modern Flexbox/Grid), and Vanilla JavaScript.
+* **Accessibility:** Adherence to WCAG 2.2 standards for contrast and scannability.
+* **Responsive Design:** Mobile-first approach, prioritizing easy "tap-to-call" and "tap-to-text" functionality for users on the go at markets.
+
+---
+
+That makes perfect sense. Moving straight to a production-ready mockup is the best way to evaluate the "rhythm" and "scannability" you value, especially with a self-hosted setup where you have total control over the CSS and grid.
+
+Since the brand is "Handmade with attitude," the design needs to feel premium but grounded—avoiding the "generic template" look.
+
+### **The Production Layout Strategy**
+
+I have structured this to prioritize the **In-Person** sales model while keeping the "Chief Sarcasm Officer" persona front and center.
+
+1. **The "Next Stop" Alert (Header):** A high-contrast, full-width banner at the very top. This is the first thing a visitor sees, creating immediate urgency for the next market.
+2. **Hero Section:** Features the watercolor gradient logo with the "torn paper" edge effect. The primary CTA (Call to Action) will be "Find Us in the Wild," scrolling users directly to the event calendar.
+3. **The "Meet the Maker" Block:** A clean, two-column section. Left side: A high-quality photo of Patricia in the workshop. Right side: The "No Live, Laugh, Love" manifesto.
+4. **The "Catch Us in the Wild" Grid:** A structured table or card-based layout for the 2025 dates (Russel, Carleton, Kiwans, etc.), each with a functional "Mark your calendar" interaction.
+5. **The "Unfiltered" Product Gallery:** A masonry-style grid showing the 200+ tote designs and the $5 "Adults Only" magnetic signs (with an 18+ content warning).
+
+### **The Visual Mockup**
+
+I am generating a high-fidelity visual representation of how these elements—the plum-to-green gradient, the bold sans-serif typography, and the workshop imagery—come together in a final, hosted environment.
+
+---
