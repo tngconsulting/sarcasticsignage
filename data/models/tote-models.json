@@ -1,0 +1,132 @@
+{
+  "grocery": {
+    "display_name": "Canvas Shopping Tote",
+    "base_price_cad": 20.00,
+
+    "dimensions": {
+      "width_in": 20,
+      "height_in": 15,
+      "handle_length_in": 10
+    },
+    "print_area": {
+      "max_width_in": 12,
+      "max_height_in": 12
+    },
+    "features": {
+      "zippered": false,
+      "innerPocket": false,
+      "fullGusset": true
+    },
+    "feature_list": [
+      "Heavy-duty 12 oz. cotton canvas",
+      "Large gusset on bottom and sides for extra capacity",
+      "Reusable and eco-friendly",
+      "Machine washable and hang to dry"
+    ],    
+    "colors": ["natural"]
+  },
+
+  "zipper-basic": {
+    "display_name": "Canvas Zipper Top Tote",
+    "base_price_cad": 20.00,
+    "dimensions": {
+      "width_in": 16,
+      "height_in": 14,
+      "handle_length_in": 9
+    },
+    "print_area": {
+      "max_width_in": 10,
+      "max_height_in": 10
+    },
+    "features": {
+      "zippered": true,
+      "innerPocket": false,
+      "fullGusset": false
+    },
+    "feature_list": [
+      "Heavy-duty 12 oz. cotton canvas",
+      "Gusset on bottom",
+      "Zipper closure on top",
+      "Reusable and eco-friendly",
+      "Machine washable and hang to dry"
+    ],    
+    "colors": ["pink", "yellow", "natural", "black"]
+  },
+
+  "zipper-pocket": {
+    "display_name": "Canvas Zipper Top Tote with Pouch",
+    "base_price_cad": 20.00,
+    "dimensions": {
+      "width_in": 17,
+      "height_in": 15,
+      "handle_length_in": 9
+    },
+    "print_area": {
+      "max_width_in": 10,
+      "max_height_in": 10
+    },
+    "features": {
+      "zippered": true,
+      "innerPocket": true,
+      "fullGusset": false
+    },
+    "feature_list": [
+      "Heavy-duty 12 oz. cotton canvas",
+      "Gusset on bottom",
+      "Zipper closure on top",
+      "Zippered pouch inside for mobile or wallet",
+      "Reusable and eco-friendly",
+      "Machine washable and hang to dry"
+    ],    
+    "colors": ["natural", "black"]
+  },
+
+  "book": {
+    "display_name": "Canvas Book Tote",
+    "base_price_cad": 15.00,
+    "dimensions": {
+      "width_in": 14,
+      "height_in": 15,
+      "handle_length_in": 10
+    },
+    "print_area": {
+      "max_width_in": 9,
+      "max_height_in": 11
+    },
+    "features": {
+      "zippered": false,
+      "innerPocket": false,
+      "fullGusset": false
+    },
+    "feature_list": [
+      "10 oz. cotton canvas",
+      "Reusable and eco-friendly",
+      "Machine washable and hang to dry"
+    ],    
+    "colors": ["natural"]
+  },
+  "short-wide": {
+    "display_name": "Canvas Grocery Tote",
+    "base_price_cad": 12.00,
+    "dimensions": {
+      "width_in": 14,
+      "height_in": 15,
+      "handle_length_in": 10
+    },
+    "print_area": {
+      "max_width_in": 9,
+      "max_height_in": 11
+    },
+    "features": {
+      "zippered": false,
+      "innerPocket": false,
+      "fullGusset": false
+    },
+    "feature_list": [
+      "10 oz. cotton canvas",
+      "Reusable and eco-friendly",
+      "Machine washable and hang to dry"
+    ],    
+    "colors": ["natural"]
+  }
+}

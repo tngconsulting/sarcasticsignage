@@ -1,0 +1,2511 @@
+{
+  "category": "tote-bags",
+  "displayName": "Tote Bags",
+  "products": [
+
+    {
+      "id": "tote-001",
+      "title": "Books and Flowers",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_172559038_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_172559038_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "book",
+        "color": "natural"
+      },
+      "tags": ["books", "flowers", "reader gift", "book lover", "floral art", "library aesthetic", "literary"],
+      "description": "A beautiful floral book-inspired tote perfect for book lovers, readers, and anyone who adores literary charm."
+    },
+
+    {
+      "id": "tote-002",
+      "title": "Get Lit",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_172645556_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_172645556_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "book",
+        "color": "natural"
+      },
+      "tags": ["books", "funny", "reader humor", "get lit", "bibliophile", "book stack", "sarcastic"],
+      "description": "A clever 'Get Lit' tote featuring stacked books — perfect for readers who enjoy a little literary humor."
+    },
+
+    {
+      "id": "tote-003",
+      "title": "Sorcery Books",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_172745356_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_172745356_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "book",
+        "color": "natural"
+      },
+      "tags": ["witchy", "magic", "sorcery", "fantasy reader", "plants", "mystical", "book lover"],
+      "description": "A magical stack of sorcery books with botanical accents — ideal for fantasy readers and witchy souls."
+    },
+
+    {
+      "id": "tote-004",
+      "title": "Just One More Chapter",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_172813157_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_172813157_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "book",
+        "color": "natural"
+      },
+      "tags": ["bookshelf", "reading life", "book lover", "chapter", "reader gift", "literary humor"],
+      "description": "For readers who always say 'just one more chapter' — a cozy bookshelf-inspired tote for book addicts."
+    },
+
+    {
+      "id": "tote-005",
+      "title": "Young Woman with a Library in Her Head",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_172842768_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_172842768_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "book",
+        "color": "natural"
+      },
+      "tags": ["library", "woman art", "bookshelf", "literary art", "creative mind", "reader aesthetic"],
+      "description": "An imaginative design of a woman with a library in her head — celebrating creativity and a love of books."
+    },
+
+    {
+      "id": "tote-006",
+      "title": "Lady Whistledown Tea House",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_172908958_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_172908958_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "book",
+        "color": "natural"
+      },
+      "tags": ["tea house", "victorian aesthetic", "london vibe", "teapot", "cookies", "period drama", "literary"],
+      "description": "A charming tea house design with Victorian flair — perfect for lovers of elegant stories and cozy afternoons."
+    },
+
+    {
+      "id": "tote-007",
+      "title": "Book with Flowers and Butterflies",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_172936858_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_172936858_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "book",
+        "color": "natural"
+      },
+      "tags": ["open book", "flowers", "butterflies", "romantic aesthetic", "reader gift", "nature art"],
+      "description": "An open book blooming with flowers and butterflies — a dreamy tote for romantic readers."
+    },
+
+    {
+      "id": "tote-008",
+      "title": "Fantasy Readers Book Club",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_173008640_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_173008640_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "book",
+        "color": "natural"
+      },
+      "tags": ["dragon", "fantasy", "book club", "reader gift", "magic", "floral art"],
+      "description": "A fantasy-inspired book club tote featuring dragons and florals — perfect for lovers of epic adventures."
+    },
+
+    {
+      "id": "tote-009",
+      "title": "Open Book with Tree, Flowers and Butterflies",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_173109696_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_173109696_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "book",
+        "color": "natural"
+      },
+      "tags": ["tree of knowledge", "open book", "flowers", "butterflies", "reader aesthetic", "literary art"],
+      "description": "A magical tree rising from an open book — celebrating imagination, growth, and storytelling."
+    },
+    {
+      "id": "tote-011",
+      "title": "Stack of Books",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_173205504_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_173205504_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "book",
+        "color": "natural"
+      },
+      "tags": ["book lover", "stack of books", "reading life", "library aesthetic"],
+      "description": "For the ones who believe there’s no such thing as too many books."
+    },
+    {
+      "id": "tote-012",
+      "title": "Between the Pages",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_173236554_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_173236554_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "book",
+        "color": "natural"
+      },
+      "tags": ["book quote", "reading escape", "bookish gift", "literary lover"],
+      "description": "Between the pages of a book is a lovely place to be."
+    },
+    {
+      "id": "tote-013",
+      "title": "Bookaholic",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_173300632_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_173300632_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "book",
+        "color": "natural"
+      },
+      "tags": ["bookaholic", "reading addiction", "funny book quote", "bibliophile"],
+      "description": "I am a bookaholic… and I regret nothing."
+    },
+    {
+      "id": "tote-014",
+      "title": "Purrvana",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_173328288_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_173328288_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "book",
+        "color": "natural"
+      },
+      "tags": ["cat parody", "rock parody", "funny cat", "music mashup"],
+      "description": "Smells like feline spirit."
+    },
+    {
+      "id": "tote-015",
+      "title": "Magic Tree Book",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_173401267_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_173401267_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "book",
+        "color": "natural"
+      },
+      "tags": ["fantasy art", "magic book", "tree illustration", "whimsical design"],
+      "description": "Where stories grow."
+    },
+    {
+      "id": "tote-016",
+      "title": "I Have No Shelf Control",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_173422268_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_173422268_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "book",
+        "color": "natural"
+      },
+      "tags": ["book pun", "shelf control", "bibliophile humor", "reading joke"],
+      "description": "Self-control? Never heard of her."
+    },
+    {
+      "id": "tote-017",
+      "title": "Buy Me Books",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_173909402_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_173909402_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "book",
+        "color": "natural"
+      },
+      "tags": ["book humor", "reading obsession", "sarcastic quote", "adult humor"],
+      "description": "Buy me books and tell me to shut up."
+    },
+    {
+      "id": "tote-018",
+      "title": "Choose Love",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_174033517_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_174033517_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "book",
+        "color": "natural"
+      },
+      "tags": ["choose love", "pride message", "lgbtq support", "rainbow heart"],
+      "description": "Always the right choice."
+    },
+    {
+      "id": "tote-019",
+      "title": "Rainbow Lips",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_174100039_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_174100039_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "book",
+        "color": "natural"
+      },
+      "tags": ["pride art", "rainbow design", "lgbtq aesthetic", "bold graphic"],
+      "description": "Speak loud. Love louder."
+    },
+    {
+      "id": "tote-020",
+      "title": "Bernese Mountain Dog Puppy",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_174127111_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_174127111_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "book",
+        "color": "natural"
+      },
+      "tags": ["bernese mountain dog", "puppy art", "dog lover gift", "cute dog"],
+      "description": "Big paws. Bigger heart."
+    },
+    {
+      "id": "tote-021",
+      "title": "Peace Love Pride",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_174216050_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_174216050_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "book",
+        "color": "natural"
+      },
+      "tags": ["peace love pride", "lgbtq support", "rainbow message"],
+      "description": "Simple message. Powerful meaning."
+    },
+    {
+      "id": "tote-022",
+      "title": "F-Bomb Kinda Mom",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_174259320_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_174259320_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "book",
+        "color": "natural"
+      },
+      "tags": ["mom humor", "sarcastic mom", "funny parent gift"],
+      "description": "She tries. Mostly."
+    },
+    {
+      "id": "tote-023",
+      "title": "Pride Drinks",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_174342032_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_174342032_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "book",
+        "color": "natural"
+      },
+      "tags": ["pride drinks", "lgbtq party", "rainbow cocktail", "celebration vibe"],
+      "description": "Sip with pride."
+    },
+    {
+      "id": "tote-024",
+      "title": "Be Kind",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_174437433_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_174437433_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "book",
+        "color": "natural"
+      },
+      "tags": ["be kind", "positive message", "heart design"],
+      "description": "Kindness never goes out of style."
+    },
+    {
+      "id": "tote-025",
+      "title": "Stuff My Kids Should Be Carrying",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_174514070_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_174514070_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "book",
+        "color": "natural"
+      },
+      "tags": ["parent humor", "funny mom quote", "sarcastic parenting"],
+      "description": "Instead of the random junk they actually bring home."
+    },
+    {
+      "id": "tote-026",
+      "title": "Teacher Truck",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_174552833_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_174552833_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "book",
+        "color": "natural"
+      },
+      "tags": ["teacher gift", "vintage truck", "school appreciation"],
+      "description": "Hauling knowledge since forever."
+    },
+    {
+      "id": "tote-027",
+      "title": "Labyrinth Characters",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_174649318_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_174649318_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "book",
+        "color": "natural"
+      },
+      "tags": ["fantasy movie", "80s nostalgia", "cult classic"],
+      "description": "You remind me of the babe."
+    },
+    {
+      "id": "tote-028",
+      "title": "Beetlejuice",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_174716817_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_174716817_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "book",
+        "color": "natural"
+      },
+      "tags": ["movie parody", "cult classic", "dark humor"],
+      "description": "Say it three times."
+    },
+    {
+      "id": "tote-029",
+      "title": "Drink Good Coffee. Read Good Books.",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_174825698_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_174825698_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "book",
+        "color": "natural"
+      },
+      "tags": ["coffee lover", "book lover", "reading lifestyle"],
+      "description": "Two essentials. No compromise."
+    },
+    {
+      "id": "tote-030",
+      "title": "Naughty Teddy Bear",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_175001183_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_175001183_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "book",
+        "color": "natural"
+      },
+      "tags": ["adult humor", "edgy design", "dark cute", "funny gift"],
+      "description": "Not your childhood teddy."
+    }
+    ,
+    {
+      "id": "tote-031",
+      "title": "Good Vibes Only",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_175031140_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_175031140_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "book",
+        "color": "natural"
+      },
+      "tags": ["double meaning", "adult humor", "cheeky", "sarcastic", "minimalist text"],
+      "description": "Looks wholesome. Isn’t entirely. A clean design with a wink."
+    },
+    {
+      "id": "tote-032",
+      "title": "Will Swing If Pushed",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_175115198_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_175115198_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "book",
+        "color": "natural"
+      },
+      "tags": ["pineapple", "cheeky humor", "adult joke", "funny tote", "bold statement"],
+      "description": "Cute pineapple. Bold personality. Interpret at your own risk."
+    },
+    {
+      "id": "tote-033",
+      "title": "I Can't Smell Children",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_175219204_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_175219204_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "short-wide",
+        "color": "natural"
+      },
+      "tags": ["movie parody", "halloween humor", "teacher life", "pop culture", "funny quote"],
+      "description": "A wickedly funny twist on a cult-classic line. Teachers especially get it."
+    },
+    {
+      "id": "tote-034",
+      "title": "Village Crazy Lady",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_175256244_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_175256244_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "short-wide",
+        "color": "natural"
+      },
+      "tags": ["small town humor", "sassy gift", "funny woman", "bold text"],
+      "description": "Every village has one. Own the title."
+    },
+    {
+      "id": "tote-035",
+      "title": "Pink Breast Cancer Butterfly",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_175329221_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_175329221_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "short-wide",
+        "color": "natural"
+      },
+      "tags": ["breast cancer awareness", "pink ribbon", "butterfly art", "support survivor"],
+      "description": "A graceful butterfly symbolizing strength, hope, and awareness."
+    },
+    {
+      "id": "tote-036",
+      "title": "Very Hip Afghan Hound",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_175357522_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_175357522_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "short-wide",
+        "color": "natural"
+      },
+      "tags": ["afghan hound", "dog lover", "cool dog", "funny animal", "sunglasses"],
+      "description": "This dog has more swagger than your entire friend group."
+    },
+    {
+      "id": "tote-037",
+      "title": "Witchy Woman",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_175428578_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_175428578_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "short-wide",
+        "color": "natural"
+      },
+      "tags": ["witch aesthetic", "mystical vibe", "goth style", "bold lettering"],
+      "description": "Dark energy. Soft edges. Zero apologies."
+    },
+    {
+      "id": "tote-038",
+      "title": "Three Artists in a Car",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_180330482_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_180330482_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-basic",
+        "color": "pink"
+      },
+      "tags": ["art parody", "van gogh", "frida kahlo", "dali", "pop mashup"],
+      "description": "Art history… but chaotic."
+    },
+    {
+      "id": "tote-039",
+      "title": "Swiftie St.",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_180402076_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_180402076_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-basic",
+        "color": "pink"
+      },
+      "tags": ["swiftie", "music fan", "pop culture", "street sign parody"],
+      "description": "Welcome to the neighborhood. Population: obsessed."
+    },
+    {
+      "id": "tote-040",
+      "title": "Cartoon Old Lady with Champagne",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_180432535_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_180432535_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-basic",
+        "color": "pink"
+      },
+      "tags": ["funny grandma", "champagne lover", "aging sass", "celebration humor"],
+      "description": "Aging gracefully? No. Aging fabulously."
+    },
+    {
+      "id": "tote-041",
+      "title": "Baby Sloth with Flowers",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_180456348_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_180456348_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-basic",
+        "color": "pink"
+      },
+      "tags": ["sloth lover", "cute animal", "floral art", "adorable gift"],
+      "description": "Slow down. Breathe. Be a sloth."
+    },
+    {
+      "id": "tote-042",
+      "title": "Making Memories One Cruise at a Time",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_180537451_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_180537451_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-basic",
+        "color": "pink"
+      },
+      "tags": ["cruise life", "travel lover", "vacation vibes", "beach aesthetic"],
+      "description": "Collect stamps. Collect sunsets. Repeat."
+    },
+    {
+      "id": "tote-043",
+      "title": "Queerness is Infinite",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_180612648_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_180612648_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-basic",
+        "color": "pink"
+      },
+      "tags": ["lgbtq", "pride", "rainbow art", "inclusive", "queer pride"],
+      "description": "Infinite identity. Infinite pride."
+    },
+    {
+      "id": "tote-044",
+      "title": "Tortoise Covered in Flowers",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_180640314_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_180640314_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-basic",
+        "color": "pink"
+      },
+      "tags": ["tortoise", "floral art", "animal lover", "nature aesthetic"],
+      "description": "Slow and stunning."
+    },
+    {
+      "id": "tote-045",
+      "title": "Amazing Grace",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_180707114_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_180707114_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-basic",
+        "color": "pink"
+      },
+      "tags": ["faith based", "christian gift", "inspirational", "hymn quote"],
+      "description": "A timeless hymn carried with grace."
+    },
+    {
+      "id": "tote-046",
+      "title": "Three Cartoon Ladies",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_180732138_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_180732138_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-basic",
+        "color": "pink"
+      },
+      "tags": ["girl squad", "funny women", "friendship", "cartoon art"],
+      "description": "Friendship. Chaos. Matching energy."
+    },
+    {
+      "id": "tote-047",
+      "title": "Three Books with Flowers",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_180754100_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_180754100_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-basic",
+        "color": "pink"
+      },
+      "tags": ["book lover", "floral design", "reader aesthetic"],
+      "description": "Because flowers belong in books."
+    },
+    {
+      "id": "tote-048",
+      "title": "I Am Loved - John 3:16",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_180818881_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_180818881_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-basic",
+        "color": "pink"
+      },
+      "tags": ["faith", "christian gift", "bible verse", "inspirational"],
+      "description": "A gentle reminder you can carry everywhere."
+    },
+    {
+      "id": "tote-049",
+      "title": "Equality",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_180851270_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_180851270_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-basic",
+        "color": "pink"
+      },
+      "tags": ["equality", "human rights", "inclusion", "justice", "diversity"],
+      "description": "Because equality isn’t optional."
+    },
+    {
+      "id": "tote-050",
+      "title": "Communication Looks Different for Everyone",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_180916163_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_180916163_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-basic",
+        "color": "pink"
+      },
+      "tags": ["inclusive", "asl support", "autism awareness", "communication matters"],
+      "description": "Understanding begins with listening differently."
+    },
+    {
+      "id": "tote-051",
+      "title": "Just a Girl Who Loves to Travel",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_180939237_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_180939237_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-basic",
+        "color": "pink"
+      },
+      "tags": ["travel lover", "girl boss", "adventure life", "vacation vibes"],
+      "description": "Passport ready. Always."
+    },
+    {
+      "id": "tote-052",
+      "title": "Flowers",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_181006202_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_181006202_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-basic",
+        "color": "pink"
+      },
+      "tags": ["floral art", "spring vibe", "botanical design"],
+      "description": "Simple. Bold. Blooming."
+    },
+    {
+      "id": "tote-053",
+      "title": "Highland Cow with Flowers",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_181034632_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_181034632_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-basic",
+        "color": "pink"
+      },
+      "tags": ["highland cow", "farm life", "cute animal", "floral art"],
+      "description": "Country charm with a floral twist."
+    },
+    {
+      "id": "tote-054",
+      "title": "Robot Cat",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_181110180_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_181110180_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-basic",
+        "color": "pink"
+      },
+      "tags": ["cat lover", "robot art", "sci fi", "futuristic design"],
+      "description": "Nine lives. Zero software updates."
+    },
+    {
+      "id": "tote-055",
+      "title": "Belle Hits the Bong",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_181148144_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_181148144_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-basic",
+        "color": "pink"
+      },
+      "tags": ["fairy tale parody", "edgy humor", "adult humor", "pop culture twist"],
+      "description": "Not your childhood fairy tale."
+    },
+    {
+      "id": "tote-056",
+      "title": "Pink Panther with Shades",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_181211402_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_181211402_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-basic",
+        "color": "pink"
+      },
+      "tags": ["retro cartoon", "cool vibe", "sunglasses", "pop art"],
+      "description": "Cool never goes out of style."
+    }
+    ,
+    {
+      "id": "tote-057",
+      "title": "Cartoon Lady Sewing and Knitting",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_181243823_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_181243823_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-basic",
+        "color": "pink"
+      },
+      "tags": ["sewing", "knitting", "craft lover", "yarn life", "creative hobby"],
+      "description": "Crafting queen energy — sewing machine in one hand, sass in the other."
+    },
+    {
+      "id": "tote-058",
+      "title": "Dancer in Silhouette",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_181309151_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_181309151_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-basic",
+        "color": "pink"
+      },
+      "tags": ["dance lover", "ballet art", "movement", "minimalist silhouette"],
+      "description": "Grace in motion. Strength in silhouette."
+    },
+    {
+      "id": "tote-059",
+      "title": "Fraggle Rock",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_181401500_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_181401500_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-basic",
+        "color": "pink"
+      },
+      "tags": ["retro tv", "nostalgia", "80s kids", "pop culture"],
+      "description": "Throwback vibes for the generation raised on Saturday mornings."
+    },
+    {
+      "id": "tote-060",
+      "title": "Boys... Ugh!",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_181448078_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_181448078_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-basic",
+        "color": "pink"
+      },
+      "tags": ["teen humor", "attitude", "girl power", "funny quote"],
+      "description": "Minimal words. Maximum eye-roll."
+    },
+    {
+      "id": "tote-061",
+      "title": "Sassy Squatch",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_181524059_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_181524059_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-basic",
+        "color": "pink"
+      },
+      "tags": ["sasquatch", "bigfoot", "funny creature", "wine lover", "rainbow vibe"],
+      "description": "Bigfoot, but make it fabulous."
+    },
+    {
+      "id": "tote-062",
+      "title": "Day of the Dead Portrait",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_181558491_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_181558491_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-basic",
+        "color": "pink"
+      },
+      "tags": ["day of the dead", "sugar skull", "cultural art", "floral design"],
+      "description": "Bold color. Strong spirit. Beautiful tradition."
+    },
+    {
+      "id": "tote-063",
+      "title": "Did Someone Say Wine?",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_181630090_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_181630090_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-basic",
+        "color": "pink"
+      },
+      "tags": ["wine lover", "funny quote", "girls night", "sarcastic humor"],
+      "description": "Miracles happen daily. Mostly involving wine."
+    },
+    {
+      "id": "tote-064",
+      "title": "Cute Kitten in Mexican Attire",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_181749014_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_181749014_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-basic",
+        "color": "pink"
+      },
+      "tags": ["cat lover", "kitten", "festive art", "cute animal"],
+      "description": "Tiny sombrero. Maximum cuteness."
+    },
+    {
+      "id": "tote-065",
+      "title": "Dachshund with Headphones",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_181900039_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_181900039_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-basic",
+        "color": "black"
+      },
+      "tags": ["dachshund", "dog lover", "music fan", "funny animal"],
+      "description": "Long dog. Loud playlist."
+    },
+    {
+      "id": "tote-066",
+      "title": "Smoking Nuns",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_181932680_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_181932680_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-basic",
+        "color": "black"
+      },
+      "tags": ["edgy humor", "satire", "rebellious art", "bold design"],
+      "description": "Holy smoke."
+    },
+    {
+      "id": "tote-067",
+      "title": "Paws n' Roses",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_182004522_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_182004522_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-basic",
+        "color": "black"
+      },
+      "tags": ["cat lover", "rock parody", "music humor", "band mashup"],
+      "description": "Welcome to the jungle… but with fur."
+    },
+    {
+      "id": "tote-068",
+      "title": "ZZ Top as Cats",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_182035367_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_182035367_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-basic",
+        "color": "black"
+      },
+      "tags": ["cat parody", "rock music", "funny band", "music lover"],
+      "description": "Beards optional. Attitude required."
+    },
+    {
+      "id": "tote-069",
+      "title": "Inspector Gadget",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_182126591_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_182126591_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-basic",
+        "color": "black"
+      },
+      "tags": ["retro cartoon", "90s nostalgia", "pop culture"],
+      "description": "Go-go gadget nostalgia."
+    },
+    {
+      "id": "tote-070",
+      "title": "Horror Movie Line-Up",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_182212026_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_182212026_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-basic",
+        "color": "black"
+      },
+      "tags": ["horror fan", "movie parody", "spooky season", "pop culture"],
+      "description": "A criminally good horror mashup."
+    },
+    {
+      "id": "tote-071",
+      "title": "Rolling Stones Tongue Remix",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_182240861_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_182240861_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-basic",
+        "color": "black"
+      },
+      "tags": ["rock fan", "graffiti art", "music parody"],
+      "description": "Classic rock — remixed with attitude."
+    },
+    {
+      "id": "tote-072",
+      "title": "Biology, Chemistry & Physics Defined",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_182316639_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_182316639_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-basic",
+        "color": "black"
+      },
+      "tags": ["science humor", "teacher gift", "nerd life", "funny quote"],
+      "description": "Science, simplified. Brutally."
+    },
+    {
+      "id": "tote-073",
+      "title": "Hocus Pocus Characters",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_182515645_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_182515645_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-basic",
+        "color": "black"
+      },
+      "tags": ["movie fan", "halloween vibe", "pop culture", "witch theme"],
+      "description": "Witch, please."
+    },
+    {
+      "id": "tote-074",
+      "title": "Don't Laugh Situation",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_184317005_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_184317005_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-basic",
+        "color": "black"
+      },
+      "tags": ["dark humor", "awkward moment", "funny quote"],
+      "description": "The more you try not to laugh…"
+    },
+    {
+      "id": "tote-075",
+      "title": "Pi - Irrational but Well Rounded",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_184355412_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_184355412_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-basic",
+        "color": "black"
+      },
+      "tags": ["math humor", "teacher gift", "nerd joke", "pi day"],
+      "description": "Math jokes that are well rounded."
+    },
+    {
+      "id": "tote-076",
+      "title": "Pink Floyd Cat Remix",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_184436891_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_184436891_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-basic",
+        "color": "black"
+      },
+      "tags": ["cat parody", "rock music", "album art remix"],
+      "description": "Another brick in the litter box."
+    },
+    {
+      "id": "tote-077",
+      "title": "Sanford and Son",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_184850733_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_184850733_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-basic",
+        "color": "black"
+      },
+      "tags": ["retro tv", "70s nostalgia", "classic sitcom"],
+      "description": "Old school cool."
+    },
+    {
+      "id": "tote-078",
+      "title": "Salem Local Witches Union",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_184926496_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_184926496_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-basic",
+        "color": "black"
+      },
+      "tags": ["witch humor", "halloween vibe", "goth aesthetic"],
+      "description": "Unionized and unapologetic."
+    },
+    {
+      "id": "tote-079",
+      "title": "Sasquatch Fishing",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_184945376_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_184945376_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-basic",
+        "color": "black"
+      },
+      "tags": ["bigfoot", "fishing life", "funny creature"],
+      "description": "Even legends need a day off."
+    },
+    {
+      "id": "tote-080",
+      "title": "Sasquatch Playing Guitar",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_185009933_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_185009933_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-basic",
+        "color": "black"
+      },
+      "tags": ["bigfoot", "rock vibe", "music humor"],
+      "description": "Bigfoot. Big sound."
+    }
+    ,
+    {
+      "id": "tote-081",
+      "title": "Ah, Men",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_185029075_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_185029075_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-basic",
+        "color": "black"
+      },
+      "tags": ["lgbtq", "faith parody", "rainbow art", "inclusive humor"],
+      "description": "A bold, cheeky mashup of faith and pride."
+    },
+    {
+      "id": "tote-082",
+      "title": "Equality Hurts No One",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_185200054_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_185200054_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-pocket",
+        "color": "natural"
+      },
+      "tags": ["equality", "human rights", "inclusive message", "social justice"],
+      "description": "Because fairness isn’t radical — it’s basic."
+    },
+    {
+      "id": "tote-083",
+      "title": "Schnauzer with Flowers",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_185218271_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_185218271_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-pocket",
+        "color": "natural"
+      },
+      "tags": ["schnauzer", "dog lover", "floral art", "pet gift"],
+      "description": "A floral tribute to your favorite bearded best friend."
+    },
+    {
+      "id": "tote-084",
+      "title": "Purride Cats",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_185236514_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_185236514_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-pocket",
+        "color": "natural"
+      },
+      "tags": ["cat lover", "pride", "lgbtq", "rainbow art"],
+      "description": "Proud. Loud. Slightly furry."
+    },
+    {
+      "id": "tote-085",
+      "title": "Destroy the Patriarchy, Not the Planet",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_185300349_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_185300349_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-pocket",
+        "color": "natural"
+      },
+      "tags": ["feminist", "climate action", "activist", "bold statement"],
+      "description": "Save the planet. Dismantle the nonsense."
+    },
+    {
+      "id": "tote-086",
+      "title": "Love Is About Hearts, Not Parts",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_185328221_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_185328221_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-pocket",
+        "color": "natural"
+      },
+      "tags": ["lgbtq support", "inclusive message", "love wins"],
+      "description": "Simple truth. Bold message."
+    },
+    {
+      "id": "tote-088",
+      "title": "Antique Pick-Up Truck for Teacher",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_185410707_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_185410707_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-pocket",
+        "color": "natural"
+      },
+      "tags": ["teacher gift", "vintage truck", "classroom appreciation"],
+      "description": "Old school truck. Old school dedication."
+    },
+    {
+      "id": "tote-089",
+      "title": "Straight Outta Patience",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_185432125_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_185432125_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-pocket",
+        "color": "natural"
+      },
+      "tags": ["mom life", "parent humor", "funny quote", "teacher life"],
+      "description": "Running low. Permanently."
+    },
+    {
+      "id": "tote-090",
+      "title": "Woodland School Bus",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_185448757_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_185448757_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-pocket",
+        "color": "natural"
+      },
+      "tags": ["teacher gift", "woodland animals", "school theme"],
+      "description": "Back to school, but make it adorable."
+    },
+    {
+      "id": "tote-091",
+      "title": "I Smell Children #TeacherLife",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_185525551_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_185525551_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-pocket",
+        "color": "natural"
+      },
+      "tags": ["teacher humor", "movie parody", "classroom life"],
+      "description": "Every teacher. Every September."
+    },
+    {
+      "id": "tote-092",
+      "title": "Faith Can Move Mountains",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_185547999_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_185547999_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-pocket",
+        "color": "natural"
+      },
+      "tags": ["faith based", "inspirational", "christian gift"],
+      "description": "Carry your reminder with confidence."
+    },
+    {
+      "id": "tote-093",
+      "title": "Rolling Fatties",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_185613251_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_185613251_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-pocket",
+        "color": "natural"
+      },
+      "tags": ["edgy humor", "420 vibe", "stoner art"],
+      "description": "Bold. Blunt. Unapologetic."
+    },
+    {
+      "id": "tote-094",
+      "title": "My Milkshake Brings All the Boys",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_185645378_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_185645378_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-pocket",
+        "color": "natural"
+      },
+      "tags": ["throwback lyric", "90s vibe", "funny quote"],
+      "description": "Classic line. Zero explanation required."
+    },
+    {
+      "id": "tote-095",
+      "title": "Support Mosquitos Since Birth",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_185701300_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_185701300_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-pocket",
+        "color": "natural"
+      },
+      "tags": ["sarcastic humor", "funny quote", "outdoor life"],
+      "description": "Apparently they love you."
+    },
+    {
+      "id": "tote-096",
+      "title": "Pinky and the Brain",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_185718139_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_185718139_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-pocket",
+        "color": "natural"
+      },
+      "tags": ["retro cartoon", "90s nostalgia", "world domination"],
+      "description": "Same plan. Every day."
+    },
+    {
+      "id": "tote-097",
+      "title": "Girls Will Be Girls (Praying Mantis)",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_185755318_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_185755318_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-pocket",
+        "color": "natural"
+      },
+      "tags": ["dark humor", "feminist twist", "nature parody"],
+      "description": "Biology doesn’t lie."
+    },
+    {
+      "id": "tote-098",
+      "title": "Skull with Flowers",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_185815388_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_185815388_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-pocket",
+        "color": "natural"
+      },
+      "tags": ["skull art", "goth aesthetic", "floral design"],
+      "description": "Soft florals. Hard edge."
+    },
+    {
+      "id": "tote-099",
+      "title": "Day of the Dead Young Lady",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_185835959_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_185835959_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-pocket",
+        "color": "natural"
+      },
+      "tags": ["day of the dead", "sugar skull", "cultural art"],
+      "description": "Color. Tradition. Celebration."
+    },
+    {
+      "id": "tote-100",
+      "title": "Same Sh*t, Different Century",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_185857781_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_185857781_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-pocket",
+        "color": "natural"
+      },
+      "tags": ["sarcastic quote", "dark humor", "history joke"],
+      "description": "History repeats. So does the attitude."
+    },
+    {
+      "id": "tote-101",
+      "title": "Belle Hits the Bong",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_185918233_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_185918233_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-pocket",
+        "color": "natural"
+      },
+      "tags": ["fairy tale parody", "edgy humor", "pop culture twist"],
+      "description": "Not your Disney moment."
+    }
+    ,
+    {
+      "id": "tote-102",
+      "title": "This Is How I Fight My Battles",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_190025961_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_190025961_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-pocket",
+        "color": "black"
+      },
+      "tags": ["faith based", "christian quote", "inspirational", "worship lyric"],
+      "description": "A bold reminder of strength, faith, and resilience."
+    },
+    {
+      "id": "tote-103",
+      "title": "Steampunk Cat",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_190052325_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_190052325_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-pocket",
+        "color": "black"
+      },
+      "tags": ["cat lover", "steampunk", "fantasy art", "vintage gears"],
+      "description": "Victorian gears. Whiskered genius."
+    },
+    {
+      "id": "tote-104",
+      "title": "Ah, Men",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_190107029_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_190107029_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-pocket",
+        "color": "black"
+      },
+      "tags": ["lgbtq", "rainbow art", "faith parody", "inclusive message"],
+      "description": "Faith meets pride with a clever twist."
+    },
+    {
+      "id": "tote-105",
+      "title": "Taylor & Guitar",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_190126348_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_190126348_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-pocket",
+        "color": "black"
+      },
+      "tags": ["pop music", "swiftie vibe", "concert life", "music fan"],
+      "description": "Pop icon energy in tote form."
+    },
+    {
+      "id": "tote-106",
+      "title": "Mother of Cats",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_190146923_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_190146923_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-pocket",
+        "color": "black"
+      },
+      "tags": ["cat lover", "fantasy parody", "pop culture mashup"],
+      "description": "Breaker of stereotypes. Feeder of cats."
+    },
+    {
+      "id": "tote-107",
+      "title": "Ozzy Was Here",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_190203100_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_190203100_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-pocket",
+        "color": "black"
+      },
+      "tags": ["rock parody", "metal humor", "music mashup"],
+      "description": "Heavy metal. Heavier sarcasm."
+    },
+    {
+      "id": "tote-108",
+      "title": "Pulp Fiction Dance",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_190221820_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_190221820_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-pocket",
+        "color": "black"
+      },
+      "tags": ["movie fan", "retro cinema", "pop culture art"],
+      "description": "Iconic scene. Timeless cool."
+    },
+    {
+      "id": "tote-109",
+      "title": "No One Should Live in a Closet",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_190304428_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_190304428_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-pocket",
+        "color": "black"
+      },
+      "tags": ["lgbtq rights", "rainbow pride", "inclusive message"],
+      "description": "A powerful statement wrapped in pop culture."
+    },
+    {
+      "id": "tote-110",
+      "title": "Lord of the Rings Duo",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_190325904_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_190325904_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-pocket",
+        "color": "black"
+      },
+      "tags": ["fantasy fan", "epic journey", "movie mashup"],
+      "description": "One tote to rule them all."
+    },
+    {
+      "id": "tote-111",
+      "title": "Inspector Gadget",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_190342350_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_190342350_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-pocket",
+        "color": "black"
+      },
+      "tags": ["retro cartoon", "nostalgia", "pop culture"],
+      "description": "Go-go gadget tote."
+    },
+    {
+      "id": "tote-112",
+      "title": "Sun and Moon Faces",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_190358349_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_190358349_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-pocket",
+        "color": "black"
+      },
+      "tags": ["celestial art", "sun moon", "boho aesthetic"],
+      "description": "Cosmic balance in bold design."
+    },
+    {
+      "id": "tote-113",
+      "title": "Just a Girl Who Loves to Travel",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_191823642_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_191823642_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-basic",
+        "color": "yellow"
+      },
+      "tags": ["travel lover", "adventure life", "vacation vibes"],
+      "description": "Passport always ready."
+    },
+    {
+      "id": "tote-114",
+      "title": "ScoobieDo Gang",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_191840193_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_191840193_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-basic",
+        "color": "yellow"
+      },
+      "tags": ["retro cartoon", "nostalgia", "mystery gang"],
+      "description": "Would have gotten away with it too…"
+    },
+    {
+      "id": "tote-115",
+      "title": "My Last Flying F***",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_191902445_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_191902445_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-basic",
+        "color": "yellow"
+      },
+      "tags": ["sarcastic humor", "bold statement", "dark wit"],
+      "description": "Look closely. That was the last one."
+    },
+    {
+      "id": "tote-116",
+      "title": "Flower Skull",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_191921124_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_191921124_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-basic",
+        "color": "yellow"
+      },
+      "tags": ["skull art", "floral design", "goth aesthetic"],
+      "description": "Soft petals. Hard attitude."
+    },
+    {
+      "id": "tote-117",
+      "title": "It's OK to Say Gay",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_191940643_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_191940643_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-basic",
+        "color": "yellow"
+      },
+      "tags": ["lgbtq support", "pride message", "inclusive statement"],
+      "description": "Clear. Proud. Unfiltered."
+    },
+    {
+      "id": "tote-118",
+      "title": "Not a Phase",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_191959416_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_191959416_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-basic",
+        "color": "yellow"
+      },
+      "tags": ["identity pride", "bold statement", "inclusive message"],
+      "description": "Spoiler alert: it never was."
+    },
+    {
+      "id": "tote-119",
+      "title": "Wife. Mom. Boss.",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_192017247_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_192017247_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-basic",
+        "color": "yellow"
+      },
+      "tags": ["mom life", "boss energy", "strong woman"],
+      "description": "Checked all the boxes."
+    },
+    {
+      "id": "tote-120",
+      "title": "Landscape Finger Painting",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_192033249_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_192033249_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-basic",
+        "color": "yellow"
+      },
+      "tags": ["abstract art", "colorful design", "creative vibe"],
+      "description": "Messy. Bold. Unapologetically creative."
+    }
+    ,
+    {
+      "id": "tote-121",
+      "title": "Cartoon Frog with a Big Butt",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_192053726_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_192053726_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-basic",
+        "color": "yellow"
+      },
+      "tags": ["frog art", "funny animal", "cheeky humor", "cartoon style"],
+      "description": "Thicc. Ribbit."
+    },
+    {
+      "id": "tote-122",
+      "title": "Girls Just Wanna Have FUNdamental Human Rights",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_192108198_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_192108198_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-basic",
+        "color": "yellow"
+      },
+      "tags": ["feminist", "human rights", "girl power", "activist"],
+      "description": "Catchy. Clever. Completely necessary."
+    },
+    {
+      "id": "tote-123",
+      "title": "Woodland School Bus",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_192146244_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_192146244_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-basic",
+        "color": "yellow"
+      },
+      "tags": ["teacher gift", "school theme", "woodland animals"],
+      "description": "Adorable back-to-school vibes."
+    },
+    {
+      "id": "tote-124",
+      "title": "(Bee) Yourself",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_192207703_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_192207703_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-basic",
+        "color": "yellow"
+      },
+      "tags": ["bee art", "positive message", "self love", "pun humor"],
+      "description": "Bee bold. Bee brave. Bee you."
+    },
+    {
+      "id": "tote-125",
+      "title": "Afrocentric Portrait",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_192223573_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_192223573_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-basic",
+        "color": "yellow"
+      },
+      "tags": ["portrait art", "bold color", "cultural art", "statement design"],
+      "description": "Strong lines. Strong presence."
+    },
+    {
+      "id": "tote-126",
+      "title": "Just a Girl Who Loves Dinosaurs",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_192239830_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_192239830_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-basic",
+        "color": "yellow"
+      },
+      "tags": ["dinosaur lover", "girl power", "fun gift", "prehistory fan"],
+      "description": "Tiny arms. Big energy."
+    },
+    {
+      "id": "tote-127",
+      "title": "Amazing Grace",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_192257862_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_192257862_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-basic",
+        "color": "yellow"
+      },
+      "tags": ["faith based", "christian gift", "inspirational hymn"],
+      "description": "Classic words. Timeless meaning."
+    },
+    {
+      "id": "tote-128",
+      "title": "Up! Characters",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_192320848_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_192320848_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-basic",
+        "color": "yellow"
+      },
+      "tags": ["movie fan", "adventure theme", "nostalgia"],
+      "description": "Adventure is out there."
+    },
+    {
+      "id": "tote-129",
+      "title": "Take Chances, Make Mistakes, Get Messy",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_192336517_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_192336517_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-basic",
+        "color": "yellow"
+      },
+      "tags": ["teacher life", "inspirational quote", "classroom vibe"],
+      "description": "Learning looks messy. So does growth."
+    },
+    {
+      "id": "tote-130",
+      "title": "Little Miss Always Wears Black",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_192406718_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_192406718_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-basic",
+        "color": "yellow"
+      },
+      "tags": ["goth vibe", "dark humor", "fashion attitude"],
+      "description": "Color is overrated."
+    },
+    {
+      "id": "tote-131",
+      "title": "Karma Is a Cat",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_192430922_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_192430922_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-basic",
+        "color": "yellow"
+      },
+      "tags": ["cat lover", "pop lyric parody", "funny quote"],
+      "description": "Purring in your lap. Plotting revenge."
+    },
+    {
+      "id": "tote-132",
+      "title": "Rainbow Latte",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_192445356_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_192445356_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-basic",
+        "color": "yellow"
+      },
+      "tags": ["coffee lover", "rainbow art", "colorful design"],
+      "description": "Caffeine, but make it fabulous."
+    },
+    {
+      "id": "tote-133",
+      "title": "Be Careful Who You Hate",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_192546406_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_192546406_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-basic",
+        "color": "yellow"
+      },
+      "tags": ["inclusive message", "human rights", "powerful quote"],
+      "description": "Compassion never goes out of style."
+    },
+    {
+      "id": "tote-134",
+      "title": "Thug Life – Golden Girls",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_192606278_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_192606278_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-basic",
+        "color": "yellow"
+      },
+      "tags": ["retro tv", "golden girls", "funny parody"],
+      "description": "Respect your elders."
+    },
+    {
+      "id": "tote-135",
+      "title": "Blue Lips",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_192634955_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_192634955_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-basic",
+        "color": "yellow"
+      },
+      "tags": ["bold art", "portrait design", "modern aesthetic"],
+      "description": "Minimal color. Maximum mood."
+    },
+    {
+      "id": "tote-136",
+      "title": "Colourful Bee",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_192651571_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_192651571_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-basic",
+        "color": "yellow"
+      },
+      "tags": ["bee art", "bright design", "nature lover"],
+      "description": "Buzzing with color."
+    },
+    {
+      "id": "tote-137",
+      "title": "Communication Looks Different for Everyone",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_192706652_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_192706652_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-basic",
+        "color": "yellow"
+      },
+      "tags": ["inclusive message", "asl support", "communication matters"],
+      "description": "Different voices. Same value."
+    },
+    {
+      "id": "tote-138",
+      "title": "More Pride, Less Prejudice",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_192722247_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_192722247_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-basic",
+        "color": "yellow"
+      },
+      "tags": ["lgbtq pride", "inclusive statement", "bold message"],
+      "description": "The math is simple."
+    },
+    {
+      "id": "tote-139",
+      "title": "Making Memories One Cruise at a Time",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_192738467_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_192738467_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-basic",
+        "color": "yellow"
+      },
+      "tags": ["cruise life", "travel lover", "vacation vibes"],
+      "description": "Ocean air. No worries."
+    },
+    {
+      "id": "tote-140",
+      "title": "Starry Night Heart",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_192755841_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_192755841_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-basic",
+        "color": "yellow"
+      },
+      "tags": ["van gogh inspired", "romantic art", "classic remix"],
+      "description": "Classic masterpiece. Modern heart."
+    },
+    {
+      "id": "tote-141",
+      "title": "Antique Pick-Up Truck for Teacher",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_192817921_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_192817921_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-basic",
+        "color": "yellow"
+      },
+      "tags": ["teacher gift", "vintage truck", "classroom appreciation"],
+      "description": "Reliable. Just like them."
+    },
+    {
+      "id": "tote-142",
+      "title": "Lifelike Bee on Flowers",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_192839418_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_192839418_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-basic",
+        "color": "yellow"
+      },
+      "tags": ["bee art", "realistic design", "nature lover"],
+      "description": "Detailed. Delicate. Alive with color."
+    },
+    {
+      "id": "tote-143",
+      "title": "Lifelike Bee with Flowers",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_192904698_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_192904698_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "zipper-basic",
+        "color": "yellow"
+      },
+      "tags": ["bee art", "floral detail", "nature aesthetic"],
+      "description": "Nature, up close."
+    },
+    {
+      "id": "tote-144",
+      "title": "Chocolate Lab in Starry Night",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_195719362_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_195719362_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "grocery",
+        "color": "natural"
+      },
+      "tags": ["dog lover", "labrador", "van gogh inspired"],
+      "description": "A masterpiece with paws."
+    },
+    {
+      "id": "tote-145",
+      "title": "Schnauzer with Flowers",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_195741782_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_195741782_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "grocery",
+        "color": "natural"
+      },
+      "tags": ["schnauzer", "dog lover", "floral art"],
+      "description": "Whiskers and wildflowers."
+    },
+    {
+      "id": "tote-146",
+      "title": "Golden Retriever",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_195801784_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_195801784_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "grocery",
+        "color": "natural"
+      },
+      "tags": ["golden retriever", "dog lover", "pet gift"],
+      "description": "Pure loyalty in tote form."
+    },
+    {
+      "id": "tote-147",
+      "title": "Golden Retriever in Starry Night",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_195827453_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_195827453_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "grocery",
+        "color": "natural"
+      },
+      "tags": ["golden retriever", "van gogh inspired", "dog art"],
+      "description": "Starry skies. Wagging tail."
+    },
+    {
+      "id": "tote-148",
+      "title": "Black Frenchie with Shades",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_195848696_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_195848696_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "grocery",
+        "color": "natural"
+      },
+      "tags": ["french bulldog", "dog lover", "cool pet"],
+      "description": "Small dog. Big swagger."
+    },
+    {
+      "id": "tote-149",
+      "title": "Hip Afghan Hound",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_195910260_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_195910260_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "grocery",
+        "color": "natural"
+      },
+      "tags": ["afghan hound", "dog lover", "cool pet"],
+      "description": "Still stylish. Still judging you."
+    },
+    {
+      "id": "tote-150",
+      "title": "Cool Bulldog on Skateboard",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_195932833_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_195932833_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "grocery",
+        "color": "natural"
+      },
+      "tags": ["bulldog", "skateboard", "dog lover", "funny animal"],
+      "description": "Rolling into cool."
+    },
+    {
+      "id": "tote-151",
+      "title": "Skeleton with a Glass of Red",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_200012244_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_200012244_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "grocery",
+        "color": "natural"
+      },
+      "tags": ["wine lover", "skeleton art", "dark humor"],
+      "description": "Aging beautifully."
+    },
+    {
+      "id": "tote-152",
+      "title": "Stoner Gnome",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_200034959_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_200034959_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "grocery",
+        "color": "natural"
+      },
+      "tags": ["gnome art", "420 vibe", "edgy humor"],
+      "description": "Garden variety rebel."
+    },
+    {
+      "id": "tote-153",
+      "title": "True North Strong and Free",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_200110622_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_200110622_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "grocery",
+        "color": "natural"
+      },
+      "tags": ["canadian pride", "patriotic", "true north"],
+      "description": "Carry it proudly."
+    },
+    {
+      "id": "tote-154",
+      "title": "The Wife Is Right",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_200128876_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_200128876_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "grocery",
+        "color": "natural"
+      },
+      "tags": ["marriage humor", "funny quote", "sarcastic"],
+      "description": "Let’s not argue about it."
+    },
+    {
+      "id": "tote-155",
+      "title": "Inside Every Older Person…",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_200145875_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_200145875_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "grocery",
+        "color": "natural"
+      },
+      "tags": ["aging humor", "funny quote", "sarcastic"],
+      "description": "Still 25. Mentally."
+    },
+    {
+      "id": "tote-156",
+      "title": "Stoner Dopey",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_200240586_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_200240586_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "grocery",
+        "color": "natural"
+      },
+      "tags": ["fairy tale parody", "420 vibe", "edgy humor"],
+      "description": "Not so innocent."
+    },
+    {
+      "id": "tote-157",
+      "title": "Green Lips",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_200258107_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_200258107_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "grocery",
+        "color": "natural"
+      },
+      "tags": ["bold art", "edgy design", "420 aesthetic"],
+      "description": "High impact."
+    },
+    {
+      "id": "tote-158",
+      "title": "Lollipop Guild",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_200336694_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_200336694_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "grocery",
+        "color": "natural"
+      },
+      "tags": ["movie parody", "retro vibe", "nostalgia"],
+      "description": "Somewhere over the sarcasm."
+    },
+    {
+      "id": "tote-159",
+      "title": "Colourful Owl",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_200354098_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_200354098_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "grocery",
+        "color": "natural"
+      },
+      "tags": ["owl art", "colorful design", "nature lover"],
+      "description": "Wise and wildly colorful."
+    },
+    {
+      "id": "tote-160",
+      "title": "Floral Reproductive Art",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_200409828_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_200409828_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "grocery",
+        "color": "natural"
+      },
+      "tags": ["feminist art", "body positive", "bold design"],
+      "description": "Anatomy meets artistry."
+    },
+    {
+      "id": "tote-161",
+      "title": "Hot Girl Summer Skeleton",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_200427446_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_200427446_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "grocery",
+        "color": "natural"
+      },
+      "tags": ["skeleton art", "summer vibe", "dark humor"],
+      "description": "Dead serious about summer."
+    },
+    {
+      "id": "tote-162",
+      "title": "Hair Hustler",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_200444736_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_200444736_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "grocery",
+        "color": "natural"
+      },
+      "tags": ["hairstylist gift", "salon life", "bold statement"],
+      "description": "Scissors sharp. Ambition sharper."
+    },
+    {
+      "id": "tote-163",
+      "title": "Sasquatch on the Beach",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_200505301_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_200505301_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "grocery",
+        "color": "natural"
+      },
+      "tags": ["bigfoot", "beach life", "funny creature"],
+      "description": "Legendary relaxation."
+    },
+    {
+      "id": "tote-164",
+      "title": "Skeleton vs Fish Skeleton",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_200532206_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_200532206_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "grocery",
+        "color": "natural"
+      },
+      "tags": ["skeleton art", "dark humor", "funny design"],
+      "description": "Bone to pick."
+    },
+    {
+      "id": "tote-165",
+      "title": "Support Wildlife – Raise Boys",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_200552023_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_200552023_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "grocery",
+        "color": "natural"
+      },
+      "tags": ["parent humor", "boy mom", "funny quote"],
+      "description": "It’s survival out here."
+    },
+    {
+      "id": "tote-166",
+      "title": "Mom Vibes",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_200614635_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_200614635_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "grocery",
+        "color": "natural"
+      },
+      "tags": ["mom life", "tv parody", "funny gift"],
+      "description": "Raising humans. Running things."
+    },
+    {
+      "id": "tote-167",
+      "title": "Nail Hustler",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_200632115_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_200632115_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "grocery",
+        "color": "natural"
+      },
+      "tags": ["nail tech", "beauty hustle", "bold design"],
+      "description": "File. Buff. Slay."
+    },
+    {
+      "id": "tote-168",
+      "title": "Red Solo Cup",
+      "image": {
+        "thumb": "https://img.sarcasticsignage.com/products/tote_20251115_200650836_thumb.webp",
+        "master": "https://img.sarcasticsignage.com/products/tote_20251115_200650836_master.webp"
+      },
+      "category": "tote",
+      "attributes": {
+        "model": "grocery",
+        "color": "natural"
+      },
+      "tags": ["party vibe", "country music parody", "funny design"],
+      "description": "The unofficial cup of everything."
+    }
+
+  ]
+}

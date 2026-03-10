@@ -1,0 +1,94 @@
+{
+  "5x7 framed": {
+    "display_name": "5x7 wood framed sign",
+    "base_price_cad": 15.00,
+
+    "dimensions": {
+      "width_in": 5,
+      "height_in": 7
+    },
+    "print_area": {
+      "max_width_in": 4,
+      "max_height_in": 6
+    },
+    "features": {
+      "wood frame": true,
+      "glass": true,
+      "hanging hardware": true
+    },
+    "feature_list": [
+      "glass can be placed in front or behind canvas "
+    ],    
+    "colors": ["beech", "white", "black"]
+  },
+  "8x10 framed": {
+    "display_name": "8x10 wood framed sign",
+    "base_price_cad": 20.00,
+
+    "dimensions": {
+      "width_in": 8,
+      "height_in": 10
+    },
+    "print_area": {
+      "max_width_in": 7,
+      "max_height_in": 9
+    },
+    "features": {
+      "wood frame": true,
+      "glass": true,
+      "hanging hardware": true
+    },
+    "feature_list": [
+      "glass can be placed in front or behind canvas "
+    ],    
+    "colors": ["beech", "white", "black"]
+  },
+  "5x7 unframed": {
+    "display_name": "5x7 unframed sign",
+    "base_price_cad": 12.00,
+
+    "dimensions": {
+      "width_in": 5,
+      "height_in": 7
+    },
+    "print_area": {
+      "max_width_in": 4,
+      "max_height_in": 6
+    },
+    "features": {
+      "wood frame": false,
+      "glass": false,
+      "hanging hardware": false
+    },
+    "feature_list": [
+      "printed on canvas with htv or dtf process",
+      "supplied in cellophane wrapper",
+      "can be mounted in wood frame for nominal extra cost ($3)"
+    ],    
+    "colors": ["all"]
+  },
+  "8x10 unframed": {
+    "display_name": "8x10 unframed sign",
+    "base_price_cad": 17.00,
+
+    "dimensions": {
+      "width_in": 8,
+      "height_in": 10
+    },
+    "print_area": {
+      "max_width_in": 7,
+      "max_height_in": 9
+    },
+    "features": {
+      "wood frame": false,
+      "glass": false,
+      "hanging hardware": false
+    },
+    "feature_list": [
+      "printed on canvas with htv or dtf process",
+      "supplied in cellophane wrapper",
+      "can be mounted in wood frame for nominal extra cost ($3)"
+    ],    
+    "colors": ["all"]
+  }
+}
