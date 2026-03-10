@@ -5,7 +5,15 @@
       "WebFetch(domain:photos.app.goo.gl)",
       "WebFetch(domain:photos.google.com)",
       "Bash(python3 -c \":*)",
-      "Bash(node -e \":*)"
+      "Bash(node -e \":*)",
+      "Bash(curl -s \"https://sarcasticsignage.com/data/totes.json\")",
+      "Bash(node -e \"const chunks=[]; process.stdin.on\\(''data'',d=>chunks.push\\(d\\)\\); process.stdin.on\\(''end'',\\(\\)=>{const d=JSON.parse\\(chunks.join\\(''''\\)\\); const prods=d.products; const arr=Array.isArray\\(prods\\)?prods:Object.values\\(prods\\); console.log\\(''count:'',arr.length\\); console.log\\(''keys:'',Object.keys\\(arr[0]\\)\\);}\\)\")",
+      "Bash(curl -s \"https://sarcasticsignage.com/data/models/tote-models.json\")",
+      "Bash(curl -s \"https://sarcasticsignage.com/demo/tote-models.js\")",
+      "Bash(curl -sL \"https://raw.githubusercontent.com/PHPMailer/PHPMailer/master/src/PHPMailer.php\" -o /d/xampp/htdocs/sarcasticsignage/phpmailer/PHPMailer.php)",
+      "Bash(curl -sL \"https://raw.githubusercontent.com/PHPMailer/PHPMailer/master/src/SMTP.php\" -o /d/xampp/htdocs/sarcasticsignage/phpmailer/SMTP.php)",
+      "Bash(curl -sL \"https://raw.githubusercontent.com/PHPMailer/PHPMailer/master/src/Exception.php\" -o /d/xampp/htdocs/sarcasticsignage/phpmailer/Exception.php)",
+      "Bash(wc -l /d/xampp/htdocs/sarcasticsignage/phpmailer/*.php)"
     ]
   }
 }
