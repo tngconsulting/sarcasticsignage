@@ -422,7 +422,7 @@
        ABOUT
        ============================================= */
     .about {
-      background: #F0E4D0 url('assets/workshop-wide.png') center bottom / cover no-repeat;
+      background: #F0E4D0 url('assets/workshop-wide.webp') center bottom / cover no-repeat;
       padding: var(--pad-section) 0;
       position: relative;
     }
@@ -430,8 +430,8 @@
       content: '';
       position: absolute; inset: 0;
       background: rgba(20, 6, 32, 0.55);
-      -webkit-mask-image: url('assets/workshop-wide.png');
-      mask-image: url('assets/workshop-wide.png');
+      -webkit-mask-image: url('assets/workshop-wide.webp');
+      mask-image: url('assets/workshop-wide.webp');
       -webkit-mask-size: cover;
       mask-size: cover;
       -webkit-mask-position: center bottom;
@@ -536,9 +536,6 @@
     .products-header { margin-bottom: var(--space-2xl); }
 
     .cat-block + .cat-block { margin-top: clamp(48px, 8vw, 72px); }
-    .cat-pair { align-items: start; margin-top: clamp(48px, 8vw, 72px); }
-    .cat-pair .cat-block + .cat-block { margin-top: 0; }
-    .cat-pair + .cat-block { margin-top: clamp(48px, 8vw, 72px); }
 
     .cat-header {
       display: flex; align-items: baseline; gap: var(--space-md);
@@ -594,7 +591,7 @@
     .pc-img {
       display: flex; align-items: center; justify-content: center;
       flex-direction: column; gap: 6px;
-      padding: var(--space-lg); min-height: 180px;
+      padding: var(--space-lg); min-height: 120px;
     }
     .tall .pc-img { flex: 1; min-height: 170px; }
     .wide .pc-img { min-height: auto; padding: var(--space-md); min-width: 100px; }
@@ -611,8 +608,6 @@
       background-position: center;
       transition: background-size 0.4s ease;
       padding: 0;
-      height: 180px;
-      min-height: unset;
     }
     .pc:hover .pc-img-photo { background-size: 108%; }
     .bg-acc  { background: linear-gradient(135deg, #F2D5D0, #E0B8B0); }
@@ -919,7 +914,6 @@
       .hero-sign-wrap { display: none; }
       .hero-stats { grid-template-columns: repeat(2, 1fr); gap: var(--space-lg); }
       .g-2-1, .g-1-1, .g-3 { grid-template-columns: 1fr; }
-      .g-4 { grid-template-columns: repeat(2, 1fr); }
       .pc.tall { grid-row: auto; }
       .pc.wide { grid-template-columns: 1fr; }
       .wide .pc-img { min-height: 140px; }
@@ -1376,138 +1370,136 @@
             <span class="cat-count">4 items</span>
           </div>
           <p class="cat-desc">The flagship product — bold sayings on quality wood. Two sizes, framed or unframed.</p>
-          <div class="grid g-4">
-            <article class="pc">
-              <div class="pc-img bg-wood pc-img-photo" style="background-image:url('https://img.sarcasticsignage.com/products/sign_5x7_unframed_20251121_153948506_thumb.webp');"></div>
+          <div class="grid g-2-1">
+            <article class="pc tall">
+              <div class="pc-img bg-wood pc-img-photo" style="flex:1;background-image:url('https://img.sarcasticsignage.com/products/sign_5x7_unframed_20251121_153948506_thumb.webp');"></div>
               <div class="pc-body">
                 <h4 class="pc-name">5&times;7 Unframed Signs</h4>
-                <p class="pc-detail">Small but mighty. Perfect for shelves and ledges.</p>
+                <p class="pc-detail">Small but mighty. Perfect for shelves, ledges, or any surface that needs attitude.</p>
                 <p class="pc-price">$15</p>
               </div>
               <div class="pc-act">
                 <a href="demo/signs.html?model=5x7+unframed" class="btn-album" aria-label="View 5 by 7 unframed signs">View Album &rarr;</a>
               </div>
             </article>
-            <article class="pc">
-              <div class="pc-img bg-wood pc-img-photo" style="background-image:url('https://img.sarcasticsignage.com/products/sign_5x7_framed_20251121_165225854_thumb.webp');"></div>
-              <div class="pc-body">
-                <h4 class="pc-name">5&times;7 Pre-framed</h4>
-                <p class="pc-detail">Ready to hang right out of the package.</p>
-                <p class="pc-price">$15</p>
-              </div>
-              <div class="pc-act">
-                <a href="demo/signs.html?model=5x7+framed" class="btn-album" aria-label="View 5 by 7 pre-framed signs">View Album &rarr;</a>
-              </div>
-            </article>
-            <article class="pc">
-              <div class="pc-img bg-wood pc-img-photo" style="background-image:url('https://img.sarcasticsignage.com/products/sign_8x10_unframed_20251129_013323849_thumb.webp');"></div>
-              <div class="pc-body">
-                <h4 class="pc-name">8&times;10 Unframed</h4>
-                <p class="pc-detail">More surface area for more elaborate opinions.</p>
-                <p class="pc-price">$20</p>
-              </div>
-              <div class="pc-act">
-                <a href="demo/signs.html?model=8x10+unframed" class="btn-album" aria-label="View 8 by 10 unframed signs">View Album &rarr;</a>
-              </div>
-            </article>
-            <article class="pc">
+            <div style="display:flex;flex-direction:column;gap:var(--space-md);">
+              <article class="pc" style="flex:1;">
+                <div class="pc-img bg-wood pc-img-photo" style="background-image:url('https://img.sarcasticsignage.com/products/sign_5x7_framed_20251121_165225854_thumb.webp');"></div>
+                <div class="pc-body">
+                  <h4 class="pc-name">5&times;7 Pre-framed</h4>
+                  <p class="pc-detail">Ready to hang right out of the package.</p>
+                  <p class="pc-price">$15</p>
+                </div>
+                <div class="pc-act">
+                  <a href="demo/signs.html?model=5x7+framed" class="btn-album" aria-label="View 5 by 7 pre-framed signs">View Album &rarr;</a>
+                </div>
+              </article>
+              <article class="pc" style="flex:1;">
+                <div class="pc-img bg-wood pc-img-photo" style="background-image:url('https://img.sarcasticsignage.com/products/sign_8x10_unframed_20251129_013323849_thumb.webp');"></div>
+                <div class="pc-body">
+                  <h4 class="pc-name">8&times;10 Unframed</h4>
+                  <p class="pc-detail">More surface area for more elaborate opinions.</p>
+                  <p class="pc-price">$20</p>
+                </div>
+                <div class="pc-act">
+                  <a href="demo/signs.html?model=8x10+unframed" class="btn-album" aria-label="View 8 by 10 unframed signs">View Album &rarr;</a>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="grid g-row" style="margin-top:var(--space-md);">
+            <article class="pc wide">
               <div class="pc-img bg-wood pc-img-photo" style="background-image:url('https://img.sarcasticsignage.com/products/sign_8x10_framed_20251121_195836344_thumb.webp');"></div>
               <div class="pc-body">
-                <h4 class="pc-name">8&times;10 Pre-framed</h4>
+                <h4 class="pc-name">8&times;10 Pre-framed Signs</h4>
                 <p class="pc-detail">Larger, framed, and ready to command a wall.</p>
-                <p class="pc-price">$20</p>
+                <p class="pc-price" style="padding-top:4px;">$20</p>
               </div>
               <div class="pc-act">
-                <a href="demo/signs.html?model=8x10+framed" class="btn-album" aria-label="View 8 by 10 pre-framed signs">View Album &rarr;</a>
+                <a href="demo/signs.html?model=8x10+framed" class="btn-album" style="width:auto;padding:10px 20px;" aria-label="View 8 by 10 pre-framed signs">View Album &rarr;</a>
               </div>
             </article>
           </div>
         </div>
 
-        <!-- TOTES & ACCESSORIES (side by side) -->
-        <div class="grid g-1-1 cat-pair">
-
-          <!-- TOTES & POUCHES -->
-          <div class="cat-block reveal">
-            <div class="cat-header">
-              <h3 class="cat-title">Tote Bags &amp; Pouches</h3>
-              <span class="cat-count">2 items</span>
-            </div>
-            <p class="cat-desc">Over 200 tote designs across five colours. Plus 100+ zippered pouches.</p>
-            <div class="grid g-1-1">
-              <article class="pc">
-                <div class="pc-img bg-tote pc-img-photo" style="background-image:url('https://img.sarcasticsignage.com/products/tote_20251115_181243823_thumb.webp');background-position:center 65%;"></div>
-                <div class="pc-body">
-                  <h4 class="pc-name">All Tote Bags</h4>
-                  <p class="pc-detail">200+ designs. Browse by colour or see the full collection.</p>
-                  <div class="chips">
-                    <a href="demo/totes.html?color=natural" class="chip" aria-label="View natural canvas tote bags"><span class="chip-dot" style="background:#f5f0e0;border:1px solid #ccc;" aria-hidden="true"></span> Natural</a>
-                    <a href="demo/totes.html?color=black" class="chip" aria-label="View black tote bags"><span class="chip-dot" style="background:#222;" aria-hidden="true"></span> Black</a>
-                    <a href="demo/totes.html?color=navy" class="chip" aria-label="View navy tote bags"><span class="chip-dot" style="background:#1b2a4a;" aria-hidden="true"></span> Navy</a>
-                    <a href="demo/totes.html?color=burgundy" class="chip" aria-label="View burgundy tote bags"><span class="chip-dot" style="background:#6b1c2a;" aria-hidden="true"></span> Burgundy</a>
-                    <a href="demo/totes.html?color=grey" class="chip" aria-label="View grey tote bags"><span class="chip-dot" style="background:#8a8a8a;" aria-hidden="true"></span> Grey</a>
-                  </div>
-                  <p class="pc-price">$15</p>
-                </div>
-                <div class="pc-act">
-                  <a href="demo/totes.html" class="btn-album" aria-label="View all tote bag designs">View Album &rarr;</a>
-                </div>
-              </article>
-              <article class="pc">
-                <div class="pc-img bg-tote">
-                  <span class="pc-img-icon" aria-hidden="true">&#x1F45C;</span>
-                  <span class="pc-img-text">100+ designs</span>
-                </div>
-                <div class="pc-body">
-                  <h4 class="pc-name">Zippered Pouches</h4>
-                  <p class="pc-detail">100+ designs. For makeup, coins, or anything worth keeping together.</p>
-                  <p class="pc-price">$6</p>
-                </div>
-                <div class="pc-act">
-                  <a href="https://photos.app.goo.gl/qEg9GaAJa5RSPjsq9" target="_blank" rel="noopener noreferrer" class="btn-album" aria-label="View zippered pouches on Google Photos">View Album &rarr;</a>
-                </div>
-              </article>
-            </div>
+        <!-- TOTES & POUCHES -->
+        <div class="cat-block reveal">
+          <div class="cat-header">
+            <h3 class="cat-title">Tote Bags &amp; Pouches</h3>
+            <span class="cat-count">2 items</span>
           </div>
-
-          <!-- ACCESSORIES -->
-          <div class="cat-block reveal">
-            <div class="cat-header">
-              <h3 class="cat-title">Accessories</h3>
-              <span class="cat-count">2 items</span>
-            </div>
-            <p class="cat-desc">Small add-ons with big personality. Croc charms in stock now; key chains coming soon.</p>
-            <div class="grid g-1-1">
-              <article class="pc">
-                <div class="pc-img bg-acc">
-                  <span class="pc-img-icon" aria-hidden="true">&#x1F40A;</span>
-                  <span class="pc-img-text">Photo album available</span>
+          <p class="cat-desc">Over 200 tote designs across five colours. Plus 100+ zippered pouches.</p>
+          <div class="grid g-2-1">
+            <article class="pc">
+              <div class="pc-img bg-tote pc-img-photo" style="background-image:url('https://img.sarcasticsignage.com/products/tote_20251115_181243823_thumb.webp');background-position:center 30%;"></div>
+              <div class="pc-body">
+                <h4 class="pc-name">All Tote Bags</h4>
+                <p class="pc-detail">200+ designs. Browse by colour or see the full collection.</p>
+                <div class="chips">
+                  <a href="demo/totes.html?color=natural" class="chip" aria-label="View natural canvas tote bags"><span class="chip-dot" style="background:#f5f0e0;border:1px solid #ccc;" aria-hidden="true"></span> Natural</a>
+                  <a href="demo/totes.html?color=black" class="chip" aria-label="View black tote bags"><span class="chip-dot" style="background:#222;" aria-hidden="true"></span> Black</a>
+                  <a href="demo/totes.html?color=navy" class="chip" aria-label="View navy tote bags"><span class="chip-dot" style="background:#1b2a4a;" aria-hidden="true"></span> Navy</a>
+                  <a href="demo/totes.html?color=burgundy" class="chip" aria-label="View burgundy tote bags"><span class="chip-dot" style="background:#6b1c2a;" aria-hidden="true"></span> Burgundy</a>
+                  <a href="demo/totes.html?color=grey" class="chip" aria-label="View grey tote bags"><span class="chip-dot" style="background:#8a8a8a;" aria-hidden="true"></span> Grey</a>
                 </div>
-                <div class="pc-body">
-                  <h4 class="pc-name">Silicone Croc Charms</h4>
-                  <p class="pc-detail">Tiny attitude for your shoes. Clips onto Crocs and Croc-style footwear.</p>
-                  <p class="pc-price">$2 each &middot; 3 for $5</p>
-                </div>
-                <div class="pc-act">
-                  <a href="https://photos.app.goo.gl/jqK1BJn38Sqz7NGcA" target="_blank" rel="noopener noreferrer" class="btn-album" aria-label="View Croc charms on Google Photos">View Album &rarr;</a>
-                </div>
-              </article>
-              <article class="pc dim">
-                <div class="pc-img bg-acc">
-                  <span class="pc-img-icon" aria-hidden="true">&#x1F5DD;&#xFE0F;</span>
-                  <span class="pc-img-text">Coming soon</span>
-                </div>
-                <div class="pc-body">
-                  <h4 class="pc-name">Key Chains &amp; Zipper Pulls</h4>
-                  <p class="pc-detail">Sarcasm for your keys. Album coming before launch.</p>
-                  <p class="pc-price">$7 each &middot; 3 for $20</p>
-                  <span class="soon-tag">Coming Soon</span>
-                </div>
-                <div class="pc-act"><span class="btn-soon">Album Coming Soon</span></div>
-              </article>
-            </div>
+                <p class="pc-price">$15</p>
+              </div>
+              <div class="pc-act">
+                <a href="demo/totes.html" class="btn-album" aria-label="View all tote bag designs">View All Totes &rarr;</a>
+              </div>
+            </article>
+            <article class="pc">
+              <div class="pc-img bg-tote">
+                <span class="pc-img-icon" aria-hidden="true">&#x1F45C;</span>
+                <span class="pc-img-text">100+ designs</span>
+              </div>
+              <div class="pc-body">
+                <h4 class="pc-name">Zippered Pouches</h4>
+                <p class="pc-detail">100+ designs. For makeup, coins, or anything worth keeping together.</p>
+                <p class="pc-price">$6</p>
+              </div>
+              <div class="pc-act">
+                <a href="https://photos.app.goo.gl/qEg9GaAJa5RSPjsq9" target="_blank" rel="noopener noreferrer" class="btn-album" aria-label="View zippered pouches on Google Photos">View Album &rarr;</a>
+              </div>
+            </article>
           </div>
+        </div>
 
+        <!-- ACCESSORIES -->
+        <div class="cat-block reveal">
+          <div class="cat-header">
+            <h3 class="cat-title">Accessories</h3>
+            <span class="cat-count">2 items</span>
+          </div>
+          <div class="grid g-1-1">
+            <article class="pc">
+              <div class="pc-img bg-acc">
+                <span class="pc-img-icon" aria-hidden="true">&#x1F40A;</span>
+                <span class="pc-img-text">Photo album available</span>
+              </div>
+              <div class="pc-body">
+                <h4 class="pc-name">Silicone Croc Charms</h4>
+                <p class="pc-detail">Tiny attitude for your shoes. Clips onto Crocs and Croc-style footwear.</p>
+                <p class="pc-price">$2 each &middot; 3 for $5</p>
+              </div>
+              <div class="pc-act">
+                <a href="https://photos.app.goo.gl/jqK1BJn38Sqz7NGcA" target="_blank" rel="noopener noreferrer" class="btn-album" aria-label="View Croc charms on Google Photos">View Album &rarr;</a>
+              </div>
+            </article>
+            <article class="pc dim">
+              <div class="pc-img bg-acc">
+                <span class="pc-img-icon" aria-hidden="true">&#x1F5DD;&#xFE0F;</span>
+                <span class="pc-img-text">Coming soon</span>
+              </div>
+              <div class="pc-body">
+                <h4 class="pc-name">Key Chains &amp; Zipper Pulls</h4>
+                <p class="pc-detail">Sarcasm for your keys. Album coming before launch.</p>
+                <p class="pc-price">$7 each &middot; 3 for $20</p>
+                <span class="soon-tag">Coming Soon</span>
+              </div>
+              <div class="pc-act"><span class="btn-soon">Album Coming Soon</span></div>
+            </article>
+          </div>
         </div>
 
         <!-- APPAREL -->
